@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+
+.photofeed {
+
+}
+
+
+.photofeedLine {
+ margin-bottom: 2px;
+}
+
+.photofeedLineItem {
+ margin-left: 2px;
+}
+
+.photofeedGallery {
+ font-size: 11px;
+ font-style: italic;
+ color: gray;
+ float: center;
+}

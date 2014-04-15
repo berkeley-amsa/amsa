@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content">
+	<name>Content - photoFEED</name>
+	<creationDate>June 2009</creationDate>
+	<author>Cedric Walter</author>
+	<authorEmail>cedric.walter@gmail.com,Ed@Henderson.net</authorEmail>
+	<authorUrl>www.waltercedric.com,www.henderland.net</authorUrl>
+	<copyright>Cedric Walter</copyright>
+	<license>GNU/GPL 3.0</license>
+	<description>PLG_PHOTOFEED_DESCRIPTION</description>
+	<version>1.6.0</version>
+
+	<media destination="plg_content_photofeed">
+		<filename>photofeed.css</filename>
+		<filename>notfound.jpg</filename>
+		<filename>index.html</filename>
+	</media>
+
+	<files>
+		<filename plugin="photofeed">photofeed.php</filename>
+		<folder>language</folder>
+		<folder>photofeed</folder>
+	</files>
+
+	<updateservers>
+		<server type="extension" priority="1" name="Extension Update Site"
+			>http://www.waltercedric.com/update/plugins/photofeed/extension.xml</server>
+		<server type="collection" priority="2" name="Collection Update Site"
+			>http://www.waltercedric.com/update/update.xml</server>
+	</updateservers>
+
+
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="enabled" type="radio" default="1"
+					label="Enable Plugin" description="Plugin is enable.">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="debug" type="radio" default="0" label="Debug"
+					description="Wenn Yes, log files will be created at /logs/plg.photofeed.log.php you can point a browser to it, use FTP/SCP/Plesk/Cpanel to read them">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="demo" type="radio" default="1" label="Demo mode"
+					description="Demo mode display some examples">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+
+				<field name="library" type="radio" default="lightbox2"
+					label="Library"
+					description="Library to open up image into. Shadowbox requires an additional component to be installed.">
+
+					<option value="lightbox2">lightbox2</option>
+					<option value="lightbox">lightbox</option>
+					<option value="shadowbox[BoxThumbs];">shadowbox</option>
+				</field>
+				<field name="thumbsize" type="text" default="75"
+					label="Thumbnail Size"
+					description="Thumbnail size in pixels."/>
+				<field name="thumbborder" type="text" default="3"
+					label="Thumbnail Border"
+					description="Thumbnail border width in pixels."/>
+				<field name="thumbsquare" type="radio" default="yes"
+					label="Square Thumbnail"
+					description="Choose 'Yes' for a square thumbnail or 'No' to maintain aspect ratio. If 'No' Thumbnail Size specifies thumbnail height only.">
+					<option value="no">JNO</option>
+					<option value="yes">JYES</option>
+				</field>
+				<field name="reverseOrder" type="radio" default="yes"
+					label="Reverse order"
+					description="If yes, last images from the rss will be the first to be displayed in the list">
+					<option value="no">JNO</option>
+					<option value="yes">JYES</option>
+				</field>
+				<field name="displayLinkToGallery" type="radio" default="yes"
+					label="Add Link to gallery source"
+					description="Add a link automatically below the wall of thumbnail that point to th gallery">
+					<option value="no">JNO</option>
+					<option value="yes">JYES</option>
+				</field>
+				<field name="NumberOfColumns" type="text" default="3"
+					label="Default Number of columns"
+					description="Number of columns to display images, can be overriden using columns="/>
+
+				<field name="DefaultImage" type="text"
+					default="plugins/content/photofeed/notfound.jpg"
+					label="Default image"
+					description="If some images can not be detected from the rss stream, the plugin will replace them with this one"/>
+
+				<field name="@spacer" type="spacer" default="" label=""
+					description=""/>
+				<field name="smugmugSize" type="radio" default="L"
+					label="SmugMug Picture Size"
+					description="SmugMug only: size of the picture">
+					<option value="S">Small</option>
+					<option value="M">Medium</option>
+					<option value="L">Large</option>
+					<option value="XL">XLarge</option>
+					<option value="X2">X2Large</option>
+					<option value="X3">X3Large</option>
+					<option value="O">Original</option>
+				</field>
+				<field name="@spacer" type="spacer" default="" label=""
+					description=""/>
+				<field name="flickrSize" type="radio" default="0"
+					label="Flickr Picture Size"
+					description="Flickr only: size of the picture">
+					<option value="0">Square</option>
+					<option value="1">Thumb</option>
+					<option value="2">Small</option>
+					<option value="3">Medium</option>
+					<option value="4">Large</option>
+				</field>
+				<field name="@spacer" type="spacer" default="" label=""
+					description=""/>
+				<field name="picasaWidth" type="text" length="25"
+					default="150px" label="Picasa image Width"
+					description="Picasa only: Width of images, use % or px"/>
+				<field name="picasaHeight" type="text" length="25"
+					default="150px" label="Picasa image Height"
+					description="Picasa only: Height of images, use % or px"/>
+				<field name="@spacer" type="spacer" default="" label=""
+					description=""/>
+				<field name="g2Width" type="text" length="25" default="150px"
+					label="Gallery2 image Width"
+					description="Gallery2 only: Width of images, use % or px"/>
+				<field name="g2Height" type="text" length="25" default="150px"
+					label="Gallery2 image Height"
+					description="Gallery2 only: Height of images, use % or px"/>
+			</fieldset>
+			<fieldset name="basic">
+				<field name="enableHtmlCache" type="radio" default="1"
+					label="HTML Cache"
+					description="Enable caching of HTML result.">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="htmlCachetime" type="text" default="3600"
+					label="Html Cache time"
+					description="Cache time in seconds for HTML result per feed"> </field>
+				<field name="enableRssCache" type="radio" default="1"
+					label="RSS Cache"
+					description="Enable caching of Rss feed result.">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="RssCachetime" type="text" default="3600"
+					label="RSS Cache time"
+					description="Cache time in seconds for rss feed"> </field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

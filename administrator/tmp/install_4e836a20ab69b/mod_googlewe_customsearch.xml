@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Google Web Elements Custom Search</name>
+	<author>Open4G Media</author>
+	<creationDate>May 2009</creationDate>
+	<copyright>Copyright (C) 2009 Open4G Media. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>sekmet@open4g.com</authorEmail>
+	<authorUrl>www.open4g.com</authorUrl>
+	<version>1.0.0</version>
+	<description>Google Custom Search element allow your visitors search your site and other sites you choose using the power of Google Custom Search. If you like, earn revenue from your site with AdSense for Search.</description>
+	<files>
+		<filename module="mod_googlewe_customsearch">mod_googlewe_customsearch.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>tmpl/index.html</filename>
+		<filename>tmpl/default.php</filename>		
+	</files>
+	<params>
+	<param name="googlewecustomsearch_customsearchid" type="text" default="" label="Your Custom Search ID" description="Enter your google custom search id if you have one" />
+	<param name="googlewecustomsearch_adsensepubid" type="text" default="pub-7566690608244936" label="Your AdSense Publisher ID" description="Already use AdSense for Search? Enter your adSense publisher ID here" />	
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+	<param name="googlewecustomsearch_loadingtext" type="text" default="Loading..." label="Loading Text" description="Define your Custom Search loading text" />		
+	<param name="googlewecustomsearch_w" type="text" default="" label="Width" description="Custom Search width" />
+	<param name="googlewecustomsearch_h" type="text" default="" label="Height" description="Custom Search height" />	
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="cache" type="list" default="0" label="Caching" description="Select whether to cache the content of this module">
+			<option value="0">Never</option>
+		</param>
+		<param name="@spacer" type="spacer" default="" label="" description="" />
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+	</params>
+</install>

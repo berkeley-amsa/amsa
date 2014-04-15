@@ -1,0 +1,436 @@
+/**
+ * @version		$Id$
+ * @package		Joomla.Administrator
+ * @subpackage	JoomDOC
+ * @author      ARTIO s.r.o., info@artio.net, http:://www.artio.net
+ * @copyright	Copyright (C) 2011 Artio s.r.o.. All rights reserved.
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+#joomdoc #pathway {
+	background-image: url("../images/icon-16-pathway.png");
+	background-repeat: no-repeat;
+	height: 16px;
+	line-height: 16px;
+	padding: 0 0 0 25px;
+	margin-bottom: 10px;
+}
+
+#jform_version,#jform_path,#jform_id {
+	background-color: #DDDDDD;
+}
+
+#joomdoc .back {
+	background-image: url("../images/icon-16-back.png");
+	background-repeat: no-repeat;
+	height: 16px;
+	line-height: 16px;
+	padding: 4px 0px 0px 22px;
+	margin-left: 3em;
+}
+
+.folder {
+	background-image: url("../images/icon-16-folder.png");
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 16px;
+	line-height: 16px;
+	padding-left: 25px;
+}
+
+.file {
+	background-image: url("../images/icon-16-file.png");
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 16px;
+	line-height: 16px;
+	padding-left: 25px;
+}
+
+a.rename {
+	background-image: url("../images/icon-16-rename.png");
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 16px;
+	line-height: 16px;
+	width: 16px;
+}
+
+div.rename input {
+	width: 100%;
+}
+
+.editWebDav {
+	background-image: url("../images/icon-16-edit.png");
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 16px;
+	line-height: 16px;
+	width: 16px;
+}
+
+.lock {
+	background-image: url("../images/icon-16-lock.png");
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 16px;
+	line-height: 16px;
+	width: 16px;
+}
+
+.editWebDav strong,td .editWebDav span {
+	color: transparent;
+	font-size: 0px;
+}
+
+#editWebDav .editWebDav {
+	padding-left: 20px;
+	width: auto;
+}
+
+.icon-48-joomdoc {
+	background-image: url("../images/icon-48-joomdoc.png");
+}
+
+.icon-48-documents {
+	background-image: url("../images/icon-48-documents.png");
+}
+
+.icon-48-document {
+	background-image: url("../images/icon-48-document.png");
+}
+
+.icon-48-file {
+	background-image: url("../images/icon-48-file.png");
+}
+
+.icon-48-upgrade {
+	background-image: url("../images/icon-48-upgrade.png");
+}
+
+.icon-32-docs-delete,.icon-32-docs-delete_f2 {
+	background-image: url("../images/icon-32-docs-delete.png");
+}
+
+.icon-32-remove {
+	background-image: url("../images/icon-32-remove.png");
+}
+
+#toolbar .icon-disabled {
+	float: left;
+	padding: 1px 5px;
+	white-space: nowrap;
+	width: auto;
+}
+
+#toolbar td .icon-disabled {
+	position: relative;
+	top: -8px;
+}
+
+#toolbar .icon-disabled  span {
+	background-position: 0 32px;
+	padding-bottom: 1px;
+}
+
+.blind {
+	position: absolute;
+	top: -10000px;
+	left: -10000px;
+}
+
+.addDocument {
+	background-image: url("../images/icon-16-add.png");
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 16px;
+	padding-right: 20px;
+	width: 16px;
+}
+
+#documents .back {
+	background-image: url("../images/icon-16-back.png");
+	background-repeat: no-repeat;
+	display: block;
+	height: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: auto;
+}
+
+body #documents h1 {
+	font-size: 25px;
+}
+
+#documents .document h2 {
+	margin: 0;
+	padding: 0;
+}
+
+#documents .document h2.icon {
+	background-repeat: no-repeat;
+	border-bottom: 1px solid #DDDDDD;
+	float: none;
+	font-size: 22px;
+	height: 26px;
+	line-height: 22px;
+	padding: 6px 0 0 40px;
+}
+
+#documents .document h2.folder {
+	background-image: url("../images/icon-32-folder.png");
+}
+
+#documents .document {
+	margin: 0;
+	padding: 0 0 20px;
+}
+
+#documents .document p {
+	margin: 0;
+	padding: 0;
+}
+
+#documents .document .info {
+	background-image: url("../images/dotline.png");
+	background-position: 0 30px;
+	background-repeat: repeat-x;
+	padding: 10px 0;
+}
+
+#documents .document .info .clr {
+	clear: left;
+}
+
+#documents .document .info>span,#document .info>span {
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: auto;
+}
+
+#documents .document .info .favorite,#document .info .favorite {
+	background-image: url("../images/icon-16-favorite.png");
+}
+
+#documents .document .info .filesize,#document .info .filesize {
+	background-image: url("../images/icon-16-filesize.png");
+}
+
+#documents .document .info .created,#document .info .created {
+	background-image: url("../images/icon-16-created.png");
+}
+
+#documents .document .info .modified,#document .info .modified {
+	background-image: url("../images/icon-16-modified.png");
+}
+
+#documents .document .info .hits,#document .info .hits {
+	background-image: url("../images/icon-16-hits.png");
+}
+
+#documents .document .toolbar .clr {
+	clear: left;
+}
+
+#documents .document .toolbar {
+	padding: 10px 0;
+}
+
+#documents .document .toolbar a,#document .toolbar a,#documents .document .toolbar a:hover,#document .toolbar a:hover {
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: auto;
+}
+
+#documents .document .toolbar .open {
+	background-image: url("../images/icon-16-open.png");
+}
+
+#documents .document .toolbar .download,#document .toolbar .download {
+	background-image: url("../images/icon-16-download.png");
+}
+
+#documents .document .toolbar .add,#document .toolbar .add {
+	background-image: url("../images/icon-16-add.png");
+}
+
+#documents .document .toolbar .edit,#document .toolbar .edit {
+	background-image: url("../images/icon-16-edit.png");
+}
+
+#documents .document .toolbar .delete,#document .toolbar .delete {
+	background-image: url("../images/icon-16-trash.png");
+}
+
+#documents .document .toolbar .deleteDocument,#document .toolbar .deleteDocument {
+	background-image: url("../images/icon-16-docs-delete.png");
+}
+
+#documents .document .toolbar .publish,#document .toolbar .publish {
+	background-image: url("../images/icon-16-publish.png");
+}
+
+#documents .document .toolbar .unpublish,#document .toolbar .unpublish {
+	background-image: url("../images/icon-16-unpublish.png");
+}
+
+#document table.admintable td.key,#document table.admintable td {
+	padding: 5px;
+}
+
+#document table.admintable td.key {
+	font-weight: bold;
+}
+
+#document .edittoolbar {
+	float: right;
+}
+
+#document .edittoolbar a,#document .edittoolbar a:hover {
+	background-position: 15px 0;
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 20px;
+	padding-top: 32px;
+	text-align: center;
+	width: 62px;
+}
+
+#document .edittoolbar .apply {
+	background-image: url("../images/icon-32-apply.png");
+}
+
+#document .edittoolbar .save {
+	background-image: url("../images/icon-32-save.png");
+}
+
+#document .edittoolbar .cancel {
+	background-image: url("../images/icon-32-cancel.png");
+}
+
+#document h1 {
+	margin: 0;
+	padding: 10px 0 5px;
+}
+
+#document .back {
+	background-image: url("../images/icon-16-back.png");
+	background-repeat: no-repeat;
+	display: block;
+	height: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: auto;
+}
+
+#document {
+	margin: 0;
+	padding: 0 0 20px;
+}
+
+#document p {
+	margin: 0;
+	padding: 0;
+}
+
+#document .info {
+	padding: 10px 0;
+}
+
+#document .info .clr {
+	clear: left;
+}
+
+#document .toolbar .clr {
+	clear: left;
+}
+
+#document .toolbar {
+	padding: 10px 0;
+}
+
+#document .toolbar .download {
+	background-image: url("../images/icon-16-download.png");
+	background-repeat: no-repeat;
+	display: block;
+	float: left;
+	height: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+	width: auto;
+}
+
+.fileinfo {
+	background-image: url("../images/icon-16-filesize.png");
+	background-repeat: no-repeat;
+	display: block;
+	float: right;
+	height: 16px;
+	width: 16px;
+}
+
+table.history thead th {
+	border: 1px solid #DDDDDD;
+	padding: 3px;
+}
+
+table.history tbody td {
+	border: 1px solid #DDDDDD;
+	padding: 3px;
+}
+
+#content-box label.edit {
+	margin-top: 4px;
+	min-width: 1px;
+	padding-right: 3px;
+}
+
+.fullWidth {
+	width: 100%;
+}
+
+#content-box .autoHeight {
+	height: auto;
+}
+
+.blind {
+	position: absolute;
+	top: -1000px;
+	left: -1000px;
+}
+
+div.rename {
+	float: left;
+	white-space: nowrap;
+}
+
+.nowrap {
+	white-space: nowrap;
+}
+
+.noLink,.noLink:hover {
+	text-decoration: none;
+	color: #666666;
+	cursor: default;
+}
+
+div#documents div.upload {
+	background-color: #E0DEDF;
+	margin-bottom: 30px;
+	margin-top: 10px;
+	padding: 10px;
+}

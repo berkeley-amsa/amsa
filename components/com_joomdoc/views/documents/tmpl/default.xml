@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="JOOMDOC_DOCUMENTS_DEFAULT_LAYOUT" option="JOOMDOC_DOCUMENTS_DEFAULT_LAYOUT_OPTION">
+		<message>
+			<![CDATA[JOOMDOC_DOCUMENTS_DEFAULT_LAYOUT_DESC]]>
+		</message>
+	</layout>
+    <!-- Joomla 1.6.x -->
+	<fields name="request">
+		<fieldset name="request"
+			addfieldpath="/administrator/components/com_joomdoc/models/fields">
+			<field name="path" type="modal_documents" label="JOOMDOC_FIELD_SELECT_DOCUMENT_LABEL"
+				required="false" description="JOOMDOC_FIELD_SELECT_DOCUMENT_DESC" />
+		</fieldset>
+	</fields>
+	<fields name="params">
+		<fieldset name="basic" label="JOOMDOC_DOCUMENTS_SETTINGS_LABEL">
+            <field name="virtual_folder" type="list" label="JOOMDOC_VIRTUAL_FOLDER"
+                description="JOOMDOC_VIRTUAL_FOLDER_DESC" default="1">
+                <option value="1">JON</option>
+                <option value="0">JOFF</option>
+            </field>
+			<field name="show_subfolders" type="list" label="JOOMDOC_SHOW_SUBFOLDERS"
+				description="JOOMDOC_SHOW_SUBFOLDERS_DESC" default="1">
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+			<field name="files_without_doc" type="list" label="JOOMDOC_FIELD_FILES_WITHOUT_DOC_LABEL"
+				description="JOOMDOC_FIELD_FILES_WITHOUT_DOC_DESC" default="1">
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+			<field name="document_ordering" type="list" label="JOOMDOC_DOCUMENT_ORDERING"
+				description="JOOMDOC_DOCUMENT_ORDERING_DESC">
+				<option value="ordering">JOOMDOC_ORDERING_ORDERING</option>
+				<option value="title">JOOMDOC_ORDERING_TITLE</option>
+				<option value="publish_up">JOOMDOC_ORDERING_DATE</option>
+			</field>
+			<field name="file_ordering" type="list" label="JOOMDOC_FILE_ORDERING"
+				description="JOOMDOC_FILE_ORDERING_DESC">
+				<option value="path">JOOMDOC_ORDERING_PATH</option>
+				<option value="upload">JOOMDOC_ORDERING_UPLOAD</option>
+				<option value="hits">JOOMDOC_ORDERING_HITS</option>
+			</field>
+			<field name="show_fileicon" type="list" label="JOOMDOC_SHOW_FILEICON"
+				description="JOOMDOC_SHOW_FILEICON_DESC" default="1">
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+			<field name="show_filesize" type="list" label="JOOMDOC_SHOW_FILESIZE"
+				description="JOOMDOC_SHOW_FILESIZE_DESC" default="1">
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+			<field name="show_created" type="list" label="JOOMDOC_SHOW_CREATED"
+				description="JOOMDOC_SHOW_CREATED_DESC" default="1">
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+			<field name="show_modified" type="list" label="JOOMDOC_SHOW_MODIFIED"
+				description="JOOMDOC_SHOW_MODIFIED_DESC" default="1">
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+			<field name="show_hits" type="list" label="JOOMDOC_SHOW_HITS"
+				description="JOOMDOC_SHOW_HITS_DESC" default="1">
+				<option value="1">JSHOW</option>
+				<option value="0">JHIDE</option>
+			</field>
+            <field name="show_open_file" type="list" label="JOOMDOC_SHOW_OPEN_FILE"
+                description="JOOMDOC_SHOW_OPEN_FILE_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="show_download_file" type="list" label="JOOMDOC_SHOW_DOWNLOAD_FILE"
+                description="JOOMDOC_SHOW_DOWNLOAD_FILE_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="show_open_folder" type="list" label="JOOMDOC_SHOW_OPEN_FOLDER"
+                description="JOOMDOC_SHOW_OPEN_FOLDER_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="show_file_desc" type="list" label="JOOMDOC_SHOW_FILE_DESC"
+                description="JOOMDOC_SHOW_FILE_DESC_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+            <field name="show_folder_desc" type="list" label="JOOMDOC_SHOW_FOLDER_DESC"
+                description="JOOMDOC_SHOW_FOLDER_DESC_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </field>
+		</fieldset>
+	</fields>
+    <!-- Joomla 1.5.x -->
+    <state>
+        <name>JOOMDOC_DOCUMENTS_DEFAULT_LAYOUT</name>
+        <description>JOOMDOC_DOCUMENTS_DEFAULT_LAYOUT_DESC</description>
+        <url addpath="/administrator/components/com_joomdoc/elements">
+            <param name="path" type="documents" label="JOOMDOC_PARAM_SELECT_DOCUMENT_LABEL"
+                required="false" description="JOOMDOC_PARAM_SELECT_DOCUMENT_DESC" />
+        </url>
+        <params>
+            <param name="virtual_folder" type="list" label="JOOMDOC_VIRTUAL_FOLDER"
+                description="JOOMDOC_VIRTUAL_FOLDER_DESC" default="1">
+                <option value="1">JON</option>
+                <option value="0">JOFF</option>
+            </param>
+            <param name="show_subfolders" type="list" label="JOOMDOC_SHOW_SUBFOLDERS"
+                description="JOOMDOC_SHOW_SUBFOLDERS_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </param>
+            <param name="files_without_doc" type="list" label="JOOMDOC_param_FILES_WITHOUT_DOC_LABEL"
+                description="JOOMDOC_param_FILES_WITHOUT_DOC_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </param>
+            <param name="document_ordering" type="list" label="JOOMDOC_DOCUMENT_ORDERING"
+                description="JOOMDOC_DOCUMENT_ORDERING_DESC">
+                <option value="ordering">JOOMDOC_ORDERING_ORDERING</option>
+                <option value="title">JOOMDOC_ORDERING_TITLE</option>
+                <option value="publish_up">JOOMDOC_ORDERING_DATE</option>
+            </param>
+            <param name="file_ordering" type="list" label="JOOMDOC_FILE_ORDERING"
+                description="JOOMDOC_FILE_ORDERING_DESC">
+                <option value="path">JOOMDOC_ORDERING_PATH</option>
+                <option value="upload">JOOMDOC_ORDERING_UPLOAD</option>
+                <option value="hits">JOOMDOC_ORDERING_HITS</option>
+            </param>
+            <param name="show_fileicon" type="list" label="JOOMDOC_SHOW_FILEICON"
+                description="JOOMDOC_SHOW_FILEICON_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </param>
+            <param name="show_filesize" type="list" label="JOOMDOC_SHOW_FILESIZE"
+                description="JOOMDOC_SHOW_FILESIZE_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </param>
+            <param name="show_created" type="list" label="JOOMDOC_SHOW_CREATED"
+                description="JOOMDOC_SHOW_CREATED_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </param>
+            <param name="show_modified" type="list" label="JOOMDOC_SHOW_MODIFIED"
+                description="JOOMDOC_SHOW_MODIFIED_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </param>
+            <param name="show_hits" type="list" label="JOOMDOC_SHOW_HITS"
+                description="JOOMDOC_SHOW_HITS_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </param>
+            <param name="show_open_file" type="list" label="JOOMDOC_SHOW_OPEN_FILE"
+                description="JOOMDOC_SHOW_OPEN_FILE_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </param>
+            <param name="show_download_file" type="list" label="JOOMDOC_SHOW_DOWNLOAD_FILE"
+                description="JOOMDOC_SHOW_DOWNLOAD_FILE_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </param>
+            <param name="show_open_folder" type="list" label="JOOMDOC_SHOW_OPEN_FOLDER"
+                description="JOOMDOC_SHOW_OPEN_FOLDER_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </param>
+            <param name="show_file_desc" type="list" label="JOOMDOC_SHOW_FILE_DESC"
+                description="JOOMDOC_SHOW_FILE_DESC_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </param>
+            <param name="show_folder_desc" type="list" label="JOOMDOC_SHOW_FOLDER_DESC"
+                description="JOOMDOC_SHOW_FOLDER_DESC_DESC" default="1">
+                <option value="1">JSHOW</option>
+                <option value="0">JHIDE</option>
+            </param>
+        </params>
+    </state>
+</metadata>

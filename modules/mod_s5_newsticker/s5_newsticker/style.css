@@ -1,0 +1,26 @@
+#s5_textrotatebuttons {
+	float:left;
+	height:19px;
+	width:48px;}
+
+a#s5textrotate_previous{
+	height:19px;
+	width:19px;
+	float:left;
+	margin-top:2px;
+	display:block;
+	background: url(arrowleft.png) no-repeat 0px 0px;} 	
+	
+	a#s5textrotate_previous:hover {
+	background: url(arrowleft.png) no-repeat 0px -18px;} 	
+	
+a#s5textrotate_next{
+	height:19px;
+	float:left;
+	width:19px;
+	margin-top:2px;
+	display:block;
+	background: url(arrowright.png) no-repeat 0px 0px;} 	
+	
+	a#s5textrotate_next:hover {
+	background: url(arrowright.png) no-repeat 0px -18px;} 	

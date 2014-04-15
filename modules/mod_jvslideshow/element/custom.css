@@ -1,0 +1,53 @@
+.listimage 
+{
+    clear:both;
+    border: 1px solid #CCCCCC;
+    padding: 5px; 
+}
+.listimage div
+{
+    overflow:hidden;
+}
+.JVListSlide-line
+{
+    border: 1px solid #CCCCCC; 
+    margin-bottom: 10px;
+    background:#F4F4F4;
+    position:relative;
+}
+.JVListSlide-attrs span
+{
+    float:left;
+}
+.JVListSlide-attrs input
+{
+    margin: 0px;
+}
+.JVListSlide-attrs span
+{
+    min-width: 70px;
+}
+.JVListSlide-attrs label{ margin:auto !important;}
+.images{max-height: 300px; overflow:auto !important;}
+.hidechild .JVListSlide-atribute
+{display:none;}
+
+.hidechild.to{background:#F0EE96;}
+.btnDelete
+{
+    width: 16px;
+    height: 16px;
+    background: url(img/erase.png);
+    display: block;
+    top:0px;
+    right: 0px;
+    position: absolute;
+}
+
+.btnAdd
+{
+    width: 32px;
+    height: 32px;
+    background: url(img/tag_add.png);
+    display: block;  
+}

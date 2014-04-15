@@ -1,0 +1,23 @@
+ARTIO JoomDOC3 Changelog
+(C) 2011 ARTIO International Co.
+--------------------------------
+
+-- 3.1.2   --- [01.09.2011]
+
+fix - WebDav setting turn off/on in Joomla 1.5.
+
+-- 3.1.1   --- [25.08.2011]
+
+new - option to disable webdav
+new - delete document's to trash
+fix - reverse virtual path to real path
+fix - menu itemid navigation
+fix - Mootools conflict in Joomla 1.5.x
+
+-- 3.1.0   --- [15.08.2011] 
+new - ACL
+new - copy/move items in backend
+new - edit/delete/upload items in frontend
+new - menu item option show/hide folder/file document description in frontend
+new - menu item option show/hide links folder/file open
+new - virtual root

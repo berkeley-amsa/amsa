@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="editors-xtd">
+    <name>Editors-xtd - JoomDOC</name>
+    <author>ARTIO s.r.o.</author>
+    <creationDate>2011-08-25</creationDate>
+    <copyright>Copyright (C) 2011 ARTIO s.r.o.. All rights reserved.</copyright>
+    
+    <license>GNU General Public License</license>
+    
+        <authorEmail>info@artio.net</authorEmail>
+    <authorUrl>http://www.artio.net/joomla-extensions/document-management</authorUrl>
+    <version>3.1.1</version>
+    <description>PLG_EDITORS-XTD_JOOMDOC_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="joomdoc">joomdoc.php</filename>
+    </files>
+</install>

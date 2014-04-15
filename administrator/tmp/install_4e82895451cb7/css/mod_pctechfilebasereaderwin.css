@@ -1,0 +1,74 @@
+.pctechfilebasereader {
+	width: 100%;
+	border: none;
+}
+.pfrfilelist {
+	list-style: none;
+	margin-left: 15px;
+	padding-left: 10px;
+}
+
+.pfrfilelist li {
+	padding-left: 0px;
+}
+
+.pfrfilelist li a {
+	/* margin-left: 15px; */
+}
+
+li.pfrfile {
+    list-style-type: disc;
+}
+
+li.pfrfile_file {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/file.png');
+}
+
+li.pfrfile_img {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/img.png');
+}
+li.pfrfile_htm {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/htm.png');
+}
+li.pfrfile_txt {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/txt.png');
+}
+li.pfrfile_swf {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/swf.png');
+}
+li.pfrfile_pdf {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/pdf.png');
+}
+li.pfrfile_zip {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/zip.png');
+}
+li.pfrfile_med {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/med.png');
+}
+li.pfrfile_mov {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/mov.png');
+}
+
+li.pfrfile_doc {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/doc.png');
+}
+li.pfrfile_ppt {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/ppt.png');
+}
+li.pfrfile_xls {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/xls.png');
+}
+li.pfrfile_vsd {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/vsd.png');
+}
+li.pfrfile_msg {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/msg.png');
+}
+
+li.pfrfile_dir {
+    list-style-image: url('modules/mod_pctechfilebasereader/images/dir.png');
+}
+
+.pfrcopyright {
+	font-size: 80%;
+}

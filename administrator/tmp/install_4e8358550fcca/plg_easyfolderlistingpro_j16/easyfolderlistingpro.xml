@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="1.6" type="plugin" group="content">
+	<name>Easy Folder Listing Pro</name>
+	<author>Michael Gilkes</author>
+	<creationDate>November 2010</creationDate>
+	<copyright>Copyright (C) 2010-2011 Michael Albert Gilkes. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPLv2</license>
+	<authorEmail>jaido7@yahoo.com</authorEmail>
+	<authorUrl>http://www.michaelgilkes.info</authorUrl>
+	<version>1.5 (J16)</version>
+	<description><![CDATA[<h3>Easy Folder Listing Pro v1.5</h3>
+<p style="font-weight:bold;">
+Copyright: Michael A. Gilkes
+License: GNU/GPL v2
+</p>
+<h4>Minimum Requirements:</h4>
+<ul>
+<li>Joomla 1.6 or 1.7</li>
+<li>PHP 5.2+</li>
+</ul>
+<h4>Description:</h4>
+<p>
+This is a flexible, simple-to-use plugin that is used to list the contents 
+of any folder in either a table or a list. The folder listing can display 
+the filename, with or without the extension, with or without the date 
+modified and file size, as well as a icon representing the file type. 
+It has the feature of allowing the user to specify whether the filename 
+listed should be linked or not.
+</p>
+<p>
+This plugin has the additional feature that allows for displaying subfolders 
+and viewing the contents of subfolders as well. The user can also click on 
+subfolder name to show or hide its contents The action to show or hide the 
+contents is animated via jQuery. The administrator can also specify the 
+show/hide transition method. For table display, the administrator can specify 
+the text headings for the columns as well.
+</p>
+<h4>Main features:</h4>
+<ul>
+<li>List files in any specified folder</li>
+<li>Each instance of the plugin on the page can have its own custom parameter set</li>
+<li>40 Parameters are customizable per instance</li>
+<li>Option to override all styles via style sheet editing</li>
+<li>Show icons for file types</li>
+<li>List files in either a table or a unordered list</li>
+<li>Sorting in Acsending or Descening order, by filename, date modified or file size</li>
+<li>Option to show/hide size, date, or date and time of the files</li>
+<li>Option to link to the files or not</li>
+<li>Option to specify a list of file types that should not be listed</li>
+<li>Option to specify a list of file types that will only be listed</li>
+<li>Color scheme of the table rows and border can be customized</li>
+<li>Specify the maximum subfolder level to explore</li>
+<li>Option to show subfolders</li>
+<li>Collapse or Reveal all subfolder listings</li>
+<li>Specify transtion type, easing and duration of subfolder sections animation</li>
+<li>Specify the text to display for an empty folder</li>
+<li>Specify the table headings text</li>
+<li>Customize the date and time format to be displayed</li>
+<li>Specify the list bullet style</li>
+<li>Exclude specific files or folders from the listing</li>
+<li>Option to show/hide empty folder text</li>
+<li>Option to force download files</li>
+<li>Option to enforce UTF-8 charset via header or meta tag</li>
+<li>Option to load jQuery or not</li>
+<li>User can interactively filter/search listing!</li>
+<li>Plugin Manager colors available through custom Color Picker</li>
+<li>Option to enclose jQuery code in noConflict()</li>
+</ul>
+<h4>Changes:</h4>
+<ul>
+<li>See changelog.txt</li>
+</ul>
+
+<h4>Known Issues:</h4>
+<p>Please note that the table transitions work best in Firefox 3.6+. Webkit-based browsers 
+(Chrome, Safari) don’t render the jQuery slide transitions for tables well. Opera 10 and 
+IE 8 don’t render the table transitions at all. Transitions seem to work for lists on all 
+the browsers, though.
+</p>
+
+<h4>Installation:</h4>
+<p>This plugin is designed for Joomla 1.6 and 1.7. To install go to the install/uninstall 
+extensions page of Joomla Administrator and upload the package file. Then go to 
+the Plugin Manager page and activate the plugin.
+</p>
+
+<h4>Usage:</h4>
+<p>
+To use this plugin as content in an article, first enable the plugin and configure the 
+default parameters in the Plugin Manager. To control which types of users have access to 
+this plugin, set the Access Level in the plugin.
+</p>
+<p>
+Secondly, in the article, type '{easyfolderlistingpro}'. It will work based on the default 
+parameters if typed with no custom parameters.
+</p>
+<p>
+To have multiple uploaders on the same page, just add 
+'{easyfolderlistingpro parameter1='value1'|parameter2='value2'|...|parameterN='valueN'}' for
+each instance you want. Please note that each instance must have something different about 
+their listed parameters.
+</p>
+<h4>Parameters:</h4>
+<style>
+.eflproMYtable
+{
+        width: 100%; 
+        border-collapse: separate; 
+        border-spacing: 1px; 
+        background-color: rgb(205, 205, 205); 
+        text-align: left;
+}
+
+table.eflproMYtable tr:nth-child(odd) > td
+{
+        background-color: rgb(240, 240, 246);
+        padding: 1px;
+}
+
+table.eflproMYtable tr:nth-child(even) > td
+{
+        background-color: rgb(255, 255, 255);
+        padding: 1px;
+}
+
+table.eflproMYtable th
+{
+        background-color: rgb(230, 238, 238);
+        border: 1px solid rgb(255, 255, 255); 
+        padding: 4px;
+}
+
+</style>
+<table class="eflproMYtable">
+<tr>
+<th>Name</th><th>Keyword</th><th>Default Value</th><th>Description</th>
+</tr>
+<tr>
+<td>Location of the Listing Folder</td><td>folder</td><td>images</td><td>This is the actual folder where the files are kept.</td>
+</tr>
+<tr>
+<td>Max Subfolder Level</td><td>level</td><td>3</td><td>This is the maximum subfolder level that we are going to give access to.</td>
+</tr>
+<tr>
+<td>Show Subfolders</td><td>subfolders</td><td>Yes (1)</td><td>If this option is set to Yes, all subfolders will be listed.</td>
+</tr>
+<tr>
+<td>Reset Header Charset to UTF-8</td><td>** NO KEYWORD **</td><td>No (0)</td><td>If this option is set to Yes, the charset value in the php header be be reset to UTF-8. This parameter can *ONLY* be specified in the Plugins Manager.</td>
+</tr>
+<tr>
+<td>Add UTF-8 Meta Tag</td><td>** NO KEYWORD **</td><td>No (0)</td><td>If this option is set to Yes, a META tag will be added to the webpaage to set charset to UTF-8. This parameter can *ONLY* be specified in the Plugins Manager.</td>
+</tr>
+<tr>
+<td>jQuery to Load</td><td>** NO KEYWORD **</td><td>bundled</td><td>This specifies whether to load the bundled jQuery, the latest jQuery supplied online, or none at all (assuming jQuery is loaded on your site already). This parameter can *ONLY* be specified in the Plugins Manager.</td>
+</tr>
+<tr>
+<td>Enable noConflict</td><td>** NO KEYWORD **</td><td>No(0)</td><td>If Yes, all jQuery code is enclosed in noConflict()</td>
+</tr>
+<tr>
+<td>Collapse Subfolders</td><td>collapse</td><td>Yes (1)</td><td>If this option is set to Yes, all subfolders will be collapsed. If set to No, all subfolders will be expanded.</td>
+</tr>
+<tr>
+<td>Transition Method</td><td>transition</td><td>slide (slideToggle)</td><td>This specifies the type of transition that will be toggled to show or hide the subfolder contents. Other options are fade (fadeToggle), and slide and fade (toggle)</td>
+</tr>
+<tr>
+<td>Transition Easing</td><td>easing</td><td>swing</td><td>This specifies the type of easing that the transition will use. Other option is linear.</td>
+</tr>
+<tr>
+<td>Transition Speed</td><td>duration</td><td>slow</td><td>This specifies the speed at which subfolder contents transitions to and from being viewed. Other option is fast.</td>
+</tr>
+<tr>
+<td>Show Icons</td><td>icons</td><td>Yes (1)</td><td>If this option is set to Yes, each file will have an icon to describe the type of the file.</td>
+</tr>
+<tr>
+<td>Show File Extensions</td><td>extensions</td><td>No (0)</td><td>If this option is set to No, each file name will be displayed without the file extension.</td>
+</tr>
+<tr>
+<td>Filename Text</td><td>filetext</td><td>Filename</td><td>This is the header text for the file column.</td>
+</tr>
+<tr>
+<td>Size Text</td><td>sizetext</td><td>Size</td><td>This is the header text for the size column.</td>
+</tr>
+<tr>
+<td>Date Text</td><td>datetext</td><td>Date</td><td>This is the header text for the date column.</td>
+</tr>
+<tr>
+<td>Show File Size</td><td>size</td><td>Yes (1)</td><td>If this option is set to Yes, the size of the file will be shown.</td>
+</tr>
+<tr>
+<td>Show Date</td><td>date</td><td>Yes (1)</td><td>If this option is set to Yes, the date that each file was modified will be shown.</td>
+</tr>
+<tr>
+<td>Show Time (with the Date above)</td><td>time</td><td>Yes (1)</td><td>If this option is set to Yes, the time stamp that each file was modified will be shown. If it is set to No, then only the Date will be shown. Note that if Date (above) is not shown at all, then time will not show either.</td>
+</tr>
+<tr>
+<td>Date Format</td><td>dateformat</td><td>Y-m-d</td><td>The format for the date only column. For help go to: http://www.php.net/manual/en/function.date.php</td>
+</tr>
+<tr>
+<td>DateTime Format</td><td>timeformat</td><td>Y-m-d H:i:s</td><td>The format for the date and time format. For help go to: http://www.php.net/manual/en/function.date.php</td>
+</tr>
+<tr>
+<td>Link To Files</td><td>linktofiles</td><td>Yes (1)</td><td>If this option is set to Yes, each file will be hyperlinked for easy downloading.</td>
+</tr>
+<tr>
+<td>Link Target</td><td>target</td><td>_blank</td><td>This specifies the link taget when you Link To Files (above). Other options are _parent, _self, and _top.</td>
+</tr>
+<tr>
+<td>Download Target</td><td>download</td><td>icon</td><td>This specifies whether to allow users to download files. You can add a download icon (icon). Or, you can make them download by clicking the linked filename (link). Or you can disable it (none).</td>
+</tr>
+<tr>
+<td>Show Empty Message</td><td>showempty</td><td>Yes (1)</td><td>If this option is set to Yes, the empty folder message below will be shown. If set to No, the empty folder message will not be shown.</td>
+</tr>
+<tr>
+<td>Empty Folder Message</td><td>empty</td><td>There are no files to list.</td><td>This is the message that will be displayed if a folder is empty.</td>
+</tr>
+<tr>
+<td>Show Filter Textbox</td><td>showfilter</td><td>Yes (1)</td><td>If this option is set to Yes, the a filter textbox will be shown. If set to No, the filter textbox will not be shown.</td>
+</tr>
+<tr>
+<td>Filter Label</td><td>filterlabel</td><td>Filter</td><td>This is the lable that will be shown preceding the textbox.</td>
+</tr>
+<tr>
+<td>Filter Error Message</td><td>filtererror</td><td>File not found!</td><td>This is the error message that will be displayed if a filter text is not found in the listing.</td>
+</tr>
+<tr>
+<td>Delay after typing (ms)</td><td>filterwait</td><td>500</td><td>This is the time delay (in milliseconds) after the user stops typing in the filter textbox before the filter is applied.</td>
+</tr>
+<tr>
+<td>Forbidden file types (separate by semi-colon)</td><td>forbidden</td><td>htm;html;php</td><td>This is a black list of the file types that are forbidden to be listed (separated by semi-colon).</td>
+</tr>
+<tr>
+<td>Permitted file types (separate by semi-colon)</td><td>whitelist</td><td>*</td><td>This is a white list of the only file types that are to be listed (separated by semi-colon). Use '*' to list any file type that is not forbidden above. This allows you to only list certain types of files from a folder with many different types.</td>
+</tr>
+<tr>
+<td>Excluded Files (separate by semi-colon)</td><td>exfiles</td><td>Desktop.ini;.@__thumb;.DS_Store</td><td>This is a black list of the files that are to be excluded from the listing (separated by semi-colon).</td>
+</tr>
+<tr>
+<td>Excluded Folders (separate by semi-colon)</td><td>exfolders</td><td>.svn;CVS;.AppleDB;.AppleDesktop;.AppleDouble</td><td>This is a black list of the folders that should be excluded from the listing (separated by semi-colon).</td>
+</tr>
+<tr>
+<td>Display Method</td><td>method</td><td>table</td><td>If Table is selected, the folder listing will be displayed in an HTML TABLE. If List is selected, it will be displayed using the Unordered List element. Other option is list.</td>
+</tr>
+<tr>
+<td>List Item Bullet Style</td><td>liststyle</td><td>none</td><td>This specifies the style of the list item bullet. Other options are disc, circle, square, decimal, decimal-leading-zero, lower-roman, upper-roman, lower-greek, lower-latin, upper-latin, armenian, georgian, lower-alpha, and upper-alpha. This can be overridden in the styles.css stylesheet.</td>
+</tr>
+<tr>
+<td>Ratio of Name Column Width to Other Columns</td><td>ratio</td><td>2</td><td>This is the ratio of the name column's width to the other columns.</td>
+</tr>
+<tr>
+<td>Sort Column</td><td>sortcolumn</td><td>name</td><td>This specifies the column that the list is sorted by. Other options are size and date.</td>
+</tr>
+<tr>
+<td>Sort Direction</td><td>sortdirection</td><td>asc</td><td>This specifies whether we are sorting by ascending or descending order. Other option is desc.</td>
+</tr>
+<tr>
+<td>Odd Table Row Background Color</td><td>oddcolor</td><td>#F0F0F6</td><td>The background color of the odd table row.</td>
+</tr>
+<tr>
+<td>Even Table Row Background Color</td><td>evencolor</td><td>#FFFFFF</td><td>The background color of the even table row.</td>
+</tr>
+<tr>
+<td>Heading Row Background Color</td><td>headcolor</td><td>#E6EEEE</td><td>The background color of the heading row.</td>
+</tr>
+<tr>
+<td>Sub Folder Background Color</td><td>subcolor</td><td>#EFEFEF</td><td>The background color of the table's subfolder rows.</td>
+</tr>
+<tr>
+<td>Border Color</td><td>bordercolor</td><td>#CDCDCD</td><td>The color of the table's border.</td>
+</tr>
+</table>
+<h4>Credits:</h4>
+<ul>
+<li>Silk icon set 1.3 by Mark James [ <a href="http://www.famfamfam.com/lab/icons/silk/" target="_blank">http://www.famfamfam.com/lab/icons/silk/</a> ]</li>
+<li>jQuery 1.6.1 [ <a href="http://jquery.com" target="_blank">http://jquery.com</a> ]</li>
+<li>Color Picker jQuery Plugin by Stefan Petre [ <a href="http://www.eyecon.ro/colorpicker/" target="_blank">http://www.eyecon.ro/colorpicker/</a> ]</li>
+</ul>
+]]></description>
+	<files>
+		<filename plugin="easyfolderlistingpro">easyfolderlistingpro.php</filename>
+		<filename>index.html</filename>
+		<filename>readme.txt</filename>
+		<filename>changelog.txt</filename>
+		<filename>helper.php</filename>
+		<filename>download.php</filename>
+		<filename>css/index.html</filename>
+		<filename>css/styles.css</filename>
+		<filename>css/colorpicker.css</filename>
+		<filename>scripts/index.html</filename>
+		<filename>scripts/jquery-1.6.1.min.js</filename>
+		<filename>scripts/eflpFunctions.js</filename>
+		<filename>scripts/colorpicker.js</filename>
+		<filename>icons/index.html</filename>
+		<filename>icons/application.png</filename>
+		<filename>icons/cancel.png</filename>
+		<filename>icons/cross.png</filename>
+		<filename>icons/disk.png</filename>
+		<filename>icons/exclamation.png</filename>
+		<filename>icons/film.png</filename>
+		<filename>icons/folder_explore.png</filename>
+		<filename>icons/folder_go.png</filename>
+		<filename>icons/html.png</filename>
+		<filename>icons/image.png</filename>
+		<filename>icons/l-node.png</filename>
+		<filename>icons/music.png</filename>
+		<filename>icons/page_code.png</filename>
+		<filename>icons/page_excel.png</filename>
+		<filename>icons/page_white_acrobat.png</filename>
+		<filename>icons/page_white_c.png</filename>
+		<filename>icons/page_white_h.png</filename>
+		<filename>icons/page_white_code.png</filename>
+		<filename>icons/page_white_compressed.png</filename>
+		<filename>icons/page_white_cplusplus.png</filename>
+		<filename>icons/page_white_csharp.png</filename>
+		<filename>icons/page_white_excel.png</filename>
+		<filename>icons/page_white_flash.png</filename>
+		<filename>icons/page_white_php.png</filename>
+		<filename>icons/page_white_powerpoint.png</filename>
+		<filename>icons/page_white_text.png</filename>
+		<filename>icons/page_white_visualstudio.png</filename>
+		<filename>icons/page_white_word.png</filename>
+		<filename>icons/page_white_zip.png</filename>
+		<filename>icons/page_white.png</filename>
+		<filename>icons/page_word.png</filename>
+		<filename>icons/picture.png</filename>
+		<filename>icons/t-node.png</filename>
+		<filename>elements/index.html</filename>
+		<filename>elements/easycolorpicker.php</filename>
+		<filename>images/index.html</filename>
+		<filename>images/blank.gif</filename>
+		<filename>images/colorpicker_indic.gif</filename>
+		<filename>images/colorpicker_select.gif</filename>
+		<filename>images/custom_indic.gif</filename>
+		<filename>images/colorpicker_background.png</filename>
+		<filename>images/colorpicker_hex.png</filename>
+		<filename>images/colorpicker_hsb_b.png</filename>
+		<filename>images/colorpicker_hsb_h.png</filename>
+		<filename>images/colorpicker_hsb_s.png</filename>
+		<filename>images/colorpicker_overlay.png</filename>
+		<filename>images/colorpicker_rgb_b.png</filename>
+		<filename>images/colorpicker_rgb_g.png</filename>
+		<filename>images/colorpicker_rgb_r.png</filename>
+		<filename>images/colorpicker_submit.png</filename>
+		<filename>images/custom_background.png</filename>
+		<filename>images/custom_hex.png</filename>
+		<filename>images/custom_hsb_b.png</filename>
+		<filename>images/custom_hsb_h.png</filename>
+		<filename>images/custom_hsb_s.png</filename>
+		<filename>images/custom_rgb_b.png</filename>
+		<filename>images/custom_rgb_g.png</filename>
+		<filename>images/custom_rgb_r.png</filename>
+		<filename>images/custom_submit.png</filename>
+		<filename>images/select.png</filename>
+		<filename>images/select2.png</filename>
+		<filename>images/slider.png</filename>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/plugins/content/easyfolderlistingpro/elements">
+			<fieldset name="basic">
+				<field name="eflpro_folder" type="text" default="images" label="Location of the Listing Folder" description="This is the actual folder where the files are kept." />
+				<field name="eflpro_maxlevel" type="text" default="3" label="Max Subfolder Level" description="This is the maximum subfolder level that we are going to give access to." />
+				<field name="eflpro_show_subfolders" type="list" default="1" label="Show Subfolders" description="If this option is set to Yes, all subfolders will be listed.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="eflpro_charsetutf8" type="list" default="0" label="Reset Header Charset to UTF-8" description="If this option is set to Yes, the charset value in the php header be be reset to UTF-8. This parameter can *ONLY* be specified in the Plugins Manager.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="eflpro_metautf8" type="list" default="0" label="Add UTF-8 Meta Tag" description="If this option is set to Yes, a META tag will be added to the webpaage to set charset to UTF-8. This parameter can *ONLY* be specified in the Plugins Manager.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="eflpro_spacer_jquery" type="spacer" label="&lt;b&gt;jQuery&lt;/b&gt;" />
+				<field name="eflpro_jquery" type="list" default="bundled" label="jQuery to Load" description="This specifies whether to load the bundled jQuery, the latest jQuery supplied online, or none at all (assuming jQuery is loaded on your site already). This parameter can *ONLY* be specified in the Plugins Manager." >
+					<option value="bundled">bundled jQuery 1.6.1</option>
+					<option value="latest">latest jQuery Online</option>
+					<option value="none">Do Not Load jQuery</option>
+				</field>
+				<field name="eflpro_noconflict" type="list" default="0" label="Enable noConflict" description="If Yes, all jQuery code is enclosed in noConflict().">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="eflpro_collapse" type="list" default="1" label="Collapse Subfolders" description="If this option is set to Yes, all subfolders will be collapsed. If set to No, all subfolders will be expanded.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="eflpro_transition" type="list" default="fadeToggle" label="Transition Method" description="This specifies the type of transition that will be toggled to show or hide the subfolder contents." >
+					<option value="slideToggle">slide</option>
+					<option value="fadeToggle">fade</option>
+					<option value="toggle">slide and fade</option>
+				</field>
+				<field name="eflpro_easing" type="list" default="swing" label="Transition Easing" description="This specifies the type of easing that the transition will use." >
+					<option value="swing">swing</option>
+					<option value="linear">linear</option>
+				</field>
+				<field name="eflpro_duration" type="list" default="slow" label="Transition Speed" description="This specifies the speed at which subfolder contents transitions to and from being viewed." >
+					<option value="slow">slow</option>
+					<option value="400">normal</option>
+					<option value="fast">fast</option>
+				</field>
+				<field name="eflpro_spacer_content" type="spacer" label="&lt;b&gt;Customize Content&lt;/b&gt;" />
+				<field name="eflpro_icons" type="list" default="1" label="Show Icons" description="If this option is set to Yes, each file will have an icon to describe the type of the file.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="eflpro_extensions" type="list" default="0" label="Show File Extensions" description="If this option is set to No, each file name will be displayed without the file extension.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="eflpro_filetext" type="text" default="Filename" label="Filename Text" description="This is the header text for the file column." />
+				<field name="eflpro_sizetext" type="text" default="Size" label="Size Text" description="This is the header text for the size column." />
+				<field name="eflpro_datetext" type="text" default="Date" label="Date Text" description="This is the header text for the date column." />
+				<field name="eflpro_size" type="list" default="1" label="Show File Size" description="If this option is set to Yes, the size of the file will  be shown.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="eflpro_date" type="list" default="1" label="Show Date" description="If this option is set to Yes, the date that each file was modified will be shown.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="eflpro_time" type="list" default="1" label="Show Time (with the Date above)" description="If this option is set to Yes, the time stamp that each file was modified will be shown. If it is set to No, then only the Date will be shown. Note that if Date (above) is not shown at all, then time will not show either.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="eflpro_dateformat" type="text" default="Y-m-d" label="Date Format" description="The format for the date only column. The default value is Y-m-d. For help go to: http://www.php.net/manual/en/function.date.php" />
+				<field name="eflpro_timeformat" type="text" default="Y-m-d H:i:s" label="DateTime Format" description="The format for the date and time format. The default value is Y-m-d H:i:s. For help go to: http://www.php.net/manual/en/function.date.php" />
+				<field name="eflpro_linktofiles" type="list" default="1" label="Link To Files" description="If this option is set to Yes, each file will be hyperlinked for easy downloading.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="eflpro_target" type="list" default="_blank" label="Link Target" description="This specifies the link taget when you Link To Files (above)." >
+					<option value="_blank">_blank</option>
+					<option value="_parent">_parent</option>
+					<option value="_self">_self</option>
+					<option value="_top">_top</option>
+				</field>
+				<field name="eflpro_download" type="list" default="icon" label="Download Target" description="This specifies whether to allow users to download files. You can add a download icon (icon). Or, you can make them download by clicking the linked filename (link). Or you can disable it (none)." >
+					<option value="icon">Icon</option>
+					<option value="link">Link (overrides Link to Files)</option>
+					<option value="none">None</option>
+				</field>
+				<field name="eflpro_showempty" type="list" default="1" label="Show Empty Message" description="If this option is set to Yes, the empty folder message below will be shown. If set to No, the empty folder message will not be shown.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="eflpro_empty" type="text" default="There are no files to list." label="Empty Folder Message" description="This is the message that will be displayed if a folder is empty." />
+				<field name="eflpro_spacer_filter" type="spacer" label="&lt;b&gt;Filtering/Searching&lt;/b&gt;" />
+				<field name="eflpro_showfilter" type="list" default="1" label="Show Filter Textbox" description="If this option is set to Yes, the a filter textbox will be shown. If set to No, the filter textbox will not be shown.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="eflpro_filterlabel" type="text" default="Filter" label="Filter Label" description="This is the lable that will be shown preceding the textbox." />
+				<field name="eflpro_filtererror" type="text" default="File not found!" label="Filter Error Message" description="This is the error message that will be displayed if a filter text is not found in the listing." />
+				<field name="eflpro_filterwait" type="text" default="500" label="Delay after typing (ms)" description="This is the time delay (in milliseconds) after the user stops typing in the filter textbox before the filter is applied." />
+				<field name="eflpro_spacer_security" type="spacer" label="&lt;b&gt;Security&lt;/b&gt;" />
+				<field name="eflpro_forbidden" type="textarea" default="htm;html;php" label="Forbidden file types (separate by semi-colon)." description="This is a black list of the file types that are forbidden to be listed (separated by semi-colon)." rows="10" cols="30" />
+				<field name="eflpro_whitelist" type="textarea" default="*" label="Permitted file types (separate by semi-colon)." description="This is a white list of the only file types that are to be listed (separated by semi-colon). Use '*' to list any file type that is not forbidden above. This allows you to only list certain types of files from a folder with many different types. " rows="10" cols="30" />
+				<field name="eflpro_exfiles" type="textarea" default="Desktop.ini;.@__thumb;.DS_Store" label="Excluded Files (separate by semi-colon)." description="This is a black list of the files that are to be excluded from the listing (separated by semi-colon)." rows="10" cols="30" />
+				<field name="eflpro_exfolders" type="textarea" default=".svn;CVS;.AppleDB;.AppleDesktop;.AppleDouble" label="Excluded Folders (separate by semi-colon)." description="This is a black list of the folders that should be excluded from the listing (separated by semi-colon)." rows="10" cols="30" />
+				<field name="eflpro_spacer_display" type="spacer" label="&lt;b&gt;Customize Display&lt;/b&gt;" />
+				<field name="eflpro_method" type="list" default="table" label="Display Method" description="If Table is selected, the folder listing will be displayed in an HTML TABLE. If List is selected, it will be displayed using the Unordered List element.">
+					<option value="table">Table</option>
+					<option value="list">List</option>
+				</field>
+				<field name="eflpro_liststyle" type="list" default="none" label="List Item Bullet Style" description="This specifies the style of the list item bullet. This can be overridden in the styles.css stylesheet." >
+					<option value="none">none</option>
+					<option value="disc">disc</option>
+					<option value="circle">circle</option>
+					<option value="square">square</option>
+					<option value="decimal">decimal</option>
+					<option value="decimal-leading-zero">decimal leading zero</option>
+					<option value="lower-roman">lower roman</option>
+					<option value="upper-roman">upper roman</option>
+					<option value="lower-greek">lower greek</option>
+					<option value="lower-latin">lower latin</option>
+					<option value="upper-latin">upper latin</option>
+					<option value="armenian">armenian</option>
+					<option value="georgian">georgian</option>
+					<option value="lower-alpha">lower alpha</option>
+					<option value="upper-alpha">upper alpha</option>
+				</field>
+				<field name="eflpro_ratio" type="text" default="2" label="Ratio of Name Column Width to Other Columns" description="This is the ratio of the name column's width to the other columns." />
+				<field name="eflpro_sortcolumn" type="list" default="name" label="Sort Column" description="This specifies the column that the list is sorted by." >
+					<option value="name">Name</option>
+					<option value="size">Size</option>
+					<option value="date">Date</option>
+				</field>
+				<field name="eflpro_sortdirection" type="list" default="asc" label="Sort Direction" description="This specifies whether we are sorting by ascending or descending order." >
+					<option value="asc">Ascending</option>
+					<option value="desc">Descending</option>
+				</field>
+				<field name="eflpro_oddcolor" type="easycolorpicker" default="#F0F0F6" label="Odd Table Row Background Color" description="The background color of the odd table row. The default value is #F0F0F6." />
+				<field name="eflpro_evencolor" type="easycolorpicker" default="#FFFFFF" label="Even Table Row Background Color" description="The background color of the even table row. The default value is #FFFFFF." />
+				<field name="eflpro_headcolor" type="easycolorpicker" default="#E6EEEE" label="Heading Row Background Color" description="The background color of the heading row. The default value is #E6EEEE." />
+				<field name="eflpro_subcolor" type="easycolorpicker" default="#EFEFEF" label="Sub Folder Background Color" description="The background color of the table's subfolder rows. The default value is #EFEFEF" />
+				<field name="eflpro_bordercolor" type="easycolorpicker" default="#CDCDCD" label="Border Color" description="The color of the table's border. The default value is #CDCDCD." />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

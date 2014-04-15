@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>Mega Lightbox Login</name>
+	<author>OmegaTheme.com</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright (C) 2008 - 2011 OmegaTheme. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>services@omegatheme.com</authorEmail>
+	<authorUrl>http://omegatheme.com</authorUrl>
+	<version>1.6.0</version>
+	<description>MOD_MEGALIGHTBOXLOGIN_DESCRIPTION</description>
+	<files>
+		<filename module="mod_megalightboxlogin">mod_megalightboxlogin.php</filename>
+		<folder>assets</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<filename>mod_megalightboxlogin.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="login_title"
+					type="text"
+					default="Login/Register"
+					size="30"
+					label="MOD_MEGALIGHTBOXLOGIN_FIELD_LOGIN_TITLE_LABEL"
+					description="MOD_MEGALIGHTBOXLOGIN_FIELD_LOGIN_TITLE_DESC" />
+				<field
+					name="logout_title"
+					type="text"
+					default="Logout"
+					size="30"
+					label="MOD_MEGALIGHTBOXLOGIN_FIELD_LOGOUT_TITLE_LABEL"
+					description="MOD_MEGALIGHTBOXLOGIN_FIELD_LOGOUT_TITLE_DESC" />
+				<field
+					name="login"
+					type="menuitem"
+					disable="separator"
+					label="MOD_MEGALIGHTBOXLOGIN_FIELD_LOGIN_REDIRECTURL_LABEL"
+					description="MOD_MEGALIGHTBOXLOGIN_FIELD_LOGIN_REDIRECTURL_DESC" >
+					<option 
+						value="">JDEFAULT</option>
+				</field>
+				<field
+					name="logout"
+					type="menuitem"
+					disable="separator"
+					label="MOD_MEGALIGHTBOXLOGIN_FIELD_LOGOUT_REDIRECTURL_LABEL"
+					description="MOD_MEGALIGHTBOXLOGIN_FIELD_LOGOUT_REDIRECTURL_DESC" >
+					<option 
+						value="">JDEFAULT</option>
+				</field>
+				<field
+					name="name"
+					type="list"
+					default="0"
+					label="MOD_MEGALIGHTBOXLOGIN_FIELD_NAME_LABEL"
+					description="MOD_MEGALIGHTBOXLOGIN_FIELD_NAME_DESC">
+					<option
+						value="0">MOD_MEGALIGHTBOXLOGIN_VALUE_NAME</option>
+					<option
+						value="1">MOD_MEGALIGHTBOXLOGIN_VALUE_USERNAME</option>
+				</field>
+				<field
+					name="usesecure"
+					type="radio"
+					default="0"
+					label="MOD_MEGALIGHTBOXLOGIN_FIELD_USESECURE_LABEL"
+					description="MOD_MEGALIGHTBOXLOGIN_FIELD_USESECURE_DESC">
+					<option
+						value="0">JNo</option>
+					<option
+						value="1">JYes</option>
+				</field>
+			</fieldset>
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+				<field
+					name="cache"
+					type="list"
+					default="0"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+	<extension 
+	type="module" 
+	version="1.7" 
+	client="site" 
+	method="upgrade">
+	<name>FileBaseReader</name>
+	<creationDate>20-JYESn-2011</creationDate>
+	<author>Marcel Wuersch</author>
+	<authorEmail>info@pcte.ch</authorEmail>
+	<authorUrl>http://pcte.ch</authorUrl>
+	<copyright>(C) 2011 pcte.ch Webservices</copyright>
+	<license>GNU General Public License version 2 or later; see gpl.txt</license>
+	<version>1.7.0</version>
+	<description>MOD_PCTECHFILEBASEREADER_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_pctechfilebasereader">mod_pctechfilebasereader.php</filename>
+			<folder>images</folder>
+			<folder>tmpl</folder>
+			<folder>css</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<filename>gpl.txt</filename>
+		<filename>CHANGELOG.php</filename>
+	</files>
+	<languages>
+		<language tag="de-DE">language/de-DE.mod_pctechfilebasereader.ini</language>
+		<language tag="en-GB">language/en-GB.mod_pctechfilebasereader.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_FILEBASEREADER" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+			<field name="moduleclass_sfx" type="text" default="" label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+			<field name="ossystem" type="list" default="lin" label="MOD_PCTECHFILEBASEREADER_SERVER_OPERATING_SYSTEM_LABEL" description="MOD_PCTECHFILEBASEREADER_SERVER_OPERATING_SYSTEM_DESC">
+			  <option value="lin">MOD_PCTECHFILEBASEREADER_VALUE_OSX</option>
+			  <option value="win">MOD_PCTECHFILEBASEREADER_VALUE_WINDOWS</option>
+			</field>
+        <field name="pfrpath" type="text" default="" size="50" label="MOD_PCTECHFILEBASEREADER_VERZEICHNIS_PFAD_LABEL" description="MOD_PCTECHFILEBASEREADER_VERZEICHNIS_PFAD_DESC" />
+        <field name="url" type="text" default="" size="50" label="MOD_PCTECHFILEBASEREADER_VERZEICHNIS_URL_LABEL" description="MOD_PCTECHFILEBASEREADER_VERZEICHNIS_URL_DESC" />
+      </fieldset>
+      <fieldset name="advanced">
+        <field name="linkfiles" type="list" default="yes" label="MOD_PCTECHFILEBASEREADER_DATEIEN_VERLINKEN_LABEL" description="MOD_PCTECHFILEBASEREADER_DATEIEN_VERLINKEN_DESC">
+          <option value="yes">JYES</option>
+          <option value="no">JNo</option>
+        </field>
+        <field name="readertarget" type="list" default="_blank" label="MOD_PCTECHFILEBASEREADER_LINK_TARGET_LABEL" description="MOD_PCTECHFILEBASEREADER_LINK_TARGET_DESC">
+          <option value="_blank">JBROWSERTARGET_NEW</option>
+          <option value="_self">JBROWSERTARGET_PARENT</option>
+          <option value="_top">JBROWSERTARGET_MODAL</option>
+        </field>
+        <field name="showicons" type="list" default="yes" label="MOD_PCTECHFILEBASEREADER_ZEIGE_ICONS_LABEL" description="MOD_PCTECHFILEBASEREADER_ZEIGE_ICONS_DESC">
+          <option value="yes">JYes</option>
+          <option value="no">JNo</option>
+        </field>
+        <field name="showhidden" type="list" default="no" label="MOD_PCTECHFILEBASEREADER_ZEIGE_SYSTEM_DATEIEN_LABEL" description="MOD_PCTECHFILEBASEREADER_ZEIGE_SYSTEM_DATEIEN_DESC">
+          <option value="yes">JYES</option>
+          <option value="no">JNo</option>
+        </field>
+        <field name="recurse" type="list" default="no" label="MOD_PCTECHFILEBASEREADER_ZEIGE_SYSTEM_UNTERVERZEICHNISSE_LABEL" description="MOD_PCTECHFILEBASEREADER_ZEIGE_SYSTEM_UNTERVERZEICHNISSE_DESC">
+          <option value="yes">JYES</option>
+          <option value="no">JNo</option>
+        </field>
+        <field name="cache" type="list" default="0" label="COM_MODULES_FIELD_CACHING_LABEL" description="COM_MODULES_FIELD_CACHING_DESC">
+          <option value="1">MOD_PCTECHFILEBASEREADER_SYSTEM</option>
+          <option value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+        </field>
+        <field name="usefilter" type="list" default="no" label="MOD_PCTECHFILEBASEREADER_FILE_FILTER_LABEL" description="MOD_PCTECHFILEBASEREADER_FILE_FILTER_DESC">
+          <option value="yes">JYES</option>
+          <option value="no">JNo</option>
+        </field>
+        <field name="userfiletypelist" type="text" default=".pdf$|.zip$|.rar$|.gz$|.htm$|.html$|.mht$|.psd$|.ai$|.jpg$|.jpeg$|.png$|.bmp$|.gif$|.wmv$|.flv$|.swf$|.mp3$|.mpeg$|.3gp$|.avi$|.mov$|.doc$|.rtf$|.dot$|.xls$|.xlt$|.ppt$|.pps|.vss$|.vsd$|.msg$" size="50" label="MOD_PCTECHFILEBASEREADER_PUBLIC_FILES_LABEL" description="MOD_PCTECHFILEBASEREADER_PUBLIC_FILES_DESC" />
+        <field name="adminfiletypelist" type="text" default=".pdf$|.zip$|.rar$|.gz$|.htm$|.html$|.mht$|.psd$|.ai$|.jpg$|.jpeg$|.png$|.bmp$|.gif$|.wmv$|.flv$|.swf$|.mp3$|.mpeg$|.3gp$|.avi$|.mov$|.doc$|.rtf$|.dot$|.xls$|.xlt$|.ppt$|.pps|.vss$|.vsd$|.msg$" size="50" label="MOD_PCTECHFILEBASEREADER_ADMIN_FILES_LABEL" description="MOD_PCTECHFILEBASEREADER_ADMIN_FILES_DESC" />
+      </fieldset>
+    </fields>
+  </config>
+</extension>

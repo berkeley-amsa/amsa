@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>Yj Piecemaker</name>
+	<author>YouJoomla.com</author>
+	<creationDate>2-28-2011</creationDate>
+	<license>GNU/GPL</license>
+	<authorEmail>youjoomla@gmail.com</authorEmail>
+	<authorUrl>www.youjoomla.com</authorUrl>
+	<version>1.0.1</version>
+	<description>
+		<![CDATA[<style type="text/css" media="all">;wrap1 {padding:0px 0px 4px 0px;}h1 {clear:both;font-family: Arial Narrow,sans-serif;font-size:18px;margin:0px 0px 12px 0px;padding:0px 0px 1px 10px;color:;C64934;}.wrap2 {background:;F7F7F7;}</style><div id="holdthem"><h1>Youjoomla Piecemaker Module for Joomla 1.5x</h1><div class="wrap2"><a title="Visit the official website!" href="http://www.youjoomla.com"> <img style="float:left;border:1px solid ;CFCFCF;margin:0px 15px 4px 22px;" src="../modules/mod_yj_piecemaker/images/yj_extensions.jpg" border="0" alt="Logo" /></a>]]>
+	</description>
+	<languages>
+		<language tag="en-GB">en-GB.mod_yj_piecemaker.ini</language>
+		<language tag="en-GB">en-GB.mod_yj_piecemaker.sys.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_yj_piecemaker">mod_yj_piecemaker.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+		<folder>elements</folder>
+		<folder>xmlfiles</folder>
+		<folder>script</folder>
+		<folder>css</folder>
+		<folder>images</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_yj_piecemaker/elements">
+			<fieldset name="LAYOUT_SETTINGS">
+				<field name="handler" type="yjhandler"/>
+				<field type="yjspacer" default="&lt;strong&gt;MODULE LAYOUT SETTINGS&lt;/strong&gt;" />
+				<field name="module_template" type="folderlist" default="Default" hide_none="blank" label="Select default module template" directory="modules/mod_yj_piecemaker/tmpl" description="You can create custom module  templates for YJ Piecemaker Simply copy modules/mod_yj_piecemaker/tmpl/Default folder , rename it to your own template name and edit default.php within your template folder to your liking. Once you have created your module template , your template name will be visible here. You can also copy your template folder to your template/html/mod_yj_piecemaker/ folder and create custom overides for each module instance. To get you started we have created blank module template name New" />
+				<field name="width" type="text" size="20" default="900" label="Slide width" description="Slide width" />
+				<field name="height" type="text" size="20" default="360" label="Slide height" description="Slide height should be the image or media height" />
+				<field name="MenuDistanceY" type="text" size="20" default="50" label="MenuDistanceY" description="Distance of the menu from the bottom of the image.NOTE: Lowest values should be 10 for best performance." />
+				<field name="MenuDistanceX" type="text" size="20" default="20" label="MenuDistanceX" description="Distance between two menu items (from center to center)" />
+				<field name="DropShadowDistance" type="text" size="20" default="25" label="Shaodow height" description="Shaodow height from slide bottom edge." />
+				<field name="order" type="list" default="0" label="Slides ordering" description="Slide ordering">
+					<option value="0">By slide ordering</option>
+					<option value="1">Random</option>
+				</field>
+				<field name="Autoplay" type="text" size="20" default="5" label="Autoplay" description="Number of seconds from one transition to another, if not stopped. Set to 0 to disable autoplay" />
+			</fieldset>
+			<fieldset name="SLIDE_1_SETTINGS">
+				<!-- SLIDE 1 -->
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 1 SETTINGS&lt;/strong&gt;" />
+				<field name="slide_type_1" type="list"  default="Image" label="Slide 1 Type" description="Select media type for Slide 1." >
+					<option value="Image">Image</option>
+					<option value="Video">Video</option>
+					<option value="Flash">Flash</option>
+				</field>
+				<field name="slide_autoplay_1" type="list"  default="true" label="If video autoplay?" description="Start video after the transition." >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="slide_iprev_1" type="imagelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Slide1 preview image" description="This setting is to be used only if slide type is Video or Flash." />
+				<field name="slide_media_1" type="filelist"  directory="/images/yj_piecemaker"  hide_default="0" default="piecemaker1.png" label="Select Slide 1 media" description="Select slide 1 media  from images/yj_piecemaker  folder." />
+				<field name="slide_title_1" type="text" size="100" default="Title for slide1" label="Slide 1 Title" description="Slide 1 title" />
+				<field name="slide_desc_1" type="textarea"  filter="safehtml"  cols="40" rows="5" default="&lt;h1&gt;This is your first slide info title&lt;/h1&gt;
+&lt;p&gt; You can use p  or h1 element tag to define your custom description&lt;/p&gt;" label="Slide  1 Description" description="Slide 1 description. If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_link_1" type="text" size="100" default="" label="Slide 1 Link" description="Slide 1 Link.If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_linkt_1" type="list"  default="1" label="Slide 1 link target" description="New window or self." >
+					<option value="1">New window</option>
+					<option value="2">Self</option>
+				</field>
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 1 TRANSITION SETTINGS&lt;/strong&gt;" />
+				<field name="slide_Pieces_1" type="text" size="20" default="8" label="Pieces" description="Number of pieces to which the image is sliced" />
+				<field name="slide_Time_1" type="text" size="20" default="1.3" label="Time" description="Time for one cube to turn" />
+				<field name="slide_Transition_1" type="list" default="easeOutExpo" label="Transition" description="Transition type of the Tweener class.The best results are 
+achieved by those transition types, which begin with easeInOut" >
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeInBack">easeInBack</option>
+					<option value="linear">linear</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+				</field>
+				<field name="slide_Delay_1" type="text" size="20" default="0.1" label="Delay" description="Delay between the start of one cube to the start of the next cube" />
+				<field name="slide_DepthOffset_1" type="text" size="20" default="500" label="DepthOffset" description="- The offset during transition on the z-axis. Value between 100 and 1000 
+are recommended." />
+				<field name="slide_CubeDistance_1" type="text" size="20" default="50" label="CubeDistance" description="- The distance between the cubes during transition. Values between 5 and 
+50 are recommended." />
+				<!-- SLIDE 1 END -->
+			</fieldset>
+			<fieldset name="SLIDE_2_SETTINGS">
+				<!-- SLIDE 2 -->
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 2 SETTINGS&lt;/strong&gt;" />
+				<field name="slide_type_2" type="list"  default="Image" label="Slide 2 Type" description="Select media type for Slide 2." >
+					<option value="Image">Image</option>
+					<option value="Video">Video</option>
+					<option value="Flash">Flash</option>
+				</field>
+				<field name="slide_autoplay_2" type="list"  default="true" label="If video autoplay?" description="Start video after the transition." >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="slide_iprev_2" type="imagelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Slide1 preview image" description="This setting is to be used only if slide type is Video or Flash." />
+				<field name="slide_media_2" type="filelist"  directory="/images/yj_piecemaker"  hide_default="0" default="piecemaker2.png" label="Select Slide 2 media" description="Select slide 1 media  from images/yj_piecemaker  folder." />
+				<field name="slide_title_2" type="text" size="100" default="Title for slide2" label="Slide 2 Title" description="Slide 2 title" />
+				<field name="slide_desc_2" type="textarea"  filter="safehtml"  cols="40" rows="5" default="&lt;h1&gt;This is your second slide info title&lt;/h1&gt; &lt;p&gt; You can use p  or h1 element tag to define your custom description&lt;/p&gt;" label="Slide  1 Description" description="Slide 2 description. If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_link_2" type="text" size="100" default="" label="Slide 2 Link" description="Slide 2 Link.If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_linkt_2" type="list"  default="1" label="Slide 2 link target" description="New window or self." >
+					<option value="1">New window</option>
+					<option value="2">Self</option>
+				</field>
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 2 TRANSITION SETTINGS&lt;/strong&gt;" />
+				<field name="slide_Pieces_2" type="text" size="20" default="15" label="Pieces" description="Number of pieces to which the image is sliced" />
+				<field name="slide_Time_2" type="text" size="20" default="3" label="Time" description="Time for one cube to turn" />
+				<field name="slide_Transition_2" type="list" default="easeOutElastic" label="Transition" description="Transition type of the Tweener class.The best results are 
+achieved by those transition types, which begin with easeInOut" >
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeInBack">easeInBack</option>
+					<option value="linear">linear</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+				</field>
+				<field name="slide_Delay_2" type="text" size="20" default="0.03" label="Delay" description="Delay between the start of one cube to the start of the next cube" />
+				<field name="slide_DepthOffset_2" type="text" size="20" default="200" label="DepthOffset" description="- The offset during transition on the z-axis. Value between 100 and 1000 
+are recommended." />
+				<field name="slide_CubeDistance_2" type="text" size="20" default="10" label="CubeDistance" description="- The distance between the cubes during transition. Values between 5 and 
+50 are recommended." />
+			</fieldset>
+			<!-- SLIDE 2 END -->
+			<fieldset name="SLIDE_3_SETTINGS">
+				<!-- SLIDE 3 -->
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 3 SETTINGS&lt;/strong&gt;" />
+				<field name="slide_type_3" type="list"  default="Image" label="Slide 3 Type" description="Select media type for Slide 3." >
+					<option value="Image">Image</option>
+					<option value="Video">Video</option>
+					<option value="Flash">Flash</option>
+				</field>
+				<field name="slide_autoplay_3" type="list"  default="true" label="If video autoplay?" description="Start video after the transition." >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="slide_iprev_3" type="imagelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Slide1 preview image" description="This setting is to be used only if slide type is Video or Flash." />
+				<field name="slide_media_3" type="filelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Select Slide 3 media" description="Select slide 3 media  from images/yj_piecemaker  folder." />
+				<field name="slide_title_3" type="text" size="100" default="Title for slide 3" label="Slide 3 Title" description="Slide 3 title" />
+				<field name="slide_desc_3" type="textarea"  filter="safehtml"  cols="40" rows="5" default="" label="Slide 3 Description" description="Slide 3 description. If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_link_3" type="text" size="100" default="" label="Slide 3 Link" description="Slide 3 Link.If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_linkt_3" type="list"  default="1" label="Slide 3 link target" description="New window or self." >
+					<option value="1">New window</option>
+					<option value="2">Self</option>
+				</field>
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 3 TRANSITION SETTINGS&lt;/strong&gt;" />
+				<field name="slide_Pieces_3" type="text" size="20" default="8" label="Pieces" description="Number of pieces to which the image is sliced" />
+				<field name="slide_Time_3" type="text" size="20" default="1.3" label="Time" description="Time for one cube to turn" />
+				<field name="slide_Transition_3" type="list" default="easeOutExpo" label="Transition" description="Transition type of the Tweener class.The best results are 
+achieved by those transition types, which begin with easeInOut" >
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeInBack">easeInBack</option>
+					<option value="linear">linear</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+				</field>
+				<field name="slide_Delay_3" type="text" size="20" default="0.1" label="Delay" description="Delay between the start of one cube to the start of the next cube" />
+				<field name="slide_DepthOffset_3" type="text" size="20" default="500" label="DepthOffset" description="- The offset during transition on the z-axis. Value between 100 and 1000 
+are recommended." />
+				<field name="slide_CubeDistance_3" type="text" size="20" default="50" label="CubeDistance" description="- The distance between the cubes during transition. Values between 5 and 
+50 are recommended." />
+			</fieldset>
+			<!-- SLIDE 3 END -->
+			<fieldset name="SLIDE_4_SETTINGS">
+				<!-- SLIDE 4 -->
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 4 SETTINGS&lt;/strong&gt;" />
+				<field name="slide_type_4" type="list"  default="Image" label="Slide 4 Type" description="Select media type for Slide 4." >
+					<option value="Image">Image</option>
+					<option value="Video">Video</option>
+					<option value="Flash">Flash</option>
+				</field>
+				<field name="slide_autoplay_4" type="list"  default="true" label="If video autoplay?" description="Start video after the transition." >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="slide_iprev_4" type="imagelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Slide1 preview image" description="This setting is to be used only if slide type is Video or Flash." />
+				<field name="slide_media_4" type="filelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Select Slide 4 media" description="Select slide 4 media  from images/yj_piecemaker  folder." />
+				<field name="slide_title_4" type="text" size="100" default="Title for slide 4" label="Slide 4 Title" description="Slide 4 title" />
+				<field name="slide_desc_4" type="textarea"  filter="safehtml"  cols="40" rows="5" default="" label="Slide 4 Description" description="Slide 4 description. If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_link_4" type="text" size="100" default="" label="Slide 4 Link" description="Slide 4 Link.If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_linkt_4" type="list"  default="1" label="Slide 4 link target" description="New window or self." >
+					<option value="1">New window</option>
+					<option value="2">Self</option>
+				</field>
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 4 TRANSITION SETTINGS&lt;/strong&gt;" />
+				<field name="slide_Pieces_4" type="text" size="20" default="8" label="Pieces" description="Number of pieces to which the image is sliced" />
+				<field name="slide_Time_4" type="text" size="20" default="1.3" label="Time" description="Time for one cube to turn" />
+				<field name="slide_Transition_4" type="list" default="easeOutExpo" label="Transition" description="Transition type of the Tweener class.The best results are 
+achieved by those transition types, which begin with easeInOut" >
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeInBack">easeInBack</option>
+					<option value="linear">linear</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+				</field>
+				<field name="slide_Delay_4" type="text" size="20" default="0.1" label="Delay" description="Delay between the start of one cube to the start of the next cube" />
+				<field name="slide_DepthOffset_4" type="text" size="20" default="500" label="DepthOffset" description="- The offset during transition on the z-axis. Value between 100 and 1000 
+are recommended." />
+				<field name="slide_CubeDistance_4" type="text" size="20" default="50" label="CubeDistance" description="- The distance between the cubes during transition. Values between 5 and 
+50 are recommended." />
+			</fieldset>
+			<!-- SLIDE 4 END -->
+			<fieldset name="SLIDE_5_SETTINGS">
+				<!-- SLIDE 5 -->
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 5 SETTINGS&lt;/strong&gt;" />
+				<field name="slide_type_5" type="list"  default="Image" label="Slide 5 Type" description="Select media type for Slide 5." >
+					<option value="Image">Image</option>
+					<option value="Video">Video</option>
+					<option value="Flash">Flash</option>
+				</field>
+				<field name="slide_autoplay_5" type="list"  default="true" label="If video autoplay?" description="Start video after the transition." >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="slide_iprev_5" type="imagelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Slide1 preview image" description="This setting is to be used only if slide type is Video or Flash." />
+				<field name="slide_media_5" type="filelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Select Slide 5 media" description="Select slide 5 media  from images/yj_piecemaker  folder." />
+				<field name="slide_title_5" type="text" size="100" default="Title for slide 5" label="Slide 5 Title" description="Slide 5 title" />
+				<field name="slide_desc_5" type="textarea"  filter="safehtml"  cols="40" rows="5" default="" label="Slide 5 Description" description="Slide 5 description. If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_link_5" type="text" size="100" default="" label="Slide 5 Link" description="Slide 5 Link.If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_linkt_5" type="list"  default="1" label="Slide 5 link target" description="New window or self." >
+					<option value="1">New window</option>
+					<option value="2">Self</option>
+				</field>
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 5 TRANSITION SETTINGS&lt;/strong&gt;" />
+				<field name="slide_Pieces_5" type="text" size="20" default="8" label="Pieces" description="Number of pieces to which the image is sliced" />
+				<field name="slide_Time_5" type="text" size="20" default="1.3" label="Time" description="Time for one cube to turn" />
+				<field name="slide_Transition_5" type="list" default="easeOutExpo" label="Transition" description="Transition type of the Tweener class.The best results are 
+achieved by those transition types, which begin with easeInOut" >
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeInBack">easeInBack</option>
+					<option value="linear">linear</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+				</field>
+				<field name="slide_Delay_5" type="text" size="20" default="0.1" label="Delay" description="Delay between the start of one cube to the start of the next cube" />
+				<field name="slide_DepthOffset_5" type="text" size="20" default="500" label="DepthOffset" description="- The offset during transition on the z-axis. Value between 100 and 1000 
+are recommended." />
+				<field name="slide_CubeDistance_5" type="text" size="20" default="50" label="CubeDistance" description="- The distance between the cubes during transition. Values between 5 and 
+50 are recommended." />
+				<!-- SLIDE 5 END -->
+			</fieldset>
+			<fieldset name="SLIDE_6_SETTINGS">
+				<!-- SLIDE 6 -->
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 6 SETTINGS&lt;/strong&gt;" />
+				<field name="slide_type_6" type="list"  default="Image" label="Slide 6 Type" description="Select media type for Slide 6." >
+					<option value="Image">Image</option>
+					<option value="Video">Video</option>
+					<option value="Flash">Flash</option>
+				</field>
+				<field name="slide_autoplay_6" type="list"  default="true" label="If video autoplay?" description="Start video after the transition." >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="slide_iprev_6" type="imagelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Slide1 preview image" description="This setting is to be used only if slide type is Video or Flash." />
+				<field name="slide_media_6" type="filelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Select Slide 6 media" description="Select slide 6 media  from images/yj_piecemaker  folder." />
+				<field name="slide_title_6" type="text" size="100" default="Title for slide 6" label="Slide 6 Title" description="Slide 6 title" />
+				<field name="slide_desc_6" type="textarea"  filter="safehtml"  cols="40" rows="5" default="" label="Slide 6 Description" description="Slide 6 description. If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_link_6" type="text" size="100" default="" label="Slide 6 Link" description="Slide 6 Link.If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_linkt_6" type="list"  default="1" label="Slide 6 link target" description="New window or self." >
+					<option value="1">New window</option>
+					<option value="2">Self</option>
+				</field>
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 6 TRANSITION SETTINGS&lt;/strong&gt;" />
+				<field name="slide_Pieces_6" type="text" size="20" default="8" label="Pieces" description="Number of pieces to which the image is sliced" />
+				<field name="slide_Time_6" type="text" size="20" default="1.3" label="Time" description="Time for one cube to turn" />
+				<field name="slide_Transition_6" type="list" default="easeOutExpo" label="Transition" description="Transition type of the Tweener class.The best results are 
+achieved by those transition types, which begin with easeInOut" >
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeInBack">easeInBack</option>
+					<option value="linear">linear</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+				</field>
+				<field name="slide_Delay_6" type="text" size="20" default="0.1" label="Delay" description="Delay between the start of one cube to the start of the next cube" />
+				<field name="slide_DepthOffset_6" type="text" size="20" default="500" label="DepthOffset" description="- The offset during transition on the z-axis. Value between 100 and 1000 
+are recommended." />
+				<field name="slide_CubeDistance_6" type="text" size="20" default="50" label="CubeDistance" description="- The distance between the cubes during transition. Values between 5 and 
+50 are recommended." />
+				<!-- SLIDE 6 END -->
+			</fieldset>
+			<fieldset name="SLIDE_7_SETTINGS">
+				<!-- SLIDE 7 -->
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 7 SETTINGS&lt;/strong&gt;" />
+				<field name="slide_type_7" type="list"  default="Image" label="Slide 7 Type" description="Select media type for Slide 7." >
+					<option value="Image">Image</option>
+					<option value="Video">Video</option>
+					<option value="Flash">Flash</option>
+				</field>
+				<field name="slide_autoplay_7" type="list"  default="true" label="If video autoplay?" description="Start video after the transition." >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="slide_iprev_7" type="imagelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Slide1 preview image" description="This setting is to be used only if slide type is Video or Flash." />
+				<field name="slide_media_7" type="filelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Select Slide 7 media" description="Select slide 7 media  from images/yj_piecemaker  folder." />
+				<field name="slide_title_7" type="text" size="100" default="Title for slide 7" label="Slide 7 Title" description="Slide 7 title" />
+				<field name="slide_desc_7" type="textarea"  filter="safehtml"  cols="40" rows="5" default="" label="Slide 7 Description" description="Slide 7 description. If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_link_7" type="text" size="100" default="" label="Slide 7 Link" description="Slide 7 Link.If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_linkt_7" type="list"  default="1" label="Slide 7 link target" description="New window or self." >
+					<option value="1">New window</option>
+					<option value="2">Self</option>
+				</field>
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 7 TRANSITION SETTINGS&lt;/strong&gt;" />
+				<field name="slide_Pieces_7" type="text" size="20" default="8" label="Pieces" description="Number of pieces to which the image is sliced" />
+				<field name="slide_Time_7" type="text" size="20" default="1.3" label="Time" description="Time for one cube to turn" />
+				<field name="slide_Transition_7" type="list" default="easeOutExpo" label="Transition" description="Transition type of the Tweener class.The best results are 
+achieved by those transition types, which begin with easeInOut" >
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeInBack">easeInBack</option>
+					<option value="linear">linear</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+				</field>
+				<field name="slide_Delay_7" type="text" size="20" default="0.1" label="Delay" description="Delay between the start of one cube to the start of the next cube" />
+				<field name="slide_DepthOffset_7" type="text" size="20" default="500" label="DepthOffset" description="- The offset during transition on the z-axis. Value between 100 and 1000 
+are recommended." />
+				<field name="slide_CubeDistance_7" type="text" size="20" default="50" label="CubeDistance" description="- The distance between the cubes during transition. Values between 5 and 
+50 are recommended." />
+				<!-- SLIDE 7 END -->
+			</fieldset>
+			<fieldset name="SLIDE_8_SETTINGS">
+				<!-- SLIDE 8 -->
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 8 SETTINGS&lt;/strong&gt;" />
+				<field name="slide_type_8" type="list"  default="Image" label="Slide 8 Type" description="Select media type for Slide 8." >
+					<option value="Image">Image</option>
+					<option value="Video">Video</option>
+					<option value="Flash">Flash</option>
+				</field>
+				<field name="slide_autoplay_8" type="list"  default="true" label="If video autoplay?" description="Start video after the transition." >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="slide_iprev_8" type="imagelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Slide1 preview image" description="This setting is to be used only if slide type is Video or Flash." />
+				<field name="slide_media_8" type="filelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Select Slide 8 media" description="Select slide 8 media  from images/yj_piecemaker  folder." />
+				<field name="slide_title_8" type="text" size="100" default="Title for slide 8" label="Slide 8 Title" description="Slide 8 title" />
+				<field name="slide_desc_8" type="textarea"  filter="safehtml"  cols="40" rows="5" default="" label="Slide 8 Description" description="Slide 8 description. If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_link_8" type="text" size="100" default="" label="Slide 8 Link" description="Slide 8 Link.If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_linkt_8" type="list"  default="1" label="Slide 8 link target" description="New window or self." >
+					<option value="1">New window</option>
+					<option value="2">Self</option>
+				</field>
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 8 TRANSITION SETTINGS&lt;/strong&gt;" />
+				<field name="slide_Pieces_8" type="text" size="20" default="8" label="Pieces" description="Number of pieces to which the image is sliced" />
+				<field name="slide_Time_8" type="text" size="20" default="1.3" label="Time" description="Time for one cube to turn" />
+				<field name="slide_Transition_8" type="list" default="easeOutExpo" label="Transition" description="Transition type of the Tweener class.The best results are 
+achieved by those transition types, which begin with easeInOut" >
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeInBack">easeInBack</option>
+					<option value="linear">linear</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+				</field>
+				<field name="slide_Delay_8" type="text" size="20" default="0.1" label="Delay" description="Delay between the start of one cube to the start of the next cube" />
+				<field name="slide_DepthOffset_8" type="text" size="20" default="500" label="DepthOffset" description="- The offset during transition on the z-axis. Value between 100 and 1000 
+are recommended." />
+				<field name="slide_CubeDistance_8" type="text" size="20" default="50" label="CubeDistance" description="- The distance between the cubes during transition. Values between 5 and 
+50 are recommended." />
+				<!-- SLIDE 8 END -->
+			</fieldset>
+			<fieldset name="SLIDE_9_SETTINGS">
+				<!-- SLIDE 9 -->
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 9 SETTINGS&lt;/strong&gt;" />
+				<field name="slide_type_9" type="list"  default="Image" label="Slide 9 Type" description="Select media type for Slide 9." >
+					<option value="Image">Image</option>
+					<option value="Video">Video</option>
+					<option value="Flash">Flash</option>
+				</field>
+				<field name="slide_autoplay_9" type="list"  default="true" label="If video autoplay?" description="Start video after the transition." >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="slide_iprev_9" type="imagelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Slide1 preview image" description="This setting is to be used only if slide type is Video or Flash." />
+				<field name="slide_media_9" type="filelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Select Slide 9 media" description="Select slide 9 media  from images/yj_piecemaker  folder." />
+				<field name="slide_title_9" type="text" size="100" default="Title for slide 9" label="Slide 9 Title" description="Slide 9 title" />
+				<field name="slide_desc_9" type="textarea"  filter="safehtml"  cols="40" rows="5" default="" label="Slide 9 Description" description="Slide 9 description. If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_link_9" type="text" size="100" default="" label="Slide 9 Link" description="Slide 9 Link.If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_linkt_9" type="list"  default="1" label="Slide 9 link target" description="New window or self." >
+					<option value="1">New window</option>
+					<option value="2">Self</option>
+				</field>
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 9 TRANSITION SETTINGS&lt;/strong&gt;" />
+				<field name="slide_Pieces_9" type="text" size="20" default="8" label="Pieces" description="Number of pieces to which the image is sliced" />
+				<field name="slide_Time_9" type="text" size="20" default="1.3" label="Time" description="Time for one cube to turn" />
+				<field name="slide_Transition_9" type="list" default="easeOutExpo" label="Transition" description="Transition type of the Tweener class.The best results are 
+achieved by those transition types, which begin with easeInOut" >
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeInBack">easeInBack</option>
+					<option value="linear">linear</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+				</field>
+				<field name="slide_Delay_9" type="text" size="20" default="0.1" label="Delay" description="Delay between the start of one cube to the start of the next cube" />
+				<field name="slide_DepthOffset_9" type="text" size="20" default="500" label="DepthOffset" description="- The offset during transition on the z-axis. Value between 100 and 1000 
+are recommended." />
+				<field name="slide_CubeDistance_9" type="text" size="20" default="50" label="CubeDistance" description="- The distance between the cubes during transition. Values between 5 and 
+50 are recommended." />
+				<!-- SLIDE 9 END -->
+			</fieldset>
+			<fieldset name="SLIDE_10_SETTINGS">
+				<!-- SLIDE 10 -->
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 10 SETTINGS&lt;/strong&gt;" />
+				<field name="slide_type_10" type="list"  default="Image" label="Slide 10 Type" description="Select media type for Slide 10." >
+					<option value="Image">Image</option>
+					<option value="Video">Video</option>
+					<option value="Flash">Flash</option>
+				</field>
+				<field name="slide_autoplay_10" type="list"  default="true" label="If video autoplay?" description="Start video after the transition." >
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="slide_iprev_10" type="imagelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Slide1 preview image" description="This setting is to be used only if slide type is Video or Flash." />
+				<field name="slide_media_10" type="filelist"  directory="/images/yj_piecemaker"  hide_default="0" default="" label="Select Slide 10 media" description="Select slide 10 media  from images/yj_piecemaker  folder." />
+				<field name="slide_title_10" type="text" size="100" default="Title for slide 10" label="Slide 10 Title" description="Slide 10 title" />
+				<field name="slide_desc_10" type="textarea"  filter="safehtml"  cols="40" rows="5" default="" label="Slide 10 Description" description="Slide 10 description. If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_link_10" type="text" size="100" default="" label="Slide 10 Link" description="Slide 10 Link.If left empty it will not be displayed. Note: Not available for Videos or Flash media type." />
+				<field name="slide_linkt_10" type="list"  default="1" label="Slide 10 link target" description="New window or self." >
+					<option value="1">New window</option>
+					<option value="2">Self</option>
+				</field>
+				<field type="yjspacer" default="&lt;strong&gt;SLIDE 10 TRANSITION SETTINGS&lt;/strong&gt;" />
+				<field name="slide_Pieces_10" type="text" size="20" default="8" label="Pieces" description="Number of pieces to which the image is sliced" />
+				<field name="slide_Time_10" type="text" size="20" default="1.3" label="Time" description="Time for one cube to turn" />
+				<field name="slide_Transition_10" type="list" default="easeOutExpo" label="Transition" description="Transition type of the Tweener class.The best results are 
+achieved by those transition types, which begin with easeInOut" >
+					<option value="easeInOutSine">easeInOutSine</option>
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					<option value="easeInCirc">easeInCirc</option>
+					<option value="easeOutCirc">easeOutCirc</option>
+					<option value="easeInOutCirc">easeInOutCirc</option>
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					<option value="easeInBack">easeInBack</option>
+					<option value="linear">linear</option>
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					<option value="easeInQuint">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeOutSine">easeOutSine</option>
+				</field>
+				<field name="slide_Delay_10" type="text" size="20" default="0.1" label="Delay" description="Delay between the start of one cube to the start of the next cube" />
+				<field name="slide_DepthOffset_10" type="text" size="20" default="500" label="DepthOffset" description="- The offset during transition on the z-axis. Value between 100 and 1000 
+are recommended." />
+				<field name="slide_CubeDistance_10" type="text" size="20" default="50" label="CubeDistance" description="- The distance between the cubes during transition. Values between 5 and 
+50 are recommended." />
+				<!-- SLIDE 10 END -->
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="A suffix to be applied to the css class of the module (table.moduletable), this allows individual module styling" />
+			</fieldset>
+			<fieldset name="SCRIPT_SETTINGS">
+				<field name="LoaderColor" type="text" size="20" default="333333" label="LoaderColor" description="Color of the cubes before the first image appears, also the color of the back sides of the cube, which become visible at some transition types" />
+				<field name="InnerSideColor" type="text" size="20" default="222222" label="InnerSideColor" description="Color of the inner sides of the cube when sliced" />
+				<field name="SideShadowAlpha" type="text" size="20" default="0.8" label="SideShadowAlpha" description="Sides get darker when moved away from the front. This is the degree of darkness - 0 == no change, 1 == 100% black" />
+				<field name="DropShadowAlpha" type="text" size="20" default="0.7" label="DropShadowAlpha" description="Alpha of the drop shadow - 0 == no shadow, 1 == opaque" />
+				<field name="DropShadowScale" type="text" size="20" default="0.95" label="DropShadowScale" description="As the shadow is blurred, it appears wider that the actual image, when not resized. Thus it‘s a good idea to make it slightly smaller. - 1 would be no resizing at all." />
+				<field name="DropShadowBlurX" type="text" size="20" default="40" label="DropShadowBlurX" description="Blur of the drop shadow on the x-axis" />
+				<field name="DropShadowBlurY" type="text" size="20" default="4" label="DropShadowBlurY" description="Blur of the drop shadow on the y-axis" />
+				<field name="MenuColor1" type="text" size="20" default="999999" label="MenuColor1" description="Color of an inactive menu item" />
+				<field name="MenuColor2" type="text" size="20" default="333333" label="MenuColor2" description="Color of an active menu item" />
+				<field name="MenuColor3" type="text" size="20" default="FFFFFF" label="MenuColor3" description="Color of the inner circle of an active menu item. Should equal the background color of the whole thing" />
+				<field name="ControlSize" type="text" size="20" default="100" label="ControlSize" description="Size of the controls, which appear on rollover (play, stop, info, link)" />
+				<field name="ControlDistance" type="text" size="20" default="20" label="ControlDistance" description="Distance between the controls (from the borders)" />
+				<field name="ControlColor1" type="text" size="20" default="222222" label="ControlColor1" description="Background color of the controls" />
+				<field name="ControlColor2" type="text" size="20" default="FFFFFF" label="ControlColor2" description="Font color of the controls" />
+				<field name="ControlAlpha" type="text" size="20" default="0.8" label="ControlAlpha" description="Alpha of a control, when mouse is not over" />
+				<field name="ControlAlphaOver" type="text" size="20" default="0.95" label="ControlAlphaOver" description="Alpha of a control, when mouse is over" />
+				<field name="ControlsX" type="text" size="20" default="450" label="ControlsX" description="X-position of the point, which aligns the controls (measured from [0,0] of the image)" />
+				<field name="ControlsY" type="text" size="20" default="280" label="ControlsY" description="Y-position of the point, which aligns the controls (measured from [0,0] of the image)" />
+				<field name="ControlsAlign" type="text" size="20" default="center" label="ControlsAlign" description="Type of alignment from the point [controlsX, controlsY] - can be center,left or right" />
+				<field name="TooltipHeight" type="text" size="20" default="30" label="TooltipHeight" description="Height of the tooltip surface in the menu" />
+				<field name="TooltipColor" type="text" size="20" default="222222" label="TooltipColor" description="Color of the tooltip surface in the menu" />
+				<field name="TooltipTextY" type="text" size="20" default="5" label="TooltipTextY" description="Y-distance of the tooltip text field from the top of the tooltip" />
+				<field name="TooltipTextStyle" type="text" size="20" default="P-Italic" label="TooltipTextStyle" description="The style of the tooltip text, specified in the modulel/mod_yj_piecemaker/css/piecemaker.css CSS file" />
+				<field name="TooltipTextColor" type="text" size="20" default="FFFFFF" label="TooltipTextColor" description="Color of the tooltip text" />
+				<field name="TooltipMarginLeft" type="text" size="20" default="5" label="TooltipMarginLeft" description="Margin of the text to the left end of the tooltip" />
+				<field name="TooltipMarginRight" type="text" size="20" default="7" label="TooltipMarginRight" description="Margin of the text to the right end of the tooltip" />
+				<field name="TooltipTextSharpness" type="text" size="20" default="50" label="TooltipTextSharpness" description="Sharpness of the tooltip text (-400 to 400)" />
+				<field name="TooltipTextThickness" type="text" size="20" default="-100" label="TooltipTextThickness" description="Thickness of the tooltip text (-400 to 400)" />
+				<field name="InfoWidth" type="text" size="20" default="400" label="InfoWidth" description="The width of the info text field" />
+				<field name="InfoBackground" type="text" size="20" default="FFFFFF" label="InfoBackground" description="The background color of the info text field" />
+				<field name="InfoBackgroundAlpha" type="text" size="20" default="0.95" label="InfoBackgroundAlpha" description="The alpha of the background of the info text, the image shines through, when smaller than 1" />
+				<field name="InfoMargin" type="text" size="20" default="15" label="InfoMargin" description="The margin of the text field in the info section to all sides
+InfoSharpness =" />
+				<field name="InfoSharpness" type="text" size="20" default="0" label="InfoSharpness" description="Sharpness of the info text" />
+				<field name="InfoThickness" type="text" size="20" default="0" label="InfoThickness" description="Thickness of the info text" />
+				<field name="FieldOfView" type="text" size="20" default="45" label="FieldOfView" description="FieldOfView" />
+				<field name="edit_time" type="yjsgtime" default="0" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

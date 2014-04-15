@@ -1,0 +1,137 @@
+/*
+ * IMPORTANT:
+ * + The ORDER of the styles in this file matters in terms of precedence.
+ * + use !important at the end of value to override inline styles
+ */
+
+/** General based styles **/
+.eflpro_empty
+{
+	font-style: italic;
+}
+
+
+/** Table based styles **/
+.eflpro_tables
+{
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 1px;
+	text-align: left;
+}
+
+.eflpro_tables *
+{
+	/* Anything here will affect ALL elements in the table */
+}
+
+.eflpro_tables th
+{
+	padding: 4px;
+	border-color: #FFFFFF !important;
+	border-style: solid !important;
+	border-width: 1px !important;
+}
+
+.eflpro_tables td
+{
+	padding: 1px;
+	border-style: none !important;
+}
+
+/** Unordered List based styles **/
+.eflpro_lists
+{
+	list-style-type: none !important;
+	padding-left: 0px; 
+}
+
+li > ul.eflpro_lists
+{
+	padding-left: 40px !important; 
+}
+
+.eflpro_lists div.eflpro_datetime
+{
+	display: inline-block; /* Do not remove! */
+	overflow: hidden;
+	height: 20px;
+	width: 160px;
+	background-color: transparent;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+.eflpro_lists div.eflpro_datetime:before
+{
+	content: "[ ";
+}
+
+.eflpro_lists div.eflpro_datetime:after
+{
+	content: " ]";
+}
+
+.eflpro_lists div.eflpro_filesize
+{
+	display: inline-block; /* Do not remove! */
+	overflow: hidden;
+	height: 20px;
+	width: 160px;
+	background-color: transparent;
+	text-align: center;
+	vertical-align: bottom;
+}
+
+.eflpro_lists div.eflpro_filesize:before
+{
+	content: "[ ";
+}
+
+.eflpro_lists div.eflpro_filesize:after
+{
+	content: " ]";
+}
+
+
+/** Filter based styles **/
+div.eflpro_filterdiv
+{
+	text-align: left;
+}
+
+span.eflpro_filterlabel
+{
+	font-weight: bold;
+}
+
+span.eflpro_notfound
+{
+	/*visibility: hidden;*/
+	display:none;
+	font-style: italic;
+	color: red;
+}
+
+input.eflpro_textboxes
+{
+}
+
+img.eflpro_cancelimgs
+{
+	/*visibility: hidden;*/
+	display:none;
+}
+
+a.eflpro_download
+{
+	display:inline-block;
+	background-color:transparent;
+}
+
+a.eflpro_download:hover
+{
+	text-decoration:none;
+	border-color:transparent;
+	background-color:transparent;
+}

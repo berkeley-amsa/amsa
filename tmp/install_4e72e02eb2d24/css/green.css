@@ -1,0 +1,541 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Package - Joomla Template based on YJSimplegrid Framework          ||
+|| # Copyright (C) 2010  Youjoomla LLC. All Rights Reserved.            ||
+|| # license - PHP files are licensed under  GNU/GPL V2                 ||
+|| # license - CSS  - JS - IMAGE files  are Copyrighted material        ||
+|| # bound by Proprietary License of Youjoomla LLC                      ||
+|| # for more information visit http://www.youjoomla.com/license.html   ||
+|| # Redistribution and  modification of this software                  ||
+|| # is bounded by its licenses                                         ||
+|| # websites - http://www.youjoomla.com | http://www.yjsimplegrid.com  ||
+|| #################################################################### ||
+\*======================================================================*/
+/*BODY ID'S USED FOR CSS FONT STYLES AND BASE SITE BODY STYLING */
+body#stylef1, body#stylef2, body#stylef3, body#stylef4, body#stylef5, body#stylef6, body#stylef7, body#stylef8, body#stylef9, body#stylef10, body#stylef11, body#stylef12, body#stylef13, body#stylef14, body#stylef15, body#stylef16 {
+	background:#fcfcfc;
+	color:#555;
+}
+body.bg1 {
+	background:#fcfcfc url(../images/green/bg1.gif) repeat-x left top!important;
+}
+body.bg2 {
+	background:#fcfcfc url(../images/green/bg2.gif) repeat-x left top!important;
+}
+/* BOTTOM PART OF THE SITE LAYOUT. BASE WRAP */
+#centerbottom {
+	background:#fcfcfc;
+}
+#logo {
+	background:url(../images/green/logo.png) no-repeat 0px 0px;
+}
+#yjsg1 {
+	background: url(../images/green/yjsg1.gif) repeat;
+}
+.yjsg1_bottom {
+	background: url(../images/green/yjsg1_bottom.gif) repeat-x left bottom;
+}
+#pathway {
+	color:#3c5800;
+}
+#pathway .yjsg_breadcrumbs a.pathway {
+	background: url(../images/arrow.png) no-repeat right center;
+}
+#footer {
+	background:#fcfcfc;
+	color:#3c5800;
+}
+#joomlacredit {
+	background:#fcfcfc;
+	color:#3c5800;
+}
+/*TEMPLATE CSS 
+--------------------- */
+/* SITE LINKS */
+a:link, a:visited {
+	text-decoration: none;
+	color:#3c5800;
+}
+/* SITE HOVERS */
+a:focus, a:hover {
+	color:#71a500;
+	text-decoration: none;
+}
+/*DIFFERENT STYLE FOR  LINKS ON DARK BG
+--------------------- */
+#footmod .yjplain a, #footmod .yjplain a:visited, #cp a, #cp a:visited, #joomlacredit a, #joomlacredit a:visited, #pathway a, #pathway a:visited {
+	color:#3c5800;
+}
+#footmod .yjplain a:hover, #footmod .yjplain a:focus, #cp a:focus, #cp a:hover, #joomlacredit a:focus, #joomlacredit a:hover, #pathway a:focus, #pathway a:hover {
+	color:#71a500;
+}
+/* SITE HEADINGS */
+h1, h2, h3, h4, h5, h6 {
+	color:#3c5800;
+}
+.small, .createdate, .modifydate, .createby {
+	text-transform: uppercase;
+	color:#ccc;
+	font-size:10px;
+}
+/* SITE TITLE, NEWS ITEM TITLE, MORE ARTICLES */
+.pagetitle, div.title h1, div.title h2, .yjsg-morearticles h3, .componentheading {
+	color:#3c5800;/*	border-bottom:1px dashed #222222;*/
+}
+.yjsg-morearticles h3 {
+	border:none;
+}
+/* NEWS ITEM TITLE WITH LINK*/
+div.title h1 a:link, div.title h1 a:visited, div.title h2 a:link, div.title h2 a:visited {
+	color:#3c5800;
+}
+div.title h1 a:hover, div.title h1 a:focus, div.title h2 a:hover, div.title h2 a:focus {
+	color:#3c5800;
+}
+/* FORM ELEMENTS */
+/* ARTICLE TABLE OF CONTENTS */
+fieldset, .toclink {
+	border:1px solid #c8c8c8;
+}
+/* FIELDSET IN MODULES */
+.yjsquare_in fieldset, .yjround_in fieldset {
+	border:none;
+}
+/* INPUTBOXES */
+.inputbox, #userreminder .required {
+	background: #FFFFFF;
+	border: 1px solid #c8c8c8;
+}
+.inputbox:hover, .inputbox:focus, #userreminder .required:hover, #userreminder .required:focus {
+	background: #F7F7F7;
+	border: 1px solid #71a500;
+}
+/*BUTTONS
+--------------------- */
+.button {
+	color:#fff;
+}
+.button, .validate {
+	color:#71a500;
+	background: url(../images/green/button.gif) no-repeat left center;
+}
+a.button:link, a.button:visited, a.button:focus {
+	color:#fff;
+	padding:3px;
+}
+.back_button a:hover, .back_button a:active {
+	color: #000;
+	text-decoration: none;
+}
+a.pagenav, .pagenav_prev a, .pagenav_next a, .pagenavbar a, .back_button a {
+}
+a.readon:link, a.readon:visited {
+	color:#3c5800;
+	background: url(../images/readon_l.gif) no-repeat left center;
+}
+/* ADDITIONAL SPAN READON CLASS FOR ROUND CORNERS */
+.readon span {
+	background:url(../images/readon_r.gif) no-repeat right center;
+}
+a.readon:hover, .pagenavbar a:hover {
+	color:#71a500;
+}
+/* THIS TEMPLATE IS EQUIPED WITH  ROUND AND SQUARE CORNERS
+TO SEE ROUND CORNERS SIMPLY CHANGE THE MODULE green STYLE IN TEMPLATE MANAGER
+UNDER ACCORDION ADVANCED OPTIONS. SEE ALSO rounded.css FILE".
+
+/* ROUND MODULES STYLING
+--------------------- */
+/* ROUND IMAGE. YOU CAN CHANGE TO YOUR OWN. 1 IMAGE TECHNIQUE USED */
+.yjround .content, .yjround .t, .yjround .b, .yjround .b div {
+	background:url(../images/green/rounded.png);
+	bac\kground:url(../images/green/rounded_ie.gif);
+}
+.yjround h4 {
+	color:#71a500;/*	border-bottom:1px dashed #222222;*/
+}
+/* TITLE SPANS FOR SECOND PART OF THE TITLE COLOR */
+.yjround h4 span {
+	color:#3c5800;
+}
+.yjround_in {
+}
+/*SQUARE MODULES STYLE
+--------------------- */
+.yjsquare h4 {
+	color:#71a500;
+}
+/* SPAN COLOR SHOWS FIRST */
+.yjsquare h4 span {
+	color:#3c5800;
+}
+/* ADDITIONAL MODULE STYLES */
+/* _yj1 */
+.yjsquare_yj1 h4 {
+	background: url(../images/yj1.gif) no-repeat left center;
+	color:#71a500;
+}
+.yjsquare_yj1 h4 span {
+	color:#3c5800;
+}
+.yjsquare_yj1 .yjsquare_in {
+	background: url(../images/green/saw_white.gif) repeat-x left top;
+}
+/* _yj2 */
+.yjsquare_yj2 h4 {
+	background: url(../images/yj2.gif) no-repeat left center;
+	color:#71a500;
+}
+.yjsquare_yj2 h4 span {
+	color:#3c5800;
+}
+.yjsquare_yj2 .yjsquare_in {
+	background: url(../images/green/saw_white.gif) repeat-x left top;
+}
+/*LOGIN MODULE INPUTBOX CURRENTLY USING DEFAULT INPUT STYLE
+--------------------- */
+#modlgn_passwd, #modlgn_username {
+}
+#modlgn_passwd {
+}
+#modlgn_username {
+}
+#mod_login_remember {
+	border: none;
+	padding: 0!important;
+}
+/*TOP MENU STYLE FOR SPLIT MENU, CSS DROPDOWN AND SMOOTH DROPDOWN
+--------------------- */
+.horiznav {
+	background:#fcfcfc;
+}
+/* MENU OVERRIDES */
+.YJSG_listContainer {
+	background:none;
+}
+/* NORMAL SUBTITLE */
+.horiznav ul li a span.yjm_desc {
+	color:#8b8b8b;
+}
+/*ACTIVE AND HOVER SUBTITLE*/
+.horiznav ul li.active a span.yjm_desc, .horiznav ul li a:hover span.yjm_desc, .horiznav ul li.sfHover a span.yjm_desc {
+	color:#4F4F4F;
+	text-shadow:1px 1px #efefef;
+}
+/* NORMAL TOP LINKS */
+.horiznav ul li {
+	background: url(../images/green/topmenu/normal_l.png) no-repeat left center;
+}
+.horiznav ul li a, .horiznav ul li a:visited {
+	color: #3c5800;
+	background: url(../images/green/topmenu/normal_r.png) no-repeat right center;
+}
+/* NORMAL TOP LINKS WITH CHILD ELEMENT */
+.horiznav ul li.haschild {
+	background: url(../images/green/topmenu/normal_l_haschild.png) no-repeat left center;
+}
+/* TOP LINKS HOVER */
+.horiznav ul li:hover, .horiznav ul li.sfHover {
+	background: url(../images/green/topmenu/hover_l.png) no-repeat left center;
+}
+.horiznav ul li a:hover, .horiznav ul li:hover a, .horiznav ul li.sfHover a, .horiznav ul li.sfHoverHas a {
+	color: #71a500;
+	background: url(../images/green/topmenu/hover_r.png) no-repeat right center;
+}
+/* TOP LINKS HOVER WITH CHILD ELEMENT */
+.horiznav ul li.haschild:hover {
+	background: url(../images/green/topmenu/hover_l_haschild.png) no-repeat left center;
+}
+.horiznav ul li.haschild a:hover {
+	color: #71a500;
+}
+/* ACTIVE TOP LINKS  */
+.horiznav li#current, .horiznav li.active {
+	background: url(../images/green/topmenu/active_l.png) no-repeat left center;
+}
+.horiznav li#current a, .horiznav li.active a, .horiznav li.active a:visited, .horiznav li.active.sfHover a:visited, .horiznav li.active.sfHoverHas a:visited {
+	color: #71a500;
+	background: url(../images/green/topmenu/active_r.png) no-repeat right center;
+}
+/* ACTIVE TOP LINKS WITH CHILD ELEMENT */
+.horiznav li#current.haschild, .horiznav li.haschild, .horiznav ul li.haschild.active, .horiznav ul li.sfHoverHas {
+	background: url(../images/green/topmenu/active_l_haschild.png) no-repeat left center;
+}
+/* ACTIVE TOP LINKS HOVER */
+.horiznav li#current:hover, .horiznav li#current.sfHover, .horiznav li.active:hover, .horiznav li.active.sfHover {
+	background: url(../images/green/topmenu/active_l.png) no-repeat left center;
+}
+.horiznav li#current a:hover, .horiznav li#current.sfHover a:hover, .horiznav li.active a:hover {
+	color: #71a500;
+	background: url(../images/green/topmenu/active_r.png) no-repeat right center;
+}
+/* ACTIVE TOP LINKS HOVER WITH CHILD ELEMENT */
+.horiznav li#current.haschild:hover, .horiznav li#current.haschild.sfHoverHas, .horiznav li#current.active.sfHover {
+	background: url(../images/green/topmenu/active_l_haschild.png) no-repeat left center;
+}
+/* MAIN SUB UL AND MODULE BG */
+ul.subul_main.group_holder, .subul_main li.has_modpoz div.yj_menu_module_holder, .subul_main li.has_module div.yj_menu_module_holder, .subul_main li.haschild div.yj_menu_module_holder, .horiznav ul ul.subul_main.dropline {
+	background:#fcfcfc;
+}
+/* end drpline extra */
+.horiznav ul ul.subul_main.dropline ul a, .horiznav ul ul.subul_main.dropline ul a:hover, ul.subul_main.dropline div.yj_menu_module_holder {
+	border-bottom: 1px solid #dadada!important;
+}
+/*--- end dropline extra ---*/
+
+/* MAIN SUB ITEM*/
+.top_menu ul.subul_main li a {
+	background:#fcfcfc;
+	border-bottom: 1px solid #dadada;
+	color: #3c5800;
+}
+.top_menu ul.subul_main li a:visited {
+	color: #3c5800;
+	background:#fcfcfc;
+}
+/*MAIN SUB ITEM HOVER*/
+.top_menu ul.subul_main li a:hover {
+	background:#fcfcfc;
+	color: #71a500;
+}
+.top_menu ul.subul_main li, .top_menu ul.subul_main li.active, .top_menu ul.subul_main li.active:visited, .top_menu ul.subul_main li.active:hover, .top_menu ul.subul_main li:hover, .top_menu ul.subul_main li:visited, .top_menu ul.subul_main li#current, .top_menu ul.subul_main li#current:hover {
+	border:none;
+	background:none;
+}
+/*MAIN SUB ACTIVE UL A ITEMS*/
+.top_menu li#current ul.subul_main li a, .top_menu li.active ul.subul_main li a {
+	background:#fcfcfc;
+	color: #3c5800;
+}
+/*MAIN SUB ACTIVE UL ITEMS A HOVER*/
+.top_menu li#current ul.subul_main li a:hover, .top_menu li.active ul.subul_main li a:hover, .top_menu li#current.sfHover ul.subul_main li a:hover, .top_menu li.active.sfHover ul.subul_main li a:hover {
+	background:#fcfcfc;
+	color: #71a500;
+}
+/*MAIN SUB UL ACTIVE LI A ITEM*/
+.top_menu ul.subul_main li#current a {
+	background:#fcfcfc;
+	color: #71a500;
+}
+/*MAIN SUB UL ACTIVE LI A ITEM HOVER*/
+.top_menu ul.subul_main li#current a:hover, .top_menu ul.subul_main li#current.sfHover {
+	background:#fff;
+	color: #71a500;
+}
+/*SUB LEVEL PARENT ITEM ARROWS*/
+ul.subul_main li.haschild span.child a, ul.subul_main ul.subul_main li.haschild span.child a, ul.subul_main ul.subul_main ul.subul_main li.haschild span.child a, ul.subul_main ul.subul_main ul.subul_main ul.subul_main li.haschild span.child a {
+	background-image:url(../images/green/topmenu/arrow_right.gif)!important;
+	background-repeat:no-repeat!important;
+	background-position:95% 50%!important;
+}
+ul.subul_main li.haschild span.child a:hover, ul.subul_main ul.subul_main li.haschild span.child a:hover, ul.subul_main ul.subul_main ul.subul_main li.haschild span.child a:hover, ul.subul_main ul.subul_main ul.subul_main ul.subul_main li.haschild span.child a:hover {
+	background-image:url(../images/green/topmenu/arrow_down.gif)!important;
+	background-repeat:no-repeat!important;
+	background-position:95% 50%!important;
+}
+/* IE6 SPECIFIC */
+.horiznav li li.sfHover ul, .horiznav li li.sfHoverHas ul, .top_menu ul.subul_main.isie {
+	background:#fcfcfc;
+}
+/********************** CORNERS FOR MENU UL'S ***************************/
+/*TOP LEFT*/
+.horiznav li.tl, .horiznav li.tl:hover {
+	background:transparent url(../images/green/topmenu/corners/tl.png)!important;
+}
+/* TOP RIGHT*/
+.horiznav li.tr, .horiznav li.tr:hover {
+	background:transparent url(../images/green/topmenu/corners/tr.png) no-repeat right top!important;
+}
+/* BOTTOM RIGHT*/
+.horiznav li.br, .horiznav li.br:hover {
+	background:transparent url(../images/green/topmenu/corners/br.png) no-repeat right bottom!important;
+}
+/* BOTTOM LEFT*/
+.horiznav li.bl, .horiznav li.bl:hover {
+	background:transparent url(../images/green/topmenu/corners/bl.png) no-repeat left bottom!important;
+}
+/* RIGHT MIDDLE */
+.horiznav li.right, .horiznav li.right:hover {
+	background:transparent url(../images/green/topmenu/corners/right.png) no-repeat right bottom!important;
+}
+/********************** YJSG MEGA MENU STYLE ***************************/
+/* Group holder title*/
+.top_menu .horiznav .group_holder li.haschild a, .top_menu .horiznav .group_holder li.haschild .group_holder li.haschild a {
+	color: #888;
+	border:none;
+	background:none;
+}
+.top_menu .horiznav .group_holder li.haschild a:hover, .top_menu .horiznav .group_holder li.haschild .group_holder li.haschild a:hover {
+	color: #71a500;
+	background:none;
+}
+/* Group holder items title*/
+.top_menu .horiznav .group_holder li.haschild li a, .top_menu .horiznav .group_holder li.haschild .group_holder li.haschild li a {
+	color: #3c5800;
+	border-bottom: 1px solid #dadada;
+	background:#fcfcfc;
+}
+.top_menu .horiznav .group_holder li.haschild li a:hover, .top_menu .horiznav .group_holder li.haschild .group_holder li.haschild li a:hover {
+	color: #71a500;
+	background:#fcfcfc;
+}
+span.separator {
+	background:#fcfcfc;
+	border-bottom: 1px solid #dadada;
+	color: #3c5800;
+}
+/*Menu module links*/
+div.yj_menu_module_holder .yjsquare_in a:link, div.yj_menu_module_holder .yjsquare_in a:visited {
+	color:#121212!important;
+}
+div.yj_menu_module_holder .yjsquare_in a:focus, div.yj_menu_module_holder .yjsquare_in a:hover {
+	color:#3c5800!important;
+}
+/*SIDE MENU MODULE
+--------------------- */
+/* MENU NORMAL LINKS COLOR */
+#mainlevel li a, .menu li a, a.mainlevel {
+	background: url(../images/green/mainlevel.gif) no-repeat left top;/* LINKS BG IMAGE */
+	color:#3c5800;
+}
+/* HOVER AND ACTIVE LINKS BG IMAGE */
+#mainlevel li a:hover, #mainlevel a#active_menu:link, #mainlevel a#active_menu:visited, a.mainlevel:hover, a.mainlevel#active_menu, #mainlevel li a:hover, #mainlevel a#active_menu:link, #mainlevel a#active_menu:visited, .menu li a:hover, .menu li.active a {
+	background: url(../images/green/mainlevel.gif) no-repeat left bottom;
+}
+/* SUB LEVELS LI IMAGE */
+a.sublevel {
+	background: url(../images/green/bodyli.gif) no-repeat 3px 7px;
+}
+a.sublevel:hover {
+	text-decoration:underline;
+}
+/*HOVER AND ACTIVE LINK COLOR */
+#footmod a.mainlevel:hover, #footmod a.mainlevel:active, #footmod a.mainlevel:focus, #mainlevel li a:hover, #mainlevel a#active_menu:link, #mainlevel a#active_menu:visited, a.mainlevel#active_menu, a.sublevel, a.sublevel:hover, a.sublevel:active, a.sublevel:focus, #active_menu, a.mainlevel:hover, a.mainlevel:active, a.mainlevel:focus, li.active a, li.parent a {
+	color:#71a500;
+}
+/* MENU LI A AND MENU SUB LEVELS LINK COLOR */
+li.active ul li a, a.sublevel#active_menu {
+	color:#71a500;
+}
+/* MENU LI A HOVER AND ACTIVE LINK COLOR AND BG */
+li.active ul li a:hover, li.active ul li.active a {
+	color:#71a500;
+	background: url(../images/green/mainlevel.gif) no-repeat left top;
+}
+/* SITES LI IMAGE */
+ul li {
+	background: url(../images/green/bodyli.gif) no-repeat 0px 5px;
+}
+/*USER PAGES STYLE */
+#userlogin, #userlogout, #userregister, #userreminder {
+	color:#3c5800;
+}
+/* IMAGE CAPTIONS */
+p.img_caption {
+	background:#efefef;
+	border:1px solid #ccc;
+	text-shadow:1px 1px #fff;
+	text-transform:uppercase;
+	color:#5F5F5F;
+}
+/* overides*/
+h1.adv_title{
+	color:#3c5800;
+	text-shadow:1px 1px #fff;
+}
+/* top1 big button*/
+a.adv_button {
+	background: url(../images/green/adv_button.png) no-repeat center center;
+	color:#3c5800;
+}
+a.adv_button:hover {
+	color:#71a500;
+}
+/* slogan*/
+p.slogan {
+	color:#71a500;
+}
+/* get in touch*/
+.get_int_holder{
+	background: url(../images/green/saw_white.gif) repeat-x center center;
+}
+a.get_int {
+	background: url(../images/green/geat_in_touch.png) no-repeat center center;
+	color:#fff;
+	text-shadow:1px 1px #273802;
+}
+a.get_int:hover {
+	color:#d9d7d5;
+}
+/*YJNF5*/
+.itemcdate .month_day, .itemcategory {
+	color:#71a500;
+}
+.itemcdate .year {
+	color:#3c5800;
+}
+#down, #down_1, #down_2, #down_3, #down_4, #down_5 {
+	background:url(../images/green/yjnf5_navs.gif) no-repeat left top;
+}
+#down:hover, #down_1:hover, #down_2:hover, #down_3:hover, #down_4:hover, #down_5:hover {
+	background:url(../images/green/yjnf5_navs.gif) no-repeat left bottom;
+}
+#up, #up_1, #up_2, #up_3, #up_4, #up_5 {
+	background:url(../images/green/yjnf5_navs.gif) no-repeat right top;
+}
+#up:hover, #up_1:hover, #up_2:hover, #up_3:hover, #up_4:hover, #up_5:hover {
+	background:url(../images/green/yjnf5_navs.gif) no-repeat right bottom;
+}
+/* grid 6 and 7*/
+#yjsg67_holder {
+	background: url(../images/green/yjsg67_holder.gif) repeat-x left top;
+}
+#yjsg67_holder_in {
+	background: url(../images/green/yjsg67_holder_in.gif) repeat-x left bottom;
+}
+#yjsg6, #yjsg7, #yjsg6 a, #yjsg7 a {
+	color:#fff;
+	text-shadow:1px 1px #273802;
+}
+#yjsg6 a:hover, #yjsg7 a:hover {
+	color:#71a500;
+}
+#yjsg6 .yjsquare h4, #yjsg6 .yjsquare h4 span, #yjsg7 .yjsquare h4, #yjsg7 .yjsquare h4 span {
+	color:#71a500;
+	text-shadow:1px 1px #273802;
+}
+#yjsg6 ul li, #yjsg7 ul li {
+	background: url(../images/green/67_li.gif) no-repeat left 5px;
+}
+.yjsquare_bottomlogo {
+	background: url(../images/green/saw_dark.gif) repeat-x left top;
+}
+.bottom_logo {
+	background: url(../images/green/logo_bottom.png) no-repeat left center;
+}
+.bottom_logo_desc {
+	background: url(../images/green/bottom_logo_desc.png) no-repeat left center;
+}
+/* Yj Ajax contact*/
+#yjajaxcontact_box input, #yjajaxcontact_box textarea {
+	border:1px solid #273802!important;
+}
+#yjajaxcontact_box span.submit input {
+	border:none!important;
+}
+#yjajaxcontact_box span.submit {
+	background: url(../images/green/submit_l.png) no-repeat left center;
+}
+#yjajaxcontact_box span.submit .submitb {
+	color:#71a500;
+	background: url(../images/green/submit_button.png) no-repeat right center;
+}
+span.errormsg {
+	color:#fff!important;
+}
+span.thnxmsg {
+	color:#71a500!important;
+}
+#log_res.ajax-loading {
+	background: url(../images/green/loader.gif) no-repeat right center;
+}

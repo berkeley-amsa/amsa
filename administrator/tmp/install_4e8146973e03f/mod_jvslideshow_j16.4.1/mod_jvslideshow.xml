@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">
+	<name>JV Slideshow</name>
+	<author>JoomlaVi Project</author>
+	<creationDate>December 2010</creationDate>
+	<copyright>Copyright (C) JoomlaVi. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@joomlavi.com</authorEmail>
+	<authorUrl>www.joomlavi.com</authorUrl>
+	<version>1.6.4.0</version>
+	<description>The JV Slideshow Module allows to display the images with effects</description>
+	<files>
+		<filename module="mod_jvslideshow">mod_jvslideshow.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>assets</folder>
+		<folder>classes</folder>
+		<folder>element</folder>
+		<folder>tmpl</folder>
+	</files>
+	<languages>
+		<language tag="en-GB">en-GB.mod_jvslideshow.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_MANAGER_MENU" />
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_jvslideshow/element">
+			<fieldset name="basic">
+				<field name="jvslideshow_loadjs" type="loadjs" default="" label="" description="" />
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />		
+				<field name="jvslideshow_imagespath" type="text" size="70" default="modules/mod_jvslideshow/assets/data/" label="Images location" description="Select images location" />
+				<field name="jvslideshow_source" type="radio" default="0" label="Source" description="If Folder, the images are in the folder above; if List, the images are only in the list below; if Banners, the images are in banners component">
+					<option value="0">Folder</option> 
+					<option value="1">List</option> 
+					<option value="2">Banner</option>             		
+				</field>               
+				<field name="jvslideshow_images" type="textarea" default="" label="Images" description="Images" cols="50" rows="4" /> 
+				<field name="jvslideshow_links" type="textarea" default="" label="Links" description="Links" cols="50" rows="4" />
+				<field name="jvslideshow_titles" type="textarea" default="" label="Titles" description="Titles" cols="50" rows="4" /> 
+				<field name="jvslideshow_descriptions" filter="raw" type="textarea" default="" label="Descriptions" description="Descriptions" cols="50" rows="4" />
+				<field name="jvslideshow_bannerid" type="text" default="" label="Banner Id" description="Banner Id" />				
+				<field name="jvslideshow_width" type="text" default="" label="Width" description="Width" />
+				<field name="jvslideshow_height" type="text" default="300" label="Height" description="Height" />
+				<field name="jvslideshow_delay" type="text" default="5000" label="Delay" description="Delay" />
+				<field name="jvslideshow_duration" type="text" default="1500" label="Duration" description="Duration" />
+				<field name="jvslideshow_transition" type="list" default="Sine" label="Transition" description="Transition">
+					<option value="linear">Linear</option>
+					<option value="Quad">Quadratic</option>
+					<option value="Cubic">Cubic</option>
+					<option value="Quart">Quartic</option>
+					<option value="Quint">Quintic</option>
+					<option value="Sine">Sinusoidal</option>
+					<option value="Expo">Exponential</option>
+					<option value="Bounce">Bouncing</option>
+					<option value="Elastic">Elastic</option>
+				</field>
+				<field name="jvslideshow_ease" type="list" default="easeInOut" label="Ease" description="Ease">
+					<option value="easeIn">easeIn</option>
+					<option value="easeOut">easeOut</option>
+					<option value="easeInOut">easeInOut</option>			
+				</field>
+				<field name="jvslideshow_fxusing" type="radio" default="swap" label="Fx using" description="Fx using">
+					<option value="swap">Fx swap</option>
+					<option value="hslider">Fx horizontal slider</option>
+					<option value="vslider">Fx vertical slider</option>
+					<option value="bslider">Fx box slider</option>
+				</field>
+				<field name="jvslideshow_fxswap" type="list" default="fade" label="Fx swap" description="Fx swap">
+					<option value="fade,fadeLeft,fadeRight,fadeTop,fadeBottom,crossFadeLeft,crossFadeRight,crossFadeTop,crossFadeBottom,slideLeft,slideRight,slideTop,slideBottom">Random</option>			
+					<option value="fade">Fade</option>			
+					<option value="fadeLeft">Fade Left</option>			
+					<option value="fadeRight">Fade Right</option>
+					<option value="fadeTop">Fade Top</option>			
+					<option value="fadeBottom">Fade Bottom</option>			
+					<option value="fadeLeft,fadeRight,fadeTop,fadeBottom">Fade All</option>			
+					<option value="crossFadeLeft">Cross Fade Left</option>			
+					<option value="crossFadeRight">Cross Fade Right</option>
+					<option value="crossFadeTop">Cross Fade Top</option>			
+					<option value="crossFadeBottom">Cross Fade Bottom</option>			
+					<option value="crossFadeLeft,crossFadeRight,crossFadeTop,crossFadeBottom">Cross Fade All</option>			
+					<option value="slideLeft">Slide Left</option>			
+					<option value="slideRight">Slide Right</option>
+					<option value="slideTop">Slide Top</option>			
+					<option value="slideBottom">Slide Bottom</option>			
+					<option value="slideLeft,slideRight,slideTop,slideBottom">Slide All</option>			
+				</field>		
+				<field name="jvslideshow_fxhorizontalslider" type="list" default="fade" label="Fx horizontal slider" description="Fx horizontal slider">
+					<option value="fade,fold,sliceLeftUp,sliceLeftDown,sliceLeftRightDown,sliceLeftRightUp,sliceRightDown,sliceRightUp,wipeDown,wipeUp">Random</option>			
+					<option value="fade">Fade</option>			
+					<option value="fold">Fold</option>			
+					<option value="sliceLeftUp">Slice Left Up</option>
+					<option value="sliceLeftDown">Slice Left Down</option>			
+					<option value="sliceLeftRightDown">Slice Left Right Down</option>			
+					<option value="sliceLeftRightUp">Slice Left Right Up</option>			
+					<option value="sliceRightDown">Slice Right Down</option>			
+					<option value="sliceRightUp">Slice Right Up</option>
+					<option value="wipeDown">Wipe Down</option>			
+					<option value="wipeUp">Wipe Up</option>			
+				</field>
+				<field name="jvslideshow_fxverticalslider" type="list" default="fade" label="Fx vertical slider" description="Fx vertical slider">
+					<option value="fade,fold,sliceDownLeft,sliceDownRight,sliceUpDownLeft,sliceUpDownRight,sliceUpLeft,sliceUpRight,wipeLeft,wipeRight">Random</option>			
+					<option value="fade">Fade</option>			
+					<option value="fold">Fold</option>			
+					<option value="sliceDownLeft">Slice Down Left</option>
+					<option value="sliceDownRight">Slice Down Right</option>			
+					<option value="sliceUpDownLeft">Slice Up Down Left</option>			
+					<option value="sliceUpDownRight">Slice Up Down Right</option>			
+					<option value="sliceUpLeft">Slice Up Left</option>			
+					<option value="sliceUpRight">Slice Up Right</option>
+					<option value="wipeLeft">Wipe Left</option>			
+					<option value="wipeRight">Wipe Right</option>			
+				</field>
+				<field name="jvslideshow_fxboxslider" type="list" default="fade" label="Fx box slider" description="Fx box slider">			
+					<option value="fade,boxRandom,boxRain,boxRainReverse,boxRainGrow,boxRainGrowReverse">Random</option>			
+					<option value="fade">Fade</option>			
+					<option value="boxRandom">box Random</option>			
+					<option value="boxRain">box Rain</option>
+					<option value="boxRainReverse">box Rain Reverse</option>			
+					<option value="boxRainGrow">box Rain Grow</option>			
+					<option value="boxRainGrowReverse">box Rain Grow Reverse</option>			
+				</field>				
+			</fieldset>
+			<fieldset name="advanced">
+				<field name="jvslideshow_display" type="text" default="0" label="Display" description="Display" />
+				<field name="jvslideshow_noofitems" type="text" default="10" label="No of Items" description="No of Items" />
+				<field name="jvslideshow_target" type="list" default="_blank" label="Target" description="Target">
+					<option value="_blank">New window</option> 
+					<option value="_parent">Parent window</option> 
+					<option value="_self">Same window</option> 
+					<option value="_top">Top window</option> 
+				</field>		
+				<field name="jvslideshow_captionsopacity" type="text" default="0.7" label="Captions opacity" description="Captions opacity" />				
+				<field name="jvslideshow_slices" type="text" default="20" label="No of Slices" description="No of Slices" />		
+				<field name="jvslideshow_boxcols" type="text" default="8" label="No of Cols" description="No of Cols" />		
+				<field name="jvslideshow_boxrows" type="text" default="4" label="No of Rows" description="No of Rows" />		
+		
+				<field name="jvslideshow_forceeffect" type="radio" default="0" label="Force effect" description="Force effect">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>				
+				<field name="jvslideshow_captions" type="radio" default="1" label="Enable captions" description="Enable captions">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="jvslideshow_autohidecaptions" type="radio" default="1" label="Enable auto hide captions" description="Enable auto hide captions">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="jvslideshow_arrows" type="radio" default="0" label="Enable arrows" description="Enable arrows">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="jvslideshow_autohidearrows" type="radio" default="1" label="Enable auto hide arrows" description="Enable auto hide arrows">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>		
+				<field name="jvslideshow_firstarrow" type="radio" default="1" label="Enable first arrow" description="Enable first arrow">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="jvslideshow_prevarrow" type="radio" default="1" label="Enable prev arrow" description="Enable prev arrow">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="jvslideshow_pausearrow" type="radio" default="1" label="Enable pause arrow" description="Enable pause arrow">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="jvslideshow_nextarrow" type="radio" default="1" label="Enable next arrow" description="Enable next arrow">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="jvslideshow_lastarrow" type="radio" default="1" label="Enable last arrow" description="Enable last arrow">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="jvslideshow_controls" type="radio" default="0" label="Enable controls" description="Enable controls">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="jvslideshow_autohidecontrols" type="radio" default="1" label="Enable auto hide controls" description="Enable auto hide controls">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="jvslideshow_bulleticon" type="radio" default="0" label="Show controls as bullet icon" description="Show controls as bullet icon">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>				
+				<field name="jvslideshow_keyboard" type="radio" default="1" label="Enable keyboard" description="Enable keyboard">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="jvslideshow_autoplay" type="radio" default="1" label="Enable auto play" description="Enable auto play">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="jvslideshow_thumbnailwidth" type="text" default="64" label="Thumnail width" description="Thumnail width" />
+				<field name="jvslideshow_thumbnailheight" type="text" default="64" label="Thumnail height" description="Thumnail height" />        
+				<field name="jvslideshow_thumbnail" type="radio" default="0" label="Enable thumbnail" description="Enable thumbnail">
+					<option value="1">Auto</option>
+					<option value="2">Folder</option>
+					<option value="0">No</option>
+				</field>
+				<field name="jvslideshow_thumbnails_mode" type="list" default="adaptiveresize" label="Thumbnail mode" description="Thumbnail mode">
+					<option value="resize">Resize</option>
+					<option value="adaptiveresize">Adaptive resize</option>
+					<option value="crop">Crop</option>
+					<option value="cropfromcenter">Crop from center</option>                
+				</field>
+				<field name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+					<option value="1">Use global</option>
+					<option value="0">No caching</option>
+				</field>
+				<field name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+			</fieldset>
+		</fields>	
+	</config>
+	<updateservers>
+        <server type="extension" priority="1" name="joomlavi.com">http://www.joomlavi.com/update/update.xml</server>
+    </updateservers>	
+</extension>

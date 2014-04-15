@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="1.7.0" client="site" method="upgrade">
+	<name>Phoca - Google AdSense Easy</name>
+	<author>Jan Pavelka (www.phoca.cz)</author>
+	<creationDate>15/09/2010</creationDate>
+	<copyright>Jan Pavelka</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@phoca.cz</authorEmail>
+	<authorUrl>www.phoca.cz</authorUrl>
+	<version>2.0.1</version>
+	<description><![CDATA[ 
+       <div style="background:#E5F5FF;border:1px solid #99D6FF;padding:10px;margin:10px;-box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc;-webkit-box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc;-moz-box-shadow: inset 0px 0px 10px #fff, 0px 0px 5px #ccc;">
+<div><strong>Phoca - Google AdSense Easy</strong> - a Joomla! CMS module.</div>
+<p>&nbsp;</p>
+<div>Just copy your Google AdSense code and paste it into your Joomla! site.<br />
+AdSense Code - paste your AdSense code here.<br />
+IP(s) Block List - add the IP(s) you want to block here. Separate each IP with semicolon (,).<br />
+Alternate Content - specify alternate content for blocked IP(s).</div>
+<p>&nbsp;</p>
+<div>More information: <a href="http://www.phoca.cz/" target="_blank" >Phoca.cz</a></div>
+<div>Help and Support: <a href="http://www.phoca.cz/forum/" target="_blank" >Phoca Forum</a></div></div>  
+      ]]></description>
+	
+	<files>
+		<filename module="mod_phocagoogleadsense">mod_phocagoogleadsense.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_phocagoogleadsense.ini</language>
+	</languages>
+	
+	<administration>
+		<languages>
+			<language tag="en-GB">language/en-GB/en-GB.mod_phocagoogleadsense.ini</language>
+		</languages>
+	</administration>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+
+<field name="adsense_code" type="textarea" rows="15" cols="40" default="" filter="raw" label="MOD_PHOCAGOOGLEADSENSE_ADSENSE_CODE_LABEL" description="MOD_PHOCAGOOGLEADSENSE_ADSENSE_CODE_DESC" />
+<field name="ip_block_list" type="textarea" rows="3" cols="40" default="" label="MOD_PHOCAGOOGLEADSENSE_BLOCK_LIST_LABEL" description="MOD_PHOCAGOOGLEADSENSE_BLOCK_LIST_DESC" />
+<field name="alternate_content" type="textarea" rows="5" cols="40" default="" label="MOD_PHOCAGOOGLEADSENSE_ALTERNATE_CONTENT_LABEL" description="MOD_PHOCAGOOGLEADSENSE_ALTERNATE_CONTENT_DESC" />
+	
+			</fieldset>
+			<fieldset name="advanced">
+		
+<field name="moduleclass_sfx" type="text" label="MOD_MODULES_FIELD_MODULECLASS_SFX_LABEL" description="MOD_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+	
+<field name="module_css_style" type="text" label="MOD_PHOCAGOOGLEADSENSE_MODULE_CSS_STYLE_LABEL" description="MOD_PHOCAGOOGLEADSENSE_MODULE_CSS_STYLE_LABEL" />
+
+<field name="cache" type="list" default="0" label="MOD_MODULES_FIELD_CACHING_LABEL" description="MOD_MODULES_FIELD_CACHING_DESC">
+	<option value="0">MOD_MODULES_FIELD_VALUE_NOCACHING</option>
+</field>
+		
+			</fieldset>
+		</fields>
+	</config>
+</extension>

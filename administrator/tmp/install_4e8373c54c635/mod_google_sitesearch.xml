@@ -1,0 +1,692 @@
+<?xml version="1.0" ?>
+<!--==================================================================================-->
+<!--                                                                          		  -->
+<!--  PROJECT:  GoogleSiteSearch                                                      -->
+<!--            Fairtec (www.fairtec.at)                                              -->
+<!--            Joomla 1.5+ Module 									              	  -->
+<!--                                       									          -->
+<!--                                                                                  -->
+<!--  COPYLEFT © GNU/PL														 		  -->
+<!--                                                                         		  -->
+<!--  AUTHORS:     MHO: Manfred Hofbauer (opensource@fairtec.at)			 		  -->
+<!--  DESCRIPTION: Module displays different versions of the google-searchbox 		  -->
+<!--  sitesearch included!			 		  										  -->
+<!--                                                                         		  -->
+<!--  Subversion Tags							     						 		  -->
+<!--                                                                         		  -->
+<!--    $Author: manfred.hofbauer $                                        		  	  			  -->
+<!--    $LastChangedDate: 2011-05-05 21:11:13 +0200 (Do, 05 Mai 2011) $     		  -->
+<!--    $LastChangedRevision: 2945 $                                          		  -->
+<!--    $LastChangedBy: manfred.hofbauer $                                 		  	  			  -->
+<!--    $Id: mod_google_sitesearch.xml 2945 2011-05-05 19:11:13Z manfred.hofbauer $    			  -->
+<!--==================================================================================-->
+ 
+<install type="module" version="1.7.0">
+    <name>Google Site Search</name>
+    <author>Manfred Hofbauer</author>
+	<creationDate>2010-08-26</creationDate>
+	<copyright>Copyright(C) 2011 Manfred Hofbauer. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>opensource(at)fairtec.at</authorEmail>
+    <authorUrl>www.fairtec.at</authorUrl>
+	<version>1.7.0</version>
+
+    <description>
+        <![CDATA[
+            Google Site Search - gives you a neat small Google Site Search for your site
+        ]]>
+    </description>
+    <files>
+      <filename module="mod_google_sitesearch">mod_google_sitesearch.php</filename>
+      <filename>helper.php</filename>
+      <filename>index.html</filename>
+    </files>
+    <params>
+       <param name="Language" type="list" default="en" label="Language" description="choose your language">
+		<option value="ar">Arabic</option>
+		<option value="bg">Bulgarian</option>
+		<option value="zh-CN">Chinese (simplified)</option>
+		<option value="zh-TW">Chinese (traditional)</option>
+		<option value="hr">Croatian</option>
+		<option value="cs">Czech</option>
+		<option value="da">Danish</option>
+		<option value="nl">Dutch</option>
+		<option value="en">English</option>
+		<option value="fi">Finnish</option>
+		<option value="fr">French</option>
+		<option value="de">German</option>
+		<option value="el">Greek</option>
+		<option value="iw">Hebrew</option>
+		<option value="hu">Hungarian</option>
+		<option value="in">Indonesian</option>
+		<option value="it">Italian</option>
+		<option value="ja">Japanese</option>
+		<option value="ko">Korean</option>
+		<option value="lv">Latvian</option>
+		<option value="lt">Lithuanian</option>
+		<option value="no">Norwegian</option>
+		<option value="pl">Polish</option>
+		<option value="pt">Portuguese</option>
+		<option value="ro">Romanian</option>
+		<option value="ru">Russian</option>
+		<option value="sr">Serbian</option>
+		<option value="sk">Slovak</option>
+		<option value="es">Spanish</option>
+		<option value="sv">Swedish</option>
+		<option value="th">Thai</option>
+		<option value="tr">Turkish</option>
+		<option value="uk">Ukrainian</option>
+		<option value="vi">Vietnamese</option>	   
+	   </param>    
+	   <param name="GoogleSite" type="list" default="default" label="Google Site" description="The Google-site of your choice if (f.e. www.google.de)">
+		<option value="default">United States</option>
+		<option value="www.google.com.af">Afghanistan</option>
+		<option value="www.google.com">Albania</option>
+		<option value="www.google.dz">Algeria</option>
+		<option value="www.google.as">American Samoa</option> 
+		<option value="www.google.ad">Andorra</option> 
+		<option value="www.google.it.ao">Angola</option> 
+		<option value="www.google.com.ai">Anguilla</option>
+		<option value="www.google.com">Antarctica</option>
+		<option value="www.google.com.ag">Antigua and Barbuda</option>
+		<option value="www.google.com.ar">Argentina</option>
+		<option value="www.google.am">Armenia</option>
+		<option value="www.google.com">Aruba</option>
+		<option value="www.google.at">Austria</option>
+		<option value="www.google.com.au">Australia</option>
+		<option value="www.google.az">Azerbaijan</option>
+		<option value="www.google.bs">Bahamas</option>
+		<option value="www.google.com.bh">Bahrain</option>
+		<option value="www.google.com.bd">Bangladesh</option>
+		<option value="www.google.com">Barbados</option>
+		<option value="www.google.com.by">Belarus</option>
+		<option value="www.google.be">Belgium</option>
+		<option value="www.google.com.bz">Belize</option>
+		<option value="www.google.bj">Benin</option>
+		<option value="www.google.com">Bermuda</option>
+		<option value="www.google.com">Bhutan</option>
+		<option value="www.google.com.bo">Bolivia</option>
+		<option value="www.google.ba">Bosnia and Herzegovina</option>
+		<option value="www.google.co.bw">Botswana</option>
+		<option value="www.google.com">Bouvet Island</option>
+		<option value="www.google.com.br">Brazil</option>
+		<option value="www.google.com">British Indian Ocean Territory</option>
+		<option value="www.google.com.bn">Brunei Darussalam</option>
+		<option value="www.google.bg">Bulgaria</option>
+		<option value="www.google.bf">Burkina Faso</option>
+		<option value="www.google.bi">Burundi</option>
+		<option value="www.google.com.kh">Cambodia</option>
+		<option value="www.google.cm">Cameroon</option>
+		<option value="www.google.ca">Canada</option>
+		<option value="www.google.com">Cape Verde</option>
+		<option value="www.google.com">Cayman Islands</option>
+		<option value="www.google.cf">Central African Republic</option>
+		<option value="www.google.td">Chad</option>
+		<option value="www.google.cl">Chile</option>
+		<option value="www.google.cn">China</option>
+		<option value="www.google.com">Christmas Island</option>
+		<option value="www.google.com">Cocos (Keeling) Islands</option>
+		<option value="www.google.com.co">Colombia</option>
+		<option value="www.google.com">Comoros</option>
+		<option value="www.google.cg">Congo</option>
+		<option value="www.google.cd">Congo, Democratic Republic</option>
+		<option value="www.google.co.ck">Cook Islands</option>
+		<option value="www.google.co.cr">Costa Rica</option>
+		<option value="www.google.ci">Cote d'Ivoire</option>
+		<option value="www.google.hr">Croatia</option>
+		<option value="www.google.com">Cyprus</option>
+		<option value="www.google.cz">Czech Republic</option>
+		<option value="www.google.dk">Denmark</option>
+		<option value="www.google.dj">Djibouti</option>
+		<option value="www.google.dm">Dominica</option>
+		<option value="www.google.com.do">Dominican Republic</option>
+		<option value="www.google.tl">East Timor</option>
+		<option value="www.google.com.ec">Ecuador</option>
+		<option value="www.google.com.eg">Egypt</option>
+		<option value="www.google.com.sv">El Salvador</option>
+		<option value="www.google.com">Equatorial Guinea</option>
+		<option value="www.google.com">Eritrea</option>
+		<option value="www.google.ee">Estonia</option>
+		<option value="www.google.com.et">Ethiopia</option>
+		<option value="www.google.com">Falkland Islands (Malvinas)</option>
+		<option value="www.google.com">Faroe Islands</option>
+		<option value="www.google.com.fj">Fiji</option>
+		<option value="www.google.fi">Finland</option>
+		<option value="www.google.fr">France</option>
+		<option value="www.google.com">French Guiana</option>
+		<option value="www.google.com">French Polynesia</option>
+		<option value="www.google.com">French Southern Territories</option>
+		<option value="www.google.ga">Gabon</option>
+		<option value="www.google.gm">Gambia</option>
+		<option value="www.google.ge">Georgia</option>
+		<option value="www.google.de">Germany</option>
+		<option value="www.google.com.gh">Ghana</option>
+		<option value="www.google.com.gi">Gibraltar</option>
+		<option value="www.google.gr">Greece</option>
+		<option value="www.google.gl">Greenland</option>
+		<option value="www.google.com">Grenada</option>
+		<option value="www.google.gp">Guadeloupe</option>
+		<option value="www.google.com">Guam</option>
+		<option value="www.google.com.gt">Guatemala</option>
+		<option value="www.google.com">Guinea</option>
+		<option value="www.google.com">Guinea-Bissau</option>
+		<option value="www.google.gy">Guyana</option>
+		<option value="www.google.ht">Haiti</option>
+		<option value="www.google.com">Heard and McDonald Islands</option>
+		<option value="www.google.hn">Honduras</option>
+		<option value="www.google.com.hk">Hong Kong</option>
+		<option value="www.google.hu">Hungary</option>
+		<option value="www.google.is">Iceland</option>
+		<option value="www.google.co.in">India</option>
+		<option value="www.google.co.id">Indonesia</option>
+		<option value="www.google.com">Iraq</option>
+		<option value="www.google.ie">Ireland</option>
+		<option value="www.google.co.il">Israel</option>
+		<option value="www.google.it">Italy</option>
+		<option value="www.google.com.jm">Jamaica</option>
+		<option value="www.google.co.jp">Japan</option>
+		<option value="www.google.jo">Jordan</option>
+		<option value="www.google.kz">Kazakhstan</option>
+		<option value="www.google.co.ke">Kenya</option>
+		<option value="www.google.ki">Kiribati</option>
+		<option value="www.google.com.kw">Kuwait</option>
+		<option value="www.google.kg">Kyrgyzstan</option>
+		<option value="www.google.la">Lao People's Democratic Republic</option>
+		<option value="www.google.lv">Latvia</option>
+		<option value="www.google.com.lb">Lebanon</option>
+		<option value="www.google.co.ls">Lesotho</option>
+		<option value="www.google.com">Liberia</option>
+		<option value="www.google.com.ly">Libya</option>
+		<option value="www.google.li">Liechtenstein</option>
+		<option value="www.google.lt">Lithuania</option>
+		<option value="www.google.lu">Luxembourg</option>
+		<option value="www.google.com">Macau</option>
+		<option value="www.google.mk">Macedonia</option>
+		<option value="www.google.mg">Madagascar</option>
+		<option value="www.google.mw">Malawi</option>
+		<option value="www.google.com.my">Malaysia</option>
+		<option value="www.google.mv">Maldives</option>
+		<option value="www.google.ml">Mali</option>
+		<option value="www.google.com.mt">Malta</option>
+		<option value="www.google.com">Marshall Islands</option>
+		<option value="www.google.com">Martinique</option>
+		<option value="www.google.com">Mauritania</option>
+		<option value="www.google.mu">Mauritius</option>
+		<option value="www.google.com">Mayotte</option>
+		<option value="www.google.com.mx">Mexico</option>
+		<option value="www.google.fm">Micronesia</option>
+		<option value="www.google.md">Moldova</option>
+		<option value="www.google.com">Monaco</option>
+		<option value="www.google.mn">Mongolia</option>
+		<option value="www.google.ms">Montserrat</option>
+		<option value="www.google.co.ma">Morocco</option>
+		<option value="www.google.co.mz">Mozambique</option>
+		<option value="www.google.com.na">Namibia</option>
+		<option value="www.google.nr">Nauru</option>
+		<option value="www.google.com.np">Nepal</option>
+		<option value="www.google.nl">Netherlands</option>
+		<option value="www.google.com">Netherlands Antilles</option>
+		<option value="www.google.com">New Caledonia</option>
+		<option value="www.google.co.nz">New Zealand</option>
+		<option value="www.google.com.ni">Nicaragua</option>
+		<option value="www.google.ne">Niger</option>
+		<option value="www.google.com.ng">Nigeria</option>
+		<option value="www.google.nu">Niue</option>
+		<option value="www.google.com.nf">Norfolk Island</option>
+		<option value="www.google.com">Northern Mariana Islands</option>
+		<option value="www.google.no">Norway</option>
+		<option value="www.google.com.om">Oman</option>
+		<option value="www.google.com.pk">Pakistan</option>
+		<option value="www.google.com">Palau</option>
+		<option value="www.google.ps">Palestinian Territory</option>
+		<option value="www.google.com.pa">Panama</option>
+		<option value="www.google.com">Papua New Guinea</option>
+		<option value="www.google.com.py">Paraguay</option>
+		<option value="www.google.com.pe">Peru</option>
+		<option value="www.google.com.ph">Philippines</option>
+		<option value="www.google.pn">Pitcairn</option>
+		<option value="www.google.pl">Poland</option>
+		<option value="www.google.pt">Portugal</option>
+		<option value="www.google.com.pr">Puerto Rico</option>
+		<option value="www.google.com.qa">Qatar</option>
+		<option value="www.google.com">Reunion</option>
+		<option value="www.google.ro">Romania</option>
+		<option value="www.google.ru">Russian Federation</option>
+		<option value="www.google.rw">Rwanda</option>
+		<option value="www.google.com">Saint Kitts and Nevis</option>
+		<option value="www.google.com">Saint Lucia</option>
+		<option value="www.google.com.vc">Saint Vincent and the Grenadines</option>
+		<option value="www.google.ws">Samoa</option>
+		<option value="www.google.sm">San Marino</option>
+		<option value="www.google.st">Sao Tome and Principe</option>
+		<option value="www.google.com.sa">Saudi Arabia</option>
+		<option value="www.google.sn">Senegal</option>
+		<option value="www.google.com">Serbia and Montenegro</option>
+		<option value="www.google.sc">Seychelles</option>
+		<option value="www.google.com.sl">Sierra Leone</option>
+		<option value="www.google.com.sg">Singapore</option>
+		<option value="www.google.sk">Slovakia</option>
+		<option value="www.google.si">Slovenia</option>
+		<option value="www.google.com.sb">Solomon Islands</option>
+		<option value="www.google.com">Somalia</option>
+		<option value="www.google.co.za">South Africa</option>
+		<option value="www.google.com">South Georgia and The South Sandwich Islands</option>
+		<option value="www.google.co.kr">South Korea</option>
+		<option value="www.google.es">Spain</option>
+		<option value="www.google.lk">Sri Lanka</option>
+		<option value="www.google.sh">St. Helena</option>
+		<option value="www.google.com">St. Pierre and Miquelon</option>
+		<option value="www.google.com">Suriname</option>
+		<option value="www.google.com">Svalbard and Jan Mayen Islands</option>
+		<option value="www.google.com">Swaziland</option>
+		<option value="www.google.se">Sweden</option>
+		<option value="www.google.ch">Switzerland</option>
+		<option value="www.google.com.tw">Taiwan</option>
+		<option value="www.google.com.tj">Tajikistan</option>
+		<option value="www.google.co.tz">Tanzania</option>
+		<option value="www.google.co.th">Thailand</option>
+		<option value="www.google.tg">Togo</option>
+		<option value="www.google.tk">Tokelau</option>
+		<option value="www.google.to">Tonga</option>
+		<option value="www.google.tt">Trinidad and Tobago</option>
+		<option value="www.google.com">Tunisia</option>
+		<option value="www.google.com.tr">Turkey</option>
+		<option value="www.google.tm">Turkmenistan</option>
+		<option value="www.google.com">Turks and Caicos Islands</option>
+		<option value="www.google.com">Tuvalu</option>
+		<option value="www.google.co.ug">Uganda</option>
+		<option value="www.google.com.ua">Ukraine</option>
+		<option value="www.google.ae">United Arab Emirates</option>
+		<option value="www.google.co.uk">United Kingdom</option>
+		<option value="www.google.com">United States Minor Outlying Islands</option>
+		<option value="www.google.com.uy">Uruguay</option>
+		<option value="www.google.co.uz">Uzbekistan</option>
+		<option value="www.google.vu">Vanuatu</option>
+		<option value="www.google.com">Vatican</option>
+		<option value="www.google.co.ve">Venezuela</option>
+		<option value="www.google.com.vn">Viet Nam</option>
+		<option value="www.google.vg">Virgin Islands (British)</option>
+		<option value="www.google.co.vi">Virgin Islands (U.S.)</option>
+		<option value="www.google.com">Wallis and Futuna Islands</option>
+		<option value="www.google.com">Western Sahara</option>
+		<option value="www.google.com">Yemen</option>
+		<option value="www.google.co.zm">Zambia</option>
+		<option value="www.google.co.zw">Zimbabwe</option>
+		</param>
+	   <param name="SearchType" type="list" default="SITESEARCH" label="SearchType" description="Select if the classic box or the SearchSite Box shall be displayed.">
+	     <option value="SITESEARCH">SITESEARCH</option>
+	     <option value="CLASSIC">CLASSIC</option>
+	   </param>
+	   <param name="OpenResult" type="list" default="google_window" label="Open Results" description="Select if the results shall be displayed in the same or in a new window.">
+	     <option value="_top">Same Window</option>
+	     <option value="google_window">New Window</option>
+	   </param>
+	   <param name="SearchDomain" type="text" default="" label="SearchDomain" description="The Domain in addition shall be searched for, important if you choose the SearchSite option, defaulted by the acutal site">
+	   </param>
+	   <param name="SearchDomainLabel" type="text" default="" label="SearchDomain Label" description="what shall be displayed, useful if the sitename is too long for the module then you can change it here to f.e. 'this site'">
+	   </param>
+	   <param name="DefaultDomain" type="list" default="DOMAIN" label="Default Search" description="Choose if by default the domain or the web shall be searched for">
+	     <option value="DOMAIN">DOMAIN</option>
+	     <option value="WEB">WEB</option>
+	   </param>
+	   <param name="Background" type="list" default="Logo_25wht.gif" label="Background Color" description="Here you can choose the background color.">
+	     <option value="Logo_25wht.gif">white</option>
+	     <option value="Logo_25blk.gif">black</option>
+	     <option value="Logo_25gry.gif">grey</option>
+	   </param>
+	   <param name="FieldLength" type="text" default="" label="Field Length" description="How long shall the search field be (default 25)">
+	   </param>
+	   <param name="SearchButtonText" type="text" default="" label="Button Text" description="Text of the Search-Button">
+	   </param>
+	   <param name="PartnerID" type="text" default="" label="PartnerId" description="if you have an partner-id you can enter it here, not mandatory">
+	   </param>
+	   <param name="ChannelNo" type="text" default="" label="Channel Number" description="Which Channel, not mandatory, a possible option for adsense">
+	   </param>
+	   <param name="PageEncoding" type="text" default="" label="Page Encoding" description="which coding is used default ISO-8859-1">
+	   </param>
+	   <param name="ButtonPos" type="list" default="BELOW" label="Button Position" description="Choose if the button be placed below the search-field or beside">
+	     <option value="BELOW">BELOW</option>
+	     <option value="BESIDE">BESIDE</option>
+	   </param>
+	   <param name="LogoPos" type="list" default="ABOVE" label="Logo Position" description="Choose if the logo shall be placed below the search-field or above">
+	     <option value="ABOVE">ABOVE</option>
+	     <option value="BESIDE">BESIDE</option>
+	   </param>
+	   <param name="VersionText" type="list" default="YES" label="Version Text" description="Choose to display the version and the credits or not">
+	     <option value="YES">YES</option>
+	     <option value="NO">NO</option>
+	   </param>
+       <param name="BorderSize" type="list" default="0px none" label="Border Size" description="choose the size of the border between the elements, necessary if there is something wrong with the layout, the layout gets a bit tighter or broader">
+                   <option value="0px none">none</option>
+                   <option value="3px solid">small</option>
+				   <option value="5px solid">medium</option>
+				   <option value="10px solid">large</option>
+       </param>
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addfieldpath="modules/mod_google_sitesearch/">
+       			<field name="Language" type="list" default="en" label="Language" description="choose your language">
+					<option value="ar">Arabic</option>
+					<option value="bg">Bulgarian</option>
+					<option value="zh-CN">Chinese (simplified)</option>
+          			<option value="zh-TW">Chinese (traditional)</option>
+          			<option value="hr">Croatian</option>
+          			<option value="cs">Czech</option>
+          			<option value="da">Danish</option>
+          			<option value="nl">Dutch</option>
+          			<option value="en">English</option>
+          			<option value="fi">Finnish</option>
+          			<option value="fr">French</option>
+          			<option value="de">German</option>
+          			<option value="el">Greek</option>
+          			<option value="iw">Hebrew</option>
+          			<option value="hu">Hungarian</option>
+          			<option value="in">Indonesian</option>
+          			<option value="it">Italian</option>
+          			<option value="ja">Japanese</option>
+          			<option value="ko">Korean</option>
+          			<option value="lv">Latvian</option>
+          			<option value="lt">Lithuanian</option>
+          			<option value="no">Norwegian</option>
+          			<option value="pl">Polish</option>
+          			<option value="pt">Portuguese</option>
+          			<option value="ro">Romanian</option>
+          			<option value="ru">Russian</option>
+          			<option value="sr">Serbian</option>
+          			<option value="sk">Slovak</option>
+          			<option value="es">Spanish</option>
+          			<option value="sv">Swedish</option>
+          			<option value="th">Thai</option>
+          			<option value="tr">Turkish</option>
+          			<option value="uk">Ukrainian</option>
+          			<option value="vi">Vietnamese</option>     
+				</field> 
+       			<field name="GoogleSite" type="list" default="default" label="Google Site" description="The Google-site of your choice if (f.e. www.google.de)">
+  				<option value="default">United States</option>
+  				<option value="www.google.com.af">Afghanistan</option>
+                <option value="www.google.com">Albania</option>
+                <option value="www.google.dz">Algeria</option>
+                <option value="www.google.as">American Samoa</option> 
+                <option value="www.google.ad">Andorra</option> 
+                <option value="www.google.it.ao">Angola</option> 
+                <option value="www.google.com.ai">Anguilla</option>
+                <option value="www.google.com">Antarctica</option>
+                <option value="www.google.com.ag">Antigua and Barbuda</option>
+                <option value="www.google.com.ar">Argentina</option>
+                <option value="www.google.am">Armenia</option>
+                <option value="www.google.com">Aruba</option>
+                <option value="www.google.at">Austria</option>
+                <option value="www.google.com.au">Australia</option>
+                <option value="www.google.az">Azerbaijan</option>
+                <option value="www.google.bs">Bahamas</option>
+                <option value="www.google.com.bh">Bahrain</option>
+                <option value="www.google.com.bd">Bangladesh</option>
+                <option value="www.google.com">Barbados</option>
+                <option value="www.google.com.by">Belarus</option>
+                <option value="www.google.be">Belgium</option>
+                <option value="www.google.com.bz">Belize</option>
+                <option value="www.google.bj">Benin</option>
+                <option value="www.google.com">Bermuda</option>
+                <option value="www.google.com">Bhutan</option>
+                <option value="www.google.com.bo">Bolivia</option>
+                <option value="www.google.ba">Bosnia and Herzegovina</option>
+                <option value="www.google.co.bw">Botswana</option>
+                <option value="www.google.com">Bouvet Island</option>
+                <option value="www.google.com.br">Brazil</option>
+                <option value="www.google.com">British Indian Ocean Territory</option>
+                <option value="www.google.com.bn">Brunei Darussalam</option>
+                <option value="www.google.bg">Bulgaria</option>
+                <option value="www.google.bf">Burkina Faso</option>
+                <option value="www.google.bi">Burundi</option>
+                <option value="www.google.com.kh">Cambodia</option>
+                <option value="www.google.cm">Cameroon</option>
+                <option value="www.google.ca">Canada</option>
+                <option value="www.google.com">Cape Verde</option>
+                <option value="www.google.com">Cayman Islands</option>
+                <option value="www.google.cf">Central African Republic</option>
+                <option value="www.google.td">Chad</option>
+                <option value="www.google.cl">Chile</option>
+                <option value="www.google.cn">China</option>
+                <option value="www.google.com">Christmas Island</option>
+                <option value="www.google.com">Cocos (Keeling) Islands</option>
+                <option value="www.google.com.co">Colombia</option>
+                <option value="www.google.com">Comoros</option>
+                <option value="www.google.cg">Congo</option>
+                <option value="www.google.cd">Congo, Democratic Republic</option>
+                <option value="www.google.co.ck">Cook Islands</option>
+                <option value="www.google.co.cr">Costa Rica</option>
+                <option value="www.google.ci">Cote d'Ivoire</option>
+                <option value="www.google.hr">Croatia</option>
+                <option value="www.google.com">Cyprus</option>
+                <option value="www.google.cz">Czech Republic</option>
+                <option value="www.google.dk">Denmark</option>
+                <option value="www.google.dj">Djibouti</option>
+                <option value="www.google.dm">Dominica</option>
+                <option value="www.google.com.do">Dominican Republic</option>
+                <option value="www.google.tl">East Timor</option>
+                <option value="www.google.com.ec">Ecuador</option>
+                <option value="www.google.com.eg">Egypt</option>
+                <option value="www.google.com.sv">El Salvador</option>
+                <option value="www.google.com">Equatorial Guinea</option>
+                <option value="www.google.com">Eritrea</option>
+                <option value="www.google.ee">Estonia</option>
+                <option value="www.google.com.et">Ethiopia</option>
+                <option value="www.google.com">Falkland Islands (Malvinas)</option>
+                <option value="www.google.com">Faroe Islands</option>
+                <option value="www.google.com.fj">Fiji</option>
+                <option value="www.google.fi">Finland</option>
+                <option value="www.google.fr">France</option>
+                <option value="www.google.com">French Guiana</option>
+                <option value="www.google.com">French Polynesia</option>
+                <option value="www.google.com">French Southern Territories</option>
+                <option value="www.google.ga">Gabon</option>
+                <option value="www.google.gm">Gambia</option>
+                <option value="www.google.ge">Georgia</option>
+                <option value="www.google.de">Germany</option>
+                <option value="www.google.com.gh">Ghana</option>
+                <option value="www.google.com.gi">Gibraltar</option>
+                <option value="www.google.gr">Greece</option>
+                <option value="www.google.gl">Greenland</option>
+                <option value="www.google.com">Grenada</option>
+                <option value="www.google.gp">Guadeloupe</option>
+                <option value="www.google.com">Guam</option>
+                <option value="www.google.com.gt">Guatemala</option>
+                <option value="www.google.com">Guinea</option>
+                <option value="www.google.com">Guinea-Bissau</option>
+                <option value="www.google.gy">Guyana</option>
+                <option value="www.google.ht">Haiti</option>
+                <option value="www.google.com">Heard and McDonald Islands</option>
+                <option value="www.google.hn">Honduras</option>
+                <option value="www.google.com.hk">Hong Kong</option>
+                <option value="www.google.hu">Hungary</option>
+                <option value="www.google.is">Iceland</option>
+                <option value="www.google.co.in">India</option>
+                <option value="www.google.co.id">Indonesia</option>
+                <option value="www.google.com">Iraq</option>
+                <option value="www.google.ie">Ireland</option>
+                <option value="www.google.co.il">Israel</option>
+                <option value="www.google.it">Italy</option>
+                <option value="www.google.com.jm">Jamaica</option>
+                <option value="www.google.co.jp">Japan</option>
+                <option value="www.google.jo">Jordan</option>
+                <option value="www.google.kz">Kazakhstan</option>
+                <option value="www.google.co.ke">Kenya</option>
+                <option value="www.google.ki">Kiribati</option>
+                <option value="www.google.com.kw">Kuwait</option>
+                <option value="www.google.kg">Kyrgyzstan</option>
+                <option value="www.google.la">Lao People's Democratic Republic</option>
+                <option value="www.google.lv">Latvia</option>
+                <option value="www.google.com.lb">Lebanon</option>
+                <option value="www.google.co.ls">Lesotho</option>
+                <option value="www.google.com">Liberia</option>
+                <option value="www.google.com.ly">Libya</option>
+                <option value="www.google.li">Liechtenstein</option>
+                <option value="www.google.lt">Lithuania</option>
+                <option value="www.google.lu">Luxembourg</option>
+                <option value="www.google.com">Macau</option>
+                <option value="www.google.mk">Macedonia</option>
+                <option value="www.google.mg">Madagascar</option>
+                <option value="www.google.mw">Malawi</option>
+                <option value="www.google.com.my">Malaysia</option>
+                <option value="www.google.mv">Maldives</option>
+                <option value="www.google.ml">Mali</option>
+                <option value="www.google.com.mt">Malta</option>
+                <option value="www.google.com">Marshall Islands</option>
+                <option value="www.google.com">Martinique</option>
+                <option value="www.google.com">Mauritania</option>
+                <option value="www.google.mu">Mauritius</option>
+                <option value="www.google.com">Mayotte</option>
+                <option value="www.google.com.mx">Mexico</option>
+                <option value="www.google.fm">Micronesia</option>
+                <option value="www.google.md">Moldova</option>
+                <option value="www.google.com">Monaco</option>
+                <option value="www.google.mn">Mongolia</option>
+                <option value="www.google.ms">Montserrat</option>
+                <option value="www.google.co.ma">Morocco</option>
+                <option value="www.google.co.mz">Mozambique</option>
+                <option value="www.google.com.na">Namibia</option>
+                <option value="www.google.nr">Nauru</option>
+                <option value="www.google.com.np">Nepal</option>
+                <option value="www.google.nl">Netherlands</option>
+                <option value="www.google.com">Netherlands Antilles</option>
+                <option value="www.google.com">New Caledonia</option>
+                <option value="www.google.co.nz">New Zealand</option>
+                <option value="www.google.com.ni">Nicaragua</option>
+                <option value="www.google.ne">Niger</option>
+                <option value="www.google.com.ng">Nigeria</option>
+                <option value="www.google.nu">Niue</option>
+                <option value="www.google.com.nf">Norfolk Island</option>
+                <option value="www.google.com">Northern Mariana Islands</option>
+                <option value="www.google.no">Norway</option>
+                <option value="www.google.com.om">Oman</option>
+                <option value="www.google.com.pk">Pakistan</option>
+                <option value="www.google.com">Palau</option>
+                <option value="www.google.ps">Palestinian Territory</option>
+                <option value="www.google.com.pa">Panama</option>
+                <option value="www.google.com">Papua New Guinea</option>
+                <option value="www.google.com.py">Paraguay</option>
+                <option value="www.google.com.pe">Peru</option>
+                <option value="www.google.com.ph">Philippines</option>
+                <option value="www.google.pn">Pitcairn</option>
+                <option value="www.google.pl">Poland</option>
+                <option value="www.google.pt">Portugal</option>
+                <option value="www.google.com.pr">Puerto Rico</option>
+                <option value="www.google.com.qa">Qatar</option>
+                <option value="www.google.com">Reunion</option>
+                <option value="www.google.ro">Romania</option>
+                <option value="www.google.ru">Russian Federation</option>
+                <option value="www.google.rw">Rwanda</option>
+                <option value="www.google.com">Saint Kitts and Nevis</option>
+                <option value="www.google.com">Saint Lucia</option>
+                <option value="www.google.com.vc">Saint Vincent and the Grenadines</option>
+                <option value="www.google.ws">Samoa</option>
+                <option value="www.google.sm">San Marino</option>
+                <option value="www.google.st">Sao Tome and Principe</option>
+                <option value="www.google.com.sa">Saudi Arabia</option>
+                <option value="www.google.sn">Senegal</option>
+                <option value="www.google.com">Serbia and Montenegro</option>
+                <option value="www.google.sc">Seychelles</option>
+                <option value="www.google.com.sl">Sierra Leone</option>
+                <option value="www.google.com.sg">Singapore</option>
+                <option value="www.google.sk">Slovakia</option>
+                <option value="www.google.si">Slovenia</option>
+                <option value="www.google.com.sb">Solomon Islands</option>
+                <option value="www.google.com">Somalia</option>
+                <option value="www.google.co.za">South Africa</option>
+                <option value="www.google.com">South Georgia and The South Sandwich Islands</option>
+                <option value="www.google.co.kr">South Korea</option>
+                <option value="www.google.es">Spain</option>
+                <option value="www.google.lk">Sri Lanka</option>
+                <option value="www.google.sh">St. Helena</option>
+                <option value="www.google.com">St. Pierre and Miquelon</option>
+                <option value="www.google.com">Suriname</option>
+                <option value="www.google.com">Svalbard and Jan Mayen Islands</option>
+                <option value="www.google.com">Swaziland</option>
+                <option value="www.google.se">Sweden</option>
+                <option value="www.google.ch">Switzerland</option>
+                <option value="www.google.com.tw">Taiwan</option>
+                <option value="www.google.com.tj">Tajikistan</option>
+                <option value="www.google.co.tz">Tanzania</option>
+                <option value="www.google.co.th">Thailand</option>
+                <option value="www.google.tg">Togo</option>
+                <option value="www.google.tk">Tokelau</option>
+                <option value="www.google.to">Tonga</option>
+                <option value="www.google.tt">Trinidad and Tobago</option>
+                <option value="www.google.com">Tunisia</option>
+                <option value="www.google.com.tr">Turkey</option>
+                <option value="www.google.tm">Turkmenistan</option>
+                <option value="www.google.com">Turks and Caicos Islands</option>
+                <option value="www.google.com">Tuvalu</option>
+                <option value="www.google.co.ug">Uganda</option>
+                <option value="www.google.com.ua">Ukraine</option>
+                <option value="www.google.ae">United Arab Emirates</option>
+                <option value="www.google.co.uk">United Kingdom</option>
+                <option value="www.google.com">United States Minor Outlying Islands</option>
+                <option value="www.google.com.uy">Uruguay</option>
+                <option value="www.google.co.uz">Uzbekistan</option>
+                <option value="www.google.vu">Vanuatu</option>
+                <option value="www.google.com">Vatican</option>
+                <option value="www.google.co.ve">Venezuela</option>
+                <option value="www.google.com.vn">Viet Nam</option>
+                <option value="www.google.vg">Virgin Islands (British)</option>
+                <option value="www.google.co.vi">Virgin Islands (U.S.)</option>
+                <option value="www.google.com">Wallis and Futuna Islands</option>
+                <option value="www.google.com">Western Sahara</option>
+                <option value="www.google.com">Yemen</option>
+                <option value="www.google.co.zm">Zambia</option>
+                <option value="www.google.co.zw">Zimbabwe</option>
+				</field>
+                <field name="SearchType" type="list" default="SITESEARCH" label="SearchType" description="Select if the classic box or the SearchSite Box shall be displayed.">
+                   <option value="SITESEARCH">SITESEARCH</option>
+                   <option value="CLASSIC">CLASSIC</option>
+                </field>
+                <field name="OpenResult" type="list" default="google_window" label="Open Results" description="Select if the results shall be displayed in the same or in a new window.">
+                   <option value="_top">Same Window</option>
+                   <option value="google_window">New Window</option>
+                </field>
+                <field name="SearchDomain" type="text" default="" label="SearchDomain" description="The Domain in addition shall be searched for, important if you choose the SearchSite option, defaulted by the acutal site">
+                </field>
+                <field name="SearchDomainLabel" type="text" default="" label="SearchDomain Label" description="what shall be displayed, useful if the sitename is too long for the module then you can change it here to f.e. 'this site'">
+                </field>
+                <field name="DefaultDomain" type="list" default="DOMAIN" label="Default Search" description="Choose if by default the domain or the web shall be searched for">
+                   <option value="DOMAIN">DOMAIN</option>
+                   <option value="WEB">WEB</option>
+                </field>
+                <field name="Background" type="list" default="Logo_25wht.gif" label="Background Color" description="Here you can choose the background color.">
+                   <option value="Logo_25wht.gif">white</option>
+                   <option value="Logo_25blk.gif">black</option>
+                   <option value="Logo_25gry.gif">grey</option>
+                </field>
+                <field name="FieldLength" type="text" default="" label="Field Length" description="How long shall the search field be (default 25)">
+                </field>
+                <field name="SearchButtonText" type="text" default="" label="Button Text" description="Text of the Search-Button">
+                </field>
+                <field name="PartnerID" type="text" default="" label="PartnerId" description="if you have an partner-id you can enter it here, not mandatory">
+                </field>
+                <field name="ChannelNo" type="text" default="" label="Channel Number" description="Which Channel, not mandatory, a possible option for adsense">
+                </field>
+                <field name="PageEncoding" type="text" default="" label="Page Encoding" description="which coding is used default ISO-8859-1">
+                </field>
+                <field name="ButtonPos" type="list" default="BELOW" label="Button Position" description="Choose if the button be placed below the search-field or beside">
+                   <option value="BELOW">BELOW</option>
+                   <option value="BESIDE">BESIDE</option>
+                </field>
+                <field name="LogoPos" type="list" default="ABOVE" label="Logo Position" description="Choose if the logo shall be placed below the search-field or above">
+                   <option value="ABOVE">ABOVE</option>
+                   <option value="BESIDE">BESIDE</option>
+                </field>
+                <field name="VersionText" type="list" default="YES" label="Version Text" description="Choose to display the version and the credits or not">
+                   <option value="YES">YES</option>
+                   <option value="NO">NO</option>
+                </field>
+                <field name="BorderSize" type="list" default="3px solid" label="Tightness" description="choose the tightness of the whole box, necessary if there is something wrong with the layout, the layout gets a bit tighter or broader">
+                   <option value="0px none">none</option>
+                   <option value="3px solid">small</option>
+				   <option value="5px solid">medium</option>
+				   <option value="10px solid">large</option>
+                </field>
+			</fieldset>
+		</fields>
+	</config>
+</install>

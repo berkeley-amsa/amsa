@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config>
+    <!-- Joomla 1.6.x  -->
+	<fieldset name="files" label="JOOMDOC_DOCUMENTS" description="" addfieldpath="/administrator/components/com_joomdoc/models/fields">
+		<field name="docroot" type="text" label="JOOMDOC_DOCUMENT_ROOT"
+			description="JOOMDOC_DOCUMENT_ROOT_DESC" default="[%DOCROOT%]" size="60" />
+        <field name="icon_theme" type="modal_icons" label="JOOMDOC_ICON_THEME" description="JOOMDOC_ICON_THEME_DESC" default="default" />
+                <field name="display_favorite" type="radio" default="1" label="JOOMDOC_DISPLAY_FAVORITE" description="JOOMDOC_DISPLAY_FAVORITE_DESC" >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+        <field name="display_signature" type="radio" default="1" label="JOOMDOC_DISPLAY_SIGNATURE" description="JOOMDOC_DISPLAY_SIGNATURE_DESC" >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </field>
+                          
+        <field name="download_id" type="text" label="JOOMDOC_DOWNLOAD_ID"
+			description="JOOMDOC_DOWNLOAD_ID_DESC" default="" size="32" />        
+		<field name="default_title" type="text" label="JOOMDOC_DEFAULT_TITLE"
+			description="JOOMDOC_DEFAULT_TITLE_DESC" default="JoomDOC" size="60" />
+        <field name="default_metakeywords" type="textarea" label="JOOMDOC_METAKEYWORDS" description="JOOMDOC_METAKEYWORDS_DESC" rows="2" cols="80" default="JoomDOC,ARTIO,Documents,Joomla" />
+        <field name="default_metadescription" type="textarea" label="JOOMDOC_METADESCRIPTION" description="JOOMDOC_METADESCRIPTION_DESC" rows="8" cols="80" default="JoomDOC is Joomla! document management component for managing documents and publishing them online." />
+        <field name="" description="" type="spacer" />
+        <field name="" description="" type="spacer" />
+        <field name="default_description" type="editor"
+			label="JOOMDOC_DEFAULT_DESCRIPTION" description="JOOMDOC_DEFAULT_DESCRIPTION_DESC"
+			default="JoomDOC is Joomla! document management component for managing documents and publishing them online." buttons="false" filter="safehtml" width="70%"/>
+	</fieldset>
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL"
+		description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL"
+			class="inputbox" validate="rules" filter="rules" component="com_joomdoc"
+			section="component" />
+	</fieldset>
+    <!-- Joomla 1.5.x  -->
+    <params addpath="/administrator/components/com_joomdoc/elements/">
+        <param name="docroot" type="text" label="JOOMDOC_DOCUMENT_ROOT"
+			description="JOOMDOC_DOCUMENT_ROOT_DESC" default="[%DOCROOT%]" size="60" />
+                <param name="display_favorite" type="radio" default="1" label="JOOMDOC_DISPLAY_FAVORITE" description="JOOMDOC_DISPLAY_FAVORITE_DESC" >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </param>                
+        <param name="display_signature" type="radio" default="1" label="JOOMDOC_DISPLAY_SIGNATURE" description="JOOMDOC_DISPLAY_SIGNATURE_DESC" >
+            <option value="1">JYES</option>
+            <option value="0">JNO</option>
+        </param>                
+                <param name="webdav_allow" type="usergroup" default="25" label="JOOMDOC_WEBDAV_ALLOW" description="JOOMDOC_WEBDAV_ALLOW_DESC" />
+        <param name="download_id" type="text" label="JOOMDOC_DOWNLOAD_ID"
+			description="JOOMDOC_DOWNLOAD_ID_DESC" default="" size="32" />        
+		<param name="default_title" type="text" label="JOOMDOC_DEFAULT_TITLE"
+			description="JOOMDOC_DEFAULT_TITLE_DESC" default="JoomDOC" size="60" />
+        <param name="default_metakeywords" type="textarea" label="JOOMDOC_METAKEYWORDS" description="JOOMDOC_METAKEYWORDS_DESC" rows="2" cols="80" default="JoomDOC,ARTIO,Documents,Joomla" />
+        <param name="default_metadescription" type="textarea" label="JOOMDOC_METADESCRIPTION" description="JOOMDOC_METADESCRIPTION_DESC" rows="8" cols="80" default="JoomDOC is Joomla! document management component for managing documents and publishing them online." />
+        <param name="" description="" type="spacer" />
+        <param name="" description="" type="spacer" />
+        <param name="default_description" type="editor"
+			label="JOOMDOC_DEFAULT_DESCRIPTION" description="JOOMDOC_DEFAULT_DESCRIPTION_DESC"
+			default="JoomDOC is Joomla! document management component for managing documents and publishing them online." buttons="false" filter="safehtml" width="70%"/>
+    </params>
+</config>

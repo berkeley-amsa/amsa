@@ -1,0 +1,47 @@
+3.1
+---
+made module ready for Joomla 1.6, changed the html code for better compatibility with 1.6, added parameter for tightness
+
+3.0.1
+---
+changed us to last so it gets selected when some site with www.google.com got chosen i guess its less confusing
+
+
+3.0
+---
+brought module to live again, 100 more google sites some more languages
+changes for 1.5 native module
+
+2.0
+---
+bugs fixed, tested with joomla
+
+1.5
+---
+- supports now all languages supported by google, default-button-text is also set in this languages
+language can be selected by a listbox now
+- supports now all google-sites currently available, can be selected by listbox
+- it can be chosen if the results are opened in a new window, or in the same
+
+1.4
+---
+- corrected minor problem when displaying the box on different sites
+
+1.3
+---
+- new parameter that allows to choose if the web or if the domain shall be searched by default
+
+1.2
+---
+- The default-Text for the button is now "Search", so a lot of english-speaking people don't have to change the parameters
+- The search-domain is also defaulted with the acutal site
+- Included the CHANGELOG.txt in the release
+
+1.1
+---
+- A bug caused to display a white box if the webpage has another background than white
+- Implemented the parameters to change the button and the logo-position.
+
+1.0
+---
+base, init

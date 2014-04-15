@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="1.5.0">
+	<name>Google Custom Search</name>
+	<author>Joomler!.net</author>
+	<creationDate>May 2008</creationDate>
+	<copyright>Copyright(c) 2008 Joomler!.net All Rights Reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>joomlers@gmail.com</authorEmail>
+	<authorUrl>www.joomler.net</authorUrl>
+	<version>1.1.0</version>
+	<description>Google Custom Search:	This module does a GoogleWEB search.
+	Comments &amp; suggestions: http://www.joomler.net/
+	</description>
+	<files>
+		<filename module="mod_google_customsearch">mod_google_customsearch.php</filename>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<params>
+		<param name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		<param name="APIKey" label="APIKey" type="text" default="" description="Please input Google Search APIKey." size="60" />
+		<param name="searchwords" label="Search Words(Default)" type="text" default="Joomla Content Component Module Template" description="Default Search Words(seperater is space. e.g.:Joomla CMS )" size="60" />
+		<param name="related_search" label="Related Web Search" type="list" default="0" description="web search with MetaKey or Title.">
+			<option value="0">Not Enabled</option>
+			<option value="1">Enabled</option>
+		</param>
+		<param name="minword" label="Minimum Length" type="text" default="5" description="minimum length of search word" size="3" />
+		<param name="maxkeyword" label="Maximum Number" type="text" default="2" description="The maximum number of the search word" size="3" />
+	    	<param name="priority" label="priority order" type="text" default="content,title,page,default" description="make a search word in order appointed by this setting." size="50" />
+		<param name="target" label="Target Window" type="list" default="google.search.Search.LINK_TARGET_BLANK" description="Select taget window" >
+			<option value="google.search.Search.LINK_TARGET_BLANK">Blank</option>
+			<option value="google.search.Search.LINK_TARGET_SELF">Self</option>
+			<option value="google.search.Search.LINK_TARGET_TOP">Top</option>
+			<option value="google.search.Search.LINK_TARGET_PARENT">Parent</option>
+			<option value="'anything-else'">anything-else</option>
+		</param>
+		<param name="@spacer" label="Style" type="spacer" default="" description="" />
+		<param name="custom_css" label="custom style" type="text" default="" description="Please write it by the format of the style sheet.(e.g.:div.gsc-results{width:180px})" size="60" />
+		<param name="loading" label="Loading..." type="text" default="Loading..." description="entry of the URL of the image or a letter. It is displayed at the time of loading." size="60"/>
+		<param name="drawmode" label="Draw Mode" type="list" default="DRAW_MODE_LINEAR" description="DRAW_MODE_TABBED is the tabbed desiplay." >
+			<option value="DRAW_MODE_TABBED">TABBED</option>
+			<option value="DRAW_MODE_LINEAR">LINEAR</option>
+		</param>
+		<param name="@spacer" label="Search Control" type="spacer" default="" description="" />
+		<param name="order" label="Ordering" type="text" default="custom,local,web,video,blog,news,image,book" description="If there is not entry, it is not displayed. (comma seperate  e.g.:custom,local,web,video,blog,news,image,book)" size="60" />
+		<param name="uselocalsearch" label="Use Local Search" type="list" default="0" description="enable local search?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="localexpand" label="ExpandMode" type="list" default="1" description="expand mode for local search">
+			<option value="0">CLOSED</option>
+			<option value="1">PARTIAL</option>
+			<option value="2">OPEN</option>
+		</param>
+		<param name="centerpoint" label="Center Point" type="text" default="New York, NY" description="default point" />
+		<param name="usewebsearch" label="Use Web Search" type="list" default="1" description="enable web search?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="webexpand" label="ExpandMode" type="list" default="1" description="expand mode for web search">
+			<option value="0">CLOSED</option>
+			<option value="1">PARTIAL</option>
+			<option value="2">OPEN</option>
+		</param>
+		<param name="usevideosearch" label="Use Video Search" type="list" default="1" description="enable video search?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="videoexpand" label="ExpandMode" type="list" default="1" description="expand mode for video search">
+			<option value="0">CLOSED</option>
+			<option value="1">PARTIAL</option>
+			<option value="2">OPEN</option>
+		</param>
+		<param name="useblogsearch" label="Use Blog Search" type="list" default="1" description="enable blog search?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="blogexpand" label="ExpandMode" type="list" default="1" description="expand mode for blog search">
+			<option value="0">CLOSED</option>
+			<option value="1">PARTIAL</option>
+			<option value="2">OPEN</option>
+		</param>
+		<param name="usenewssearch" label="Use News Search" type="list" default="1" description="enable news search?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="newsexpand" label="ExpandMode" type="list" default="1" description="expand mode for news search">
+			<option value="0">CLOSED</option>
+			<option value="1">PARTIAL</option>
+			<option value="2">OPEN</option>
+		</param>
+		<param name="useimagesearch" label="Use Image Search" type="list" default="1" description="enable image search?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="imageexpand" label="ExpandMode" type="list" default="1" description="expand mode for image search">
+			<option value="0">CLOSED</option>
+			<option value="1">PARTIAL</option>
+			<option value="2">OPEN</option>
+		</param>
+		<param name="usebooksearch" label="Use Book Search" type="list" default="1" description="enable book search?">
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="bookexpand" label="ExpandMode" type="list" default="1" description="expand mode for book search">
+			<option value="0">CLOSED</option>
+			<option value="1">PARTIAL</option>
+			<option value="2">OPEN</option>
+		</param>
+		<param name="@spacer" label="Custom Search Engine" type="spacer" default="" description="" />
+		<param name="usecustomsearch" label="Use Custom Search" type="list" default="0" description="enable custom search?" >
+			<option value="0">No</option>
+			<option value="1">Yes</option>
+		</param>
+		<param name="customexpand" label="ExpandMode" type="list" default="1" description="expand mode for Custom search">
+			<option value="0">CLOSED</option>
+			<option value="1">PARTIAL</option>
+			<option value="2">OPEN</option>
+		</param>
+		<param name="label" label="Title" type="text" default="Custom Search" description="title of custom search" size="40" />
+		<param name="suffix" label="Class Suffix" type="text" default="" description="class suffix for custom search" size="20" />
+		<param name="siteRestriction" label="Site Restriction" type="text" default="amazon.com" description="your cx value of Google or hostname(e.g.:00012312938384:abcdefghij)" size="60" />
+	</params>
+	<params group="advanced">
+		<param name="gwebsearch_css" label="CSS" type="text" default="" description="http://www.google.com/uds/css/gsearch.css is read without entry" size="60" />
+		<param name="cache" type="list" default="1" label="Caching" description="Select whether to cache the content of this module">
+			<option value="1">Use global</option>
+			<option value="0">No caching</option>
+		</param>
+		<param name="cache_time" type="text" default="900" label="Cache Time" description="The time before the module is recached" />
+	</params>
+</install>

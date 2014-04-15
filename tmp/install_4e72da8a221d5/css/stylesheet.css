@@ -1,0 +1,26 @@
+/*======================================================================*\
+|| #################################################################### ||
+|| # Youjoomla LLC 
+|| # ---------------------------------------------------------------- # ||
+|| # Copyright ©2006-2009 Youjoomla LLC. All Rights Reserved.           ||
+|| # This file may not be redistributed in whole or significant part. # ||
+|| # ---------------- THIS IS NOT FREE SOFTWARE ---------------- #      ||
+|| # http://www.youjoomla.com | http://www.youjoomla.com/license.html # ||
+|| #################################################################### ||
+\*======================================================================*/
+#piecemaker_holder{
+	margin:0 auto;
+	overflow:hidden;
+	text-align:center;
+	display:block;
+	position:relative;
+}
+#xmlerror{
+	background:#F4F4F4;
+	color:red;
+	padding:10px;
+	font-weight:bold;
+	text-align:center;
+	border-top:1px solid #eee;
+	border-bottom:1px solid #eee;
+}

@@ -1,0 +1,48 @@
+REQUIREMENTS
+------------
+Joomla 1.5 and above 
+
+WHAT IS IT?
+-----------
+"Google Site Search" is a module for Joomla 1.5+ that enables you to search your site by using the Google-Site-Search feature.
+Alternatively you can also choose the classic Google-Search-Box.
+There are different options to choose like the background-color and others.
+
+INSTALLATION/CONFIGURATION
+--------------------------
+
+In the Joomla-Administration choose "Extensions -> Install/Uninstall".
+
+In the "Upload Package File"-Dialog Browse to the installation-zip-file and press the "Upload File & Install" Button.
+
+After succesful installation choose "Modules -> Site Modules" from the Administration-Menu and navigate to the "Google Site Search".
+
+dependent how many modules are installed it can be that you have to navigate to other pages of the modules-list with the "< Start < Previous  1 Next > End >>" links.
+
+Click the new "Google Site Search" Module, that brings you to the Module-Configuration.
+
+In the Module-Configuration publish the module. 
+
+There are some parameters
+
+	.) Language
+	.) Google Site - A listbox where you can choose the Google-Site of your choice
+	.) SearchType - A listbox with two options, if you choose "SITESEARCH" the Google-Site-Search is displayed, if you choose "CLASSIC", use the classic box.
+	.) OpenResult - shall the results be opened in a new window? Default is new windows
+	.) SearchDomain - Just necessary if you choose "SITESEARCH", this is the domain that is searched for.
+	.) SearchDomainLabel - necessary if the name of the site is too large for the column f.e "this site"
+	.) DefaultSearch - what is the default-value for the record-group site or web just necessary when using sitesearch
+	.) Background Color - here you can choose the backgroundcolor of the Box, grey, white, black default is white.
+	.) Field Length - If you want a longer Field for entering the Search you can change this option. If you don't enter anything a default of 25 is set.
+	.) Button Text - Which Text do you want to display on your button, the default is "Search", you can enter anything depending on your preferred language here.
+	.) PartnerId - You can add your Adsense partner id here. You also can just leave it blank.
+	.) Channel Number - If you are a partner and you defined a specific channel you can enter it here, you can also leave it blank.
+	.) Page Coding - Choose the Coding of your page, default is ISO-8859-1 that shall be good enough for most of the pages.
+	.) Button Position - Choose if the button be placed below the search-field or beside default is BELOW.
+	.) Logo Position - Choose if the logo shall be placed below the search-field or above default is ABOVE.
+	.) Version Text - Shall the version and the credits be displayed
+	.) Tightness - if the layout gets to tight or broad you can change that here, due that this module is very flexible and you can display the button/logo above/beside... there might be glitches
+	
+You are done, have fun!
+
+

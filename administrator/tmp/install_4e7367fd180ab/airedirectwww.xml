@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<install version="1.5" type="plugin" group="system" method="upgrade">
+	<name>aiRedirectWww</name>
+	<author>Alex Dobrin</author>
+	<creationDate>March 2011</creationDate>
+	<copyright>Copyright (C)2011 Alex Dobrin. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenseses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>alex@algis.ro</authorEmail>
+	<authorUrl>www.algisinfo.com</authorUrl>
+	<version>2.0.0</version>
+	<description>A plugin to redirect the page to the domain with or without www.</description>
+	<files>
+		<filename plugin="airedirectwww">airedirectwww.php</filename>
+		<filename>index.html</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field type="spacer" default="Version 2.0.0" />
+				<field type="spacer" />
+				<field name="check_localhost" type="radio" default="1" label="Check localhost" description="Redirect the page only if the page is not accessed through localhost.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="with_www" type="radio" default="1" label="Redirect to WWW" description="Redirect the page to the domain with wwww.">
+					<option value="1">Yes</option>
+					<option value="0">No</option>
+				</field>
+				<field name="redirect_site" type="radio" default="1" label="Redirect" description="Select when to redirect the page.">
+					<option value="1">On front-end</option>
+					<option value="2">On Back-end</option>
+					<option value="3">Both</option>
+				</field>
+				<field name="cookie_lifetime" type="text" size="5" default="300" label="Cookie life time" description="Number of seconds the value of noaiwww ( deactivate the plugin ) is remembered in a cookie."/>
+			</fieldset>
+		</fields>
+	</config>
+</install>

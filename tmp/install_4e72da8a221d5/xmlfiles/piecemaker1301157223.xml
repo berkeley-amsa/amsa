@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Piecemaker>
+<Contents>
+<Image Source="http://localhost/Youportfolio/16/images/yj_piecemaker/youmedia.jpg" Title="Youmedia -  Developer Portfolio">
+<Text>&lt;h1&gt;Developer Portfolio&lt;/h1&gt; &lt;p&gt;YjSimpleGrid comes to shine trough this incredible Joomla Template. YouMedia is a perfect example of our framework power and simplicity in producing new joomla themes.&lt;/p&gt;&lt;p&gt; YouMedia comes with 8 style combos combined with 2 background images and 4 primary style colors.&lt;/p&gt; &lt;p&gt;The unique layout and new custom joomla extension, Yj Ajax Contact are one of the main reasons that will make you love this template.&lt;/p&gt;</Text><Hyperlink URL="http://www.joomla1.5.youjoomla.info/youmedia/" Target="_blank" />
+</Image><Image Source="http://localhost/Youportfolio/16/images/yj_piecemaker/youstorage.jpg" Title="YouStorage - Joomla Hosting Template">
+<Text>&lt;h1&gt;Joomla Hosting Template&lt;/h1&gt; &lt;p&gt;We are starting this month with a famous concept but a fresh news style and features. YouStorage is ultimate Joomla! Hosting template and comes with a very clean WEB 2.0 style , 4 color styles , YJSG Powered and 3 new Joomla! extensions.&lt;/p&gt;&lt;p&gt; YouStorage News Slider presents your Joomla! News items with  very nice Mootools animation , YJ Plan Features module will let you showcase  your subscription plan features with a sexy Mootools hover class .&lt;/p&gt;</Text><Hyperlink URL="http://www.joomla1.5.youjoomla.info/youstorage/" Target="_blank" />
+</Image><Image Source="http://localhost/Youportfolio/16/images/yj_piecemaker/youmomentum.jpg" Title="YouMomentum - Cars Joomla Template">
+<Text>&lt;h1&gt;Cars Joomla Template &lt;/h1&gt; &lt;p&gt;This month bonus Joomla! Template is YouMomentum. Unique layout, beautiful WEB 2.0 style and something new under the hood too. YJSimple Grid Joomla! Template framework is in full development and YouMomentum gets to test it first.&lt;/p&gt;&lt;p&gt; YouMomentum comes with  7 unique styles , YouMomentum Slider , 21 module positions , additional module styles , K2 loaded with plenty of demo news items and more.  &lt;/p&gt;</Text><Hyperlink URL="http://www.joomla1.5.youjoomla.info/youmomentum/" Target="_blank" />
+</Image><Image Source="http://localhost/Youportfolio/16/images/yj_piecemaker/yousofa.jpg" Title="Yousofa - Furniture Joomla Template">
+<Text>&lt;h1&gt;Furniture Joomla Template &lt;/h1&gt; &lt;p&gt;Month of March brings you more than just a spring breeze. Yousofa has arrived with clean style and unique layout. Built on famous YJSimpleGrid and for Joomla 1.5 and Joomla 1.6. &lt;/p&gt;&lt;p&gt;Using our club extensions, YJ Image Slider 3.0 , YJ News Slider 7.0 YJ Newsflash Ultimate and, you get plenty of space for your content. For Joomla 1.5 version we have implemented fresh new style for K2 extension as well, that will help you manage your furniture catalog.&lt;/p&gt;</Text><Hyperlink URL="http://www.joomla1.5.youjoomla.info/yousofa/" Target="_blank" />
+</Image></Contents>
+<Transitions><Transition 
+							Pieces="8" 
+							Time="1.3" 
+							Transition="easeOutExpo" 
+							Delay="0.1" 
+							DepthOffset="500" 
+							CubeDistance="50">
+						</Transition>
+						<Transition 
+							Pieces="15" 
+							Time="3" 
+							Transition="easeOutElastic" 
+							Delay="0.03" 
+							DepthOffset="200" 
+							CubeDistance="10">
+						</Transition>
+						<Transition 
+							Pieces="8" 
+							Time="1.3" 
+							Transition="easeOutExpo" 
+							Delay="0.1" 
+							DepthOffset="500" 
+							CubeDistance="50">
+						</Transition>
+						<Transition 
+							Pieces="5" 
+							Time="1.3" 
+							Transition="easeInOutElastic" 
+							Delay="0.1" 
+							DepthOffset="500" 
+							CubeDistance="10">
+						</Transition>
+						</Transitions>
+
+		<Settings 
+		ImageWidth="550" 
+		ImageHeight="290" 
+		LoaderColor="0x333333" 
+		InnerSideColor="0x222222" 
+		SideShadowAlpha="0.8" 
+		DropShadowAlpha="0.3" 
+		DropShadowDistance="15" 
+		DropShadowScale="0.95" 
+		DropShadowBlurX="40" 
+		DropShadowBlurY="8" 
+		MenuDistanceX="20" 
+		MenuDistanceY="40" 
+		MenuColor1="0x999999" 
+		MenuColor2="0x333333" 
+		MenuColor3="0xFFFFFF" 
+		ControlSize="65" 
+		ControlDistance="20" 
+		ControlColor1="0x222222" 
+		ControlColor2="0xFFFFFF" 
+		ControlAlpha="0.8" 
+		ControlAlphaOver="0.95" 
+		ControlsX="270" 
+		ControlsY="230" 
+		ControlsAlign="center" 
+		TooltipHeight="30" 
+		TooltipColor="0x222222" 
+		TooltipTextY="5" 
+		TooltipTextStyle="P-Italic" 
+		TooltipTextColor="0xFFFFFF" 
+		TooltipMarginLeft="5" 
+		TooltipMarginRight="7" 
+		TooltipTextSharpness="50" 
+		TooltipTextThickness="-100" 
+		InfoWidth="400" 
+		InfoBackground="0xFFFFFF" 
+		InfoBackgroundAlpha="0.95" 
+		InfoMargin="15" 
+		InfoSharpness="0" 
+		InfoThickness="0" 
+		Autoplay="0" 
+		FieldOfView="45">
+		</Settings>
+</Piecemaker>
